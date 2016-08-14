@@ -84,8 +84,7 @@ article > header > span + span {
 }
 
 article > header > span + span::before {
-    content: '@';
-    margin-right: 4px;
+        margin-right: 4px;
 }
 
 article > header > span {
