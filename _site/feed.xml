@@ -6,9 +6,49 @@
 </description>
     <link>http://daryl.andrewlee.name/</link>
     <atom:link href="http://daryl.andrewlee.name/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Aug 2016 22:36:24 +0530</pubDate>
-    <lastBuildDate>Mon, 15 Aug 2016 22:36:24 +0530</lastBuildDate>
+    <pubDate>Mon, 22 Aug 2016 23:52:17 +0530</pubDate>
+    <lastBuildDate>Mon, 22 Aug 2016 23:52:17 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>How to run automated python scripts on a remote machines</title>
+        <description>&lt;p&gt;I am currently working on the B.Tech Project that involves predicting flight prices. To build the models, I needed historical flight prices. Unfortunately, such data is not available and so I had to build a scraper to extract flight prices daily and save it in a csv file.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Building a scraper is no rocket science. If you are using python, there are multiple frameworks like Scrapy, which are very powerful tools. My particular problem was not a complex one, and therefore I manually built a script which extracts the useful fields from Makemytrip website. You can look at the code &lt;a href=&quot;https://github.com/achyutjoshi/Flight-Prices-Scraper&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, the most challenging part of this whole process was to schedule it. I wanted my script to run on a particular time, daily and everytime it runs, it should append the values to the original csv file. Scheduling it on my local machine was not a solution, because I cannot keep it running all the time.&lt;/p&gt;
+
+&lt;p&gt;I had two options -&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Run it on my institute’s server&lt;/li&gt;
+  &lt;li&gt;Use virtual machines provided by &lt;a href=&quot;http://azure.microsoft.com/&quot; target=&quot;_blank&quot;&gt;Microsoft Azure&lt;/a&gt; or &lt;a href=&quot;http://aws.amazon.com&quot; target=&quot;_blank&quot;&gt;AWS&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Due to some reason, the institute’s server was not responding. So the next best possible option was to use Microsoft Azure. AWS is better with respect to performance, but you need to be technically very sound to set up the server using AWS.So, I set up a virtual machine using the least possible configuration on Azure. It provides us with a INR 12k free credits on signing up. I used SSH to login into my remote system and installed python and all the libraries that were needed.&lt;/p&gt;
+
+&lt;p&gt;Linux system provided a beautiful option called Cronjobs. It is an in-built scheduling option that is very easy to use. The major problem you can face when scheduling your scripts is the permissions of the file. Do make sure that you have given execution rights to all users(to be on the safer side). Also, if your script is writing/reading a file, make sure those files have the respective permissions.&lt;/p&gt;
+
+&lt;p&gt;These are the few links that will help you to setup a cronjob and run a python script -&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.adminschoice.com/crontab-quick-reference&quot; target=&quot;_blank&quot;&gt;Quick Reference&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/8727935/execute-python-script-on-crontab&quot; target=&quot;_blank&quot;&gt;Stack OverFlow - Python Script&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;To conclude, data science frequently requires the tedious job of collecting data. However, if you just learn the basics of scraping and scheduling scripts on a remote machine, your life will be a lot more easier.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 22 Aug 2016 00:43:39 +0530</pubDate>
+        <link>http://daryl.andrewlee.name/datascience/how-to-run-automated-python-script-on-remote-machine</link>
+        <guid isPermaLink="true">http://daryl.andrewlee.name/datascience/how-to-run-automated-python-script-on-remote-machine</guid>
+        
+        
+        <category>datascience</category>
+        
+      </item>
     
       <item>
         <title>One Hot Encoding in Data Science</title>
