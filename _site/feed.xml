@@ -6,12 +6,12 @@
 </description>
     <link>http://daryl.andrewlee.name/</link>
     <atom:link href="http://daryl.andrewlee.name/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 Aug 2016 23:52:17 +0530</pubDate>
-    <lastBuildDate>Mon, 22 Aug 2016 23:52:17 +0530</lastBuildDate>
+    <pubDate>Mon, 22 Aug 2016 23:55:33 +0530</pubDate>
+    <lastBuildDate>Mon, 22 Aug 2016 23:55:33 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
-        <title>How to run automated python scripts on a remote machines</title>
+        <title>How to run automated python scripts on remote machines</title>
         <description>&lt;p&gt;I am currently working on the B.Tech Project that involves predicting flight prices. To build the models, I needed historical flight prices. Unfortunately, such data is not available and so I had to build a scraper to extract flight prices daily and save it in a csv file.&lt;/p&gt;
 
 &lt;!--more--&gt;

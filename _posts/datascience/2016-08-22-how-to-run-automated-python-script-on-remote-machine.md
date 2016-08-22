@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to run automated python scripts on a remote machines"
+title:  "How to run automated python scripts on remote machines"
 date:   2016-08-21 19:13:39
 categories: datascience
 excerpt_separator: <!--more-->
