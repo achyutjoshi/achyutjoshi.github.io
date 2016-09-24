@@ -4,10 +4,10 @@
     <title>Achyut Joshi</title>
     <description>Entrepreneur, Avid Traveller, IITian, Skeptic, Hustler and a lifelong learner. I share my life through this blog.
 </description>
-    <link>http://daryl.andrewlee.name/</link>
-    <atom:link href="http://daryl.andrewlee.name/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Sep 2016 00:47:00 +0530</pubDate>
-    <lastBuildDate>Mon, 12 Sep 2016 00:47:00 +0530</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 24 Sep 2016 12:42:06 +0530</pubDate>
+    <lastBuildDate>Sat, 24 Sep 2016 12:42:06 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -42,8 +42,8 @@
 
 </description>
         <pubDate>Mon, 22 Aug 2016 00:43:39 +0530</pubDate>
-        <link>http://daryl.andrewlee.name/datascience/how-to-run-automated-python-script-on-remote-machine</link>
-        <guid isPermaLink="true">http://daryl.andrewlee.name/datascience/how-to-run-automated-python-script-on-remote-machine</guid>
+        <link>/datascience/how-to-run-automated-python-script-on-remote-machine</link>
+        <guid isPermaLink="true">/datascience/how-to-run-automated-python-script-on-remote-machine</guid>
         
         
         <category>datascience</category>
@@ -83,8 +83,8 @@
 
 </description>
         <pubDate>Mon, 15 Aug 2016 00:43:39 +0530</pubDate>
-        <link>http://daryl.andrewlee.name/datascience/one-hot-encoding</link>
-        <guid isPermaLink="true">http://daryl.andrewlee.name/datascience/one-hot-encoding</guid>
+        <link>/datascience/one-hot-encoding</link>
+        <guid isPermaLink="true">/datascience/one-hot-encoding</guid>
         
         
         <category>datascience</category>
@@ -116,8 +116,8 @@
 &lt;image src=&quot;/assets/images/mps4.jpg&quot;&gt;&lt;/image&gt;
 </description>
         <pubDate>Thu, 07 Apr 2016 18:43:39 +0530</pubDate>
-        <link>http://daryl.andrewlee.name/randomblog/what-i-learnt-by-speaking-to-school-kids</link>
-        <guid isPermaLink="true">http://daryl.andrewlee.name/randomblog/what-i-learnt-by-speaking-to-school-kids</guid>
+        <link>/randomblog/what-i-learnt-by-speaking-to-school-kids</link>
+        <guid isPermaLink="true">/randomblog/what-i-learnt-by-speaking-to-school-kids</guid>
         
         
         <category>randomblog</category>
@@ -142,8 +142,8 @@
 
 </description>
         <pubDate>Sun, 20 Mar 2016 18:43:39 +0530</pubDate>
-        <link>http://daryl.andrewlee.name/randomblog/i-failed</link>
-        <guid isPermaLink="true">http://daryl.andrewlee.name/randomblog/i-failed</guid>
+        <link>/randomblog/i-failed</link>
+        <guid isPermaLink="true">/randomblog/i-failed</guid>
         
         
         <category>randomblog</category>
@@ -178,8 +178,8 @@
 &lt;image src=&quot;/assets/images/kasol7.jpg&quot;&gt; &lt;/image&gt;
 </description>
         <pubDate>Sun, 10 Jan 2016 18:43:39 +0530</pubDate>
-        <link>http://daryl.andrewlee.name/travel/kasol-place-closest-to-heaven</link>
-        <guid isPermaLink="true">http://daryl.andrewlee.name/travel/kasol-place-closest-to-heaven</guid>
+        <link>/travel/kasol-place-closest-to-heaven</link>
+        <guid isPermaLink="true">/travel/kasol-place-closest-to-heaven</guid>
         
         
         <category>travel</category>
