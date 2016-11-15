@@ -40,7 +40,9 @@
             <li>
               <a class = "active" href=/btp/dataprep >Data Preparation</a>
             </li>
-
+            <li>
+              <a href = /btp/ourmodel >Our Model</a>
+            </li>
             <li>
               <a href = /btp/graphs >Analysis & Graphs</a>
             </li>
@@ -50,7 +52,7 @@
             </li>
 
             <li>
-              <a href = /btp/results>Results</a>
+              <a href = /btp/results>Results & Conclusions</a>
             </li>
             
 
@@ -64,267 +66,145 @@
         <article class="col-md-9 col-sm-9 main-content" role="main">
           
           <header>
-            <h1>TheDocs</h1>
-            <p><strong>TheDocs</strong> is a html online documentation template which can help you rapidly develop your next software's documentation. It can be used for documenting API, frameworks, plugins, templates, etc. It's based on Bootstrap and contains a lot of components to easily make your interactive documentation.</p>
-            <p><b>TheDocs</b> comes with a simple design and puts its focus on readability and functionality. It has a lot of useful components to reduce the burden of writing a documentation for your next product. With the help of <b>TheDocs</b> just focus on the quality of writing; don't worry about the quality of design and ease of writing. We guarantee them!</p>
+            <h1>Data Preparation</h1>
+            <p>The kind of data that we collected from the python script was very raw and needed a lot of work. For instance, the price was a character type and not an integer. Moreover, for any model to work efficiently, certain variables need to be introduced by combining or changing the existing variables. </p>
+            <p>This section focuses on various techniques we used to clean and prepare the data.</p>
             
             <ol class="toc">
-              <li><a href="#features">Features</a></li>
-              <li><a href="#what_included">What's included</a></li>
-              <li><a href="#getting_started">Getting started</a></li>
-              <li><a href="#continue_reading">Continue reading</a></li>
+              <li><a href="#generic">Generic Exploration & Cleaning</a></li>
+              <li><a href="#data_spec">Data Specific Methods</a></li>
+              <li><a href="#trend">Trend Analysis for Predicting Number of Days to wait</a></li>
+
             </ol>
           </header>
 
           <section>
-            <h2 id="features">Features</h2>
-            <p>This template has everything that you need to develop your next documentation. Check out some of features that we have in this template. To know more about features of TheDocs, continue reading our documentation and check our available components.</p>
+            <h2 id="generic">Generic Exploration & Cleaning</h2>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/data1.png"></img>
             <br>
-
-            <div class="row">
-              <div class="col-md-4 col-sm-6">
-                <div class="promo small-icon left">
-                  <i class="fa fa-tv"></i>
-                  <h3>Responsive</h3>
-                  <p>Your documentation works on any device: desktop, tablet or mobile.</p>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-sm-6">
-                <div class="promo small-icon left">
-                  <i class="fa fa-wrench"></i>
-                  <h3>Customizable</h3>
-                  <p>You can easily read, edit, and write your own code, or change everything.</p>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-sm-6">
-                <div class="promo small-icon left">
-                  <i class="fa fa-cubes"></i>
-                  <h3>UI Elements</h3>
-                  <p>There is a bunch of useful and necessary elements for writing documentation.</p>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-sm-6">
-                <div class="promo small-icon left">
-                  <i class="fa fa-code"></i>
-                  <h3>Clean Code</h3>
-                  <p>You can find our code well organized, commented and readable.</p>
-                </div>
-              </div>
-              
-              <div class="col-lg-4 col-sm-6">
-                <div class="promo small-icon left">
-                  <i class="fa fa-file-text-o"></i>
-                  <h3>Documented</h3>
-                  <p>As you can see in this online documentation, we provided a comprehensive documentation.</p>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-sm-6">
-                <div class="promo small-icon left">
-                  <i class="fa fa-download"></i>
-                  <h3>Free Updates</h3>
-                  <p>When you purchase this template, you'll freely receive future updates.</p>
-                </div>
-              </div>
-            </div>
-
-            <br><br>
-
-            <div class="row">
-              <div class="col-md-6">
-                <ul>
-                  <li>HTML5 & CSS3</li>
-                  <li>Built with Bootstrap 3.3</li>
-                  <li>SASS files included</li>
-                  <li>Grunt Tasks</li>
-                  <li>Responsive design</li>
-                  <li>Well documented</li>
-                  <li>Developer friendly code</li>
-                  <li>44 HTML page</li>
-                  <li>30+ component variation</li>
-                  <li>13 skin color</li>
-                  <li>Easy to customize: sidebar, header, color scheme, content</li>
-                  <li>FontAwesome 400+ icons</li>
-                  <li>Glyphicons 250+ icons</li>
-                  <li>Wide & Boxed Layouts</li>
-                  <li>Single page Layouts</li>
-                  <li>Left/Right/No sidebar</li>
-                  <li>Different navbar sizes & variation</li>
-                  <li>Different banner sizes & variation</li>
-                  <li>Different sidebar variation</li>
-                </ul>
-              </div>
-
-              <div class="col-md-6">
-                <ul>
-                  <li>3 Type of views</li>
-                  <li>Sticky sidebar</li>
-                  <li>Syntax highlighter</li>
-                  <li>Button variations</li>
-                  <li>Tabs</li>
-                  <li>Alerts</li>
-                  <li>Callouts</li>
-                  <li>Color palette</li>
-                  <li>Lightbox</li>
-                  <li>Carousel</li>
-                  <li>Promo boxes</li>
-                  <li>Script requirements</li>
-                  <li>Directory explanation</li>
-                  <li>File tree</li>
-                  <li>Table of content</li>
-                  <li>Changelog table</li>
-                  <li>Property table</li>
-                  <li>Instance searchable FAQ</li>
-                  <li>Responsive video (YouTube, Vimeo, Self-hosted)</li>
-                  <li>Extended Jumbotron</li>
-                </ul>
-              </div>
-            </div>
-
-          </section>
-
-          <section>
-            
-            <h2 id="what_included">What's included</h2>
-            <p>Once you download the template, you can see a folder with several files and sub folders. You can read description of some important files in continue.</p>
-
-            <div class="file-tree">
-              
-              <ul>
-                <li class="is-folder open">
-                  assets
-                  <ul>
-                    <li class="is-folder open">
-                      css
-                      <ul>
-                        <li class="is-file">custom.css<i>Write your custom styles in this file</i></li>
-                        <li class="is-file">skin-*.css<i>Skin styles</i></li>
-                        <li class="is-file">theDocs.all.min.css<i>Minified version of all required CSS files</i></li>
-                      </ul>
-                    </li>
-                    <li class="is-folder">fonts<i>FontAwesome and Glyphicons</i></li>
-                    <li class="is-folder">img<i>Here is a place to put your media files like logo, images, videoes, etc.</i></li>
-                    <li class="is-folder open">
-                      js
-                      <ul>
-                        <li class="is-file">theDocs.all.min.js<i>Minified version of all required Javascript files</i></li>
-                        <li class="is-file">custom.js<i>Write your custom scripts in this file</i></li>
-                      </ul>
-                    </li>
-                    <li class="is-folder">vendors<i>Bootstrap, jQuery, FontAwesome, etc.</i></li>
-                  </ul>
-                </li>
-                <li class="is-file">layout_boxed_no-sidebar.html</li>
-                <li class="is-file">layout_boxed_left-sidebar.html</li>
-                <li class="is-file">layout_boxed_right-sidebar.html</li>
-                <li class="is-file">layout_full_no-sidebar.html</li>
-                <li class="is-file">layout_full_left-sidebar.html</li>
-                <li class="is-file">layout_full_right-sidebar.html</li>
-                <li class="is-file">layout_single-page-1.html</li>
-                <li class="is-file">layout_single-page-2.html</li>
-                <li class="is-file">layout_single-page-3.html</li>
-                <li class="is-file">layout_sidebar_boxed.html</li>
-              </ul>
-
-            </div>
-
-            <p>We just included layouts files for your start point. You should choose one of those and start customizing components such as navbar, banner, sidebar and footer to make a starter file for your documentation. You can access to all of the available files in "Documentation" or "src" folder.</p>
-
-          </section>
-
-
-          <section>
-
-            <h2 id="getting_started">Getting started</h2>
-            <p>Start your documentation template by editing one of the starter files. It won't take more than 15 minutes to start. Read the step-by-step guide:</p>
+            <p>The collected data for each route looks like the one above. Because of the large number of flights in the busy routes like Delhi Bombay, the data collected over time is over a million points and hence efficiently handling such big data for faster computation is the first aim. In R the <b>‘fread’ function in ‘data.table’</b> package was used. 
+            <br>
+            <pre><code>bomdel <- fread("bomdel.csv")</code></pre>
+            </p>
+            <br>
+            <p>A few basic cleaning and feature engineering looking at the data. A lot of data preparation needs to be done according to the model and strategy we use, but here are the basic cleaning we did initially to understand the data better:</p>
             <br>
             <ul class="step-text">
               <li>
-                <h5>Prepare your directory</h5>
-                <p>Start your documentation project by makeing a copy of start-kit folder to your desired directory. This folder contains essential files to develop your documentation based on TheDocs.</p>
+                <h5>Duplicates</h5>
+                <p>There were not many, but a few repetitions in the data collected.</p>
               </li>
 
               <li>
-                <h5>Choose a layout</h5>
-                <p>Decide about your documentation layout. Boxed, full-width, or single page? Do you need a sidebar on the left of page, on the right of page, or a page without sidebar? Choose your desired layout from one of the starter files and start by editing it. Even it's better to decide about <a href="layout_skin.html">skin</a> right now.</p>
+                <h5>Days to departure</h5>
+                <p>Our objective is to optimize this parameter. This the difference is the departure date and the day of booking the ticket. We consider this parameter to be within 45 days.</p>
               </li>
 
               <li>
-                <h5>Design your header</h5>
-                <p><a href="component_navbar.html">The header</a> of the page is inside <code>header</code> tag. Customize it by editing logo and navigation links. If you need, you can include a <a href="component_banner.html">banner</a> as well.</p>
+                <h5>Day of departure</h5>
+                <p>Intuitively we can say that flights scheduled during weekends will have a higher price compared to the flights on Wednesday or Thursday. Since including this in any of the models we use can be beneficial. We can also try to include the month or if it is a holiday time for better accuracy.</p>
               </li>
 
               <li>
-                <h5>Design your footer</h5>
-                <p><a href="component_footer.html">The footer</a> of the page is inside <code>footer</code> tag. Customize it by editing copyright text and navigation links.</p>
+                <h5>Duration</h5>
+                <p>Converting the duration of the flight into numeric values, so that the model can interpret it properly. Also, it will be fair enough to omit flights with a very long duration.</p>
               </li>
 
               <li>
-                <h5>Design your sidebar</h5>
-                <p>If you've already planned your documentation pages, you can categorize them and design your <a href="component_sidebar.html">sidebar</a>.</p>
+                <h5>Time of departure</h5>
+                <p>Similar to day of departure, the time also seem to play an important factor. Hence we divided all the flights into three categories: Morning (6am to noon), Evening (noon to 9pm) and Night (9pm to 6am)</p>
               </li>
 
               <li>
-                <h5>Start writing</h5>
-                <p>Make a copy of your starter page and start writing your documentation with the help of our wonderful elements.</p>
+                <h5>Hoppings</h5>
+                <p>The data we collected did not give very authentic information about the number of hops a journey takes. Hence, we calculated the hops using the flight ids.</p>
+              </li>
+              <li>
+                <h5>Outliers</h5>
+                <p>We are focusing on minimizing the flight prices, hence we considered only the economy class with the following conditions: <br>
+
+                a) The minimum value of total fare for all days for a particular flight id  is less than the mean fare of all the flights 
+                b) The duration of the journey is less than 3 times the mean duration.
+                
+
+                </p>
               </li>
             </ul>
 
-          </section>
 
+            
+
+          </section>
 
           <section>
             
-            <h2 id="continue_reading">Continue reading</h2>
-            <p>It's time to see and read other pages of this documentation to learn how you can use different elements for you own documentation. Don't worry about reading time, you can check each element in a couple of minutes and come back to the documentation page once you want to use them. You can use them by just make a copy and paste.</p>
+            <h2 id="data_spec">Data Specific Methods</h2>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/dept_btp.png"></img>
+            <br>
+            <p>Suppose a user makes a query to buy a flight ticket 44 days in advance, then our system should be able to tell the user whether he should wait for the prices to decrease or he should buy the tickets immediately. For this we have two options:</p>
+            <ol>
+            <li><b>Predict the flight prices for all the days between 44 and 1 </b>and check on which day the price is minimum.</li>
+            <li>Classify the data we already have into, <b>“Buy” or  “Wait”</b>. This then becomes a classification problem and we would need to predict only a binary number. However, this does not give a good insight on the number of days to wait.</li>
+            </ol>
+            <br>
+            <p>For the above example, if we choose the first method we would need to make a total of 44 predictions (i.e. run a machine learning algorithm 44 times) for a single query. This also cascades the error per prediction decreasing the accuracy. Hence, the <b>second method seems to be a better way to predict</b>, wait or buy which is a simple binary classification problem. But, in this method, we would need to predict the days to wait using the historic trends.</p>
             
-            <ul class="categorized-view view-col-3">
-              <li>
-                <h5>Components</h5>
-                <a href="component_navbar.html">Navbar</a>
-                <a href="component_banner.html">Banner</a>
-                <a href="component_banner_sample1.html">Banner - Sample 1</a>
-                <a href="component_banner_sample2.html">Banner - Sample 2</a>
-                <a href="component_banner_sample3.html">Banner - Sample 3</a>
-                <a href="component_sidebar.html">Sidebar - default</a>
-                <a href="component_sidebar_line.html">Sidebar - line</a>
-                <a href="component_sidebar_icon.html">Sidebar - icon</a>
-                <a href="component_footer.html">Footer</a>
-              </li>
+            <p>For this we again have two options:</p>
+            <ol>
+            <li>We do the <b>predictions for each flight id</b>. The problem with this is that, if there is a change in flight id by the airline (which happens frequently) or there is an introduction or a new flight for a specific route then our analysis would fail.</li>
+            <li>We <b>group the flight ids according to the airline and the time of departure </b>and do the analysis on each group. For this we need to combine the prices of the airlines lying in that group such that the basic trend in captured.</li>
+            </ol>
+            <p>Moving ahead with the second option, we created the group according to the airlines and the departure time-slot created earlier (Morning, Evening, Night) and calculated the combined flight prices for each group, day of departure and depart day. Since these three are the most influencing factors which determine the flight prices. Also, we calculated the average number of flights that operated in a particular group, since competition could also play a role in determining the fare.</p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/data2.png"></img>
+            <br>
+            <p>Combining fare for the flights in one group:</p>
+            <ol>
+            <li><b>Mean fare:</b> This is the average of the fare of all the flights in a particular group corresponding to departure day and days to departure. Because of high standard deviation, taking the mean is not a very good option.
+</li>
+            <li><b>Minimum fare:</b> This does not give a very good insight of the trend, as a minimum value could occur because of some offer by an airline.
+</li>
+            <li><b>First Quartile: </b> This is a good measure as we are focusing on minimizing the fare and we do not want to consider the flights with high fares. 
+</li>
+            <li><b>Custom Fare:</b> This is the fare giving more weightage to recent price trend.<br>
+            <code>Total_customFare  = w*(First Quartile for entire time period) + (1-w)*(First quartile of last x days)</code><br>(We have considered: w = 0.7 and x = & days)
+</li>
+            </ol>
+            <br>
+            <p>Calculating whether to buy or wait for the this data:</p>
+            <p><code>Logical = 1 if for any d < D the Total_customFare is less than the current Total_customFare
+</code><br> (Here, d is the days to departure and D is the days to departure for the current row.)
+</p>
 
-              <li>
-                <h5>Basic Styling</h5>
-                <a href="css_typography.html">Typography</a>
-                <a href="css_button.html">Buttons</a>
-                <a href="css_label.html">Labels</a>
-                <a href="css_table.html">Tables</a>
-                <a href="css_alert.html">Alerts</a>
-                <a href="css_icon.html">Icons</a>
-              </li>
+            
+<section>
+            <h2 id="trend">Trend Analysis</h2>
+            <p>After creating the train file, we shift to create another dataset which is used to <b>predict number of days to wait</b>. For this, we used trend analysis on the original dataset.</p>
+            <br>
+            <p><u><b>Determining the minimum CustomFare for a particular pair of Departure Day and Days to Departure</b></u></p>
+            <p>We input the train dataset that has been created and find the minimum of the CustomFare corresponding to each combination of Departure Date and Days to Departure. Now with the obtained minimum CustomFare corresponding to each pair, we do a merge with our initial dataset and find out the Airline corresponding to which the minimum CustomFare is being obtained.</p>
+            <p>The count on the number of times a particular Airline appears corresponding to the minimum Custom Fare is the probability with which the Airline would be likely to offer a lower price in the future. This probability of each Airline for having a minimum Fare in the future is exported to the test dataset and merged with the same while the dataset of minimum Fares is retained for the preparation of bins to analyse the time to wait before the prices reduce</p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/prep_min.jpg"></img>
 
-              <li>
-                <h5>Elements</h5>
-                <a href="element_toc.html">Table of contents</a>
-                <a href="element_code.html">Code view</a>
-                <a href="element_view.html">Views</a>
-                <a href="element_promo.html">Promo</a>
-                <a href="element_files.html">Included files</a>
-                <a href="element_requirement.html">Requirements</a>
-                <a href="element_tab.html">Tabs</a>
-                <a href="element_step.html">Steps</a>
-                <a href="element_media.html">Media</a>
-                <a href="element_color.html">Color palette</a>
-                <a href="element_jumbotron.html">Jumbotron</a>
-                <a href="element_carousel.html">Carousel</a>
-                <a href="element_faq.html">FAQ</a>
-                <a href="element_mix.html">Mix</a>
-              </li>
+            <br>
+            <p><u><b>Creation of Bins</b></u></p>
+            <p>We next wanted to determine the trend of “lowest” airline prices over the data we were training upon. So the entire sequence of 45 days to departure was divided into bins of 5 days. In intervals of 5, the first bin would represent days 1-5, the second represents 6-10 and so on.</p>
 
-            </ul>
+            <p>Corresponding to each bin, we required a value of the fare that would be optimal for consideration in suggesting a value for the days to wait to the user. Among all the points that lie in a bin, the 25th percentile was determined as the value that would be the possible lowest Fare corresponding to the bin which indicates days to departure.</p>
+
+            <p>Comparing the present price on the day the query was made with the prices of each of the bin, a suggestion is made corresponding to the maximum percentage of savings that can be done by waiting for that time period.The approximate time to wait for the prices to decrease and the corresponding savings that could be made is returned to the user.
+</p>
+<br>
+            <img class="img-shadow img-responsive center-block" style='width:50%;' src="/assets/images/btp/prep_per.png"></img>
+
+<br>
+
+
+            
+
           </section>
+          
           
         </article>
         <!-- END Main content -->
