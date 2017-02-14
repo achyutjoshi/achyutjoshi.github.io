@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Flight Prices Prediction</title>
+
+    <!-- Styles -->
+    <link href="assets/css/theDocs.all.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../apple-touch-icon.html">
+    <link rel="icon" href="assets/img/favicon.ico">
+  </head>
+
+
+    <main class="container">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-md-3 col-sm-3 sidebar">
+
+          <ul class="sidenav dropable sticky">
+            <li><a  href=/btp/flightprices>Overview</a></li>
+            <li>
+              <a  href=/btp/datacollection>Data Collection</a>
+            </li>
+
+            <li>
+              <a href=/btp/dataprep >Data Preparation</a>
+            </li>
+            <li>
+              <a href = /btp/ourmodel >Our Model</a>
+            </li>
+            <li>
+              <a class = "active" href = /btp/stats >Statistical Analysis</a>
+            </li>
+            <li>
+              <a href = /btp/graphs >Analysis & Graphs</a>
+            </li>
+
+             <li>
+              <a  href = /btp/status >Project Status & Future Work </a>
+            </li>
+
+            <li>
+              <a href = /btp/results>Results & Conclusions</a>
+            </li>
+            
+
+          </ul>
+
+        </aside>
+        <!-- END Sidebar -->
+
+
+        <!-- Main content -->
+        <article class="col-md-9 col-sm-9 main-content" role="main">
+          
+          <header>
+            <h1>Statistical Analysis</h1>
+            <p>The initial data we had of the flight prices after cleaning had the following distribution -</p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/stats4.png"></img>
+            <br>
+            <p>With the moments of Kurtosis was 10.5 and skewness was 3.4 when the entire data was considered. For each interval, all the moments are shown.</p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/stats2.png"></img>
+            <br>
+            <p>On observation, it was observed that the data of flight prices followed a lognormal distribution, and upon transformation the distribution came out as follows.</p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/stats7.png"></img>
+            <br>
+            <p>This distribution now appeared to be very much like the normal distribution, so we decided to further examine the data. We calculated the moments as done above to find out that after transformation. The skewness was 0.4 and the kurtosis was 3.8 for the entire data with the moments for each interval as follows - </p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/stats5.png"></img>
+            <br>
+            <p>Further examining the data, we found the QQ plots and the PP plots for the same considering the transformed distribution to follow normal distribution - </p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/stats3.png"></img>
+            <br>
+            <p>From the analysis we can see that the data almost closely resembles the normal distribution.</p>
+            <br>
+            <p>Further we decided to use the hypothesis testing and find out the chi-square and p-value. We used the Pearson normality test for the same and the results are as below - </p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/stats6.png"></img>
+            <br>
+            <p>The p-value signifies that our transformed data closely follows normal distribution.</p>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/stats1.png"></img>
+
+
+
+
+
+
+
+
+            
+          
+        </article>
+        <!-- END Main content -->
+      </div>
+    </main>
+
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/theDocs.all.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+
+
+</html>
