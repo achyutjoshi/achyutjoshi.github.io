@@ -29,4 +29,9 @@
 </script>
 {% seo %}
 
+{% if page.image %}
+  <meta content="/assets/images/{{ page.image }}" property="og:image">
+{% else %}
+  <meta content="/assets/images/profile1.png" property="og:image">
+{% endif %}
 </head>
