@@ -32,4 +32,4 @@ analytics :
       tracking_id : 'UA-76699034-1'
 
 # Gems
-gems: [jekyll-paginate, jekyll-seo-tag]
+gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
