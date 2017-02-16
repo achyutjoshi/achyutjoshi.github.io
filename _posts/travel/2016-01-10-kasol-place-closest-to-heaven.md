@@ -3,7 +3,7 @@ layout: post
 title:  "Kasol : A place closest to Heaven"
 date:   2016-01-10 13:13:39
 category : travel
-image : kasol1.png
+image : kasol1.jpg
 
 ---
 
