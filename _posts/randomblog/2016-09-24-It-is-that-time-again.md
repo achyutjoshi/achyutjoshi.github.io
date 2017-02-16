@@ -3,6 +3,8 @@ layout: post
 title:  "It is that time of year again"
 date:   2016-09-24 13:13:39
 categories: randomblog
+comments : true
+
 excerpt_separator: <!--more-->
 
 

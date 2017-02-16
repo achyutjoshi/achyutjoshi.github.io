@@ -3,6 +3,7 @@ layout: post
 title:  "One Hot Encoding in Data Science"
 date:   2016-08-14 19:13:39
 categories: datascience
+comments : true
 excerpt_separator: <!--more-->
 
 

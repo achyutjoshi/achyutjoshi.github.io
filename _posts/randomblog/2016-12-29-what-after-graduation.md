@@ -3,6 +3,8 @@ layout: post
 title:  "What After Graduation?"
 date:   2016-12-29 10:00:39
 categories: randomblog
+comments : true
+
 excerpt_separator: <!--more-->
 
 ---

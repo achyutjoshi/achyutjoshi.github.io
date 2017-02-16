@@ -3,6 +3,8 @@ layout: post
 title:  "Power of Habit by Charles Duhigg"
 date:   2017-02-10 20:13:39
 categories: reviews
+comments : true
+
 excerpt_separator: <!--more-->
 
 ---

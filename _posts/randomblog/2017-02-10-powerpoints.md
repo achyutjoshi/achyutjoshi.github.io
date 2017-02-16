@@ -3,6 +3,8 @@ layout: post
 title:  "Powerpoints - How not to make them?"
 date:   2017-02-10 22:13:39
 categories: randomblog
+comments : true
+
 ---
 
 

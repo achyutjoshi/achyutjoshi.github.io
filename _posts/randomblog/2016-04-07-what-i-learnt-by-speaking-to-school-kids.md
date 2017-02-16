@@ -3,6 +3,8 @@ layout: post
 title:  "What I learnt by speaking in front of 120 school kids"
 date:   2016-04-07 13:13:39
 categories: randomblog
+comments : true
+
 ---
 
 After a long long time, today when I entered the auditorium of MPS Jodhpur (a school in Jodhpur) I started missing my school again. As we grow up, we begin to get indifferent to things from our past. But that auditorium, those young kids in uniform and those teachers shouting at them to shut up, brought back happy memories from my Vidyani days.

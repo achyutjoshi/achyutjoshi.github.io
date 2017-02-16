@@ -3,6 +3,8 @@ layout: post
 title:  "How to run automated python scripts on remote machines"
 date:   2016-08-21 19:13:39
 categories: datascience
+comments : true
+
 excerpt_separator: <!--more-->
 
 
