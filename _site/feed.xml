@@ -4,11 +4,11 @@
     <title>Achyut Joshi</title>
     <description>Entrepreneur, Avid Traveller, IITian, Skeptic, Hustler and a lifelong learner. I share my life through this blog.
 </description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Feb 2017 18:50:17 +0530</pubDate>
-    <lastBuildDate>Tue, 14 Feb 2017 18:50:17 +0530</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 16 Feb 2017 23:57:23 +0530</pubDate>
+    <lastBuildDate>Thu, 16 Feb 2017 23:57:23 +0530</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>Powerpoints - How not to make them?</title>
@@ -89,8 +89,8 @@
 &lt;/ol&gt;
 </description>
         <pubDate>Sat, 11 Feb 2017 03:43:39 +0530</pubDate>
-        <link>/randomblog/powerpoints</link>
-        <guid isPermaLink="true">/randomblog/powerpoints</guid>
+        <link>http://localhost:4000/randomblog/powerpoints</link>
+        <guid isPermaLink="true">http://localhost:4000/randomblog/powerpoints</guid>
         
         
         <category>randomblog</category>
@@ -201,8 +201,8 @@
 &lt;/ol&gt;
 </description>
         <pubDate>Sat, 11 Feb 2017 01:43:39 +0530</pubDate>
-        <link>/reviews/power-of-habit</link>
-        <guid isPermaLink="true">/reviews/power-of-habit</guid>
+        <link>http://localhost:4000/reviews/power-of-habit</link>
+        <guid isPermaLink="true">http://localhost:4000/reviews/power-of-habit</guid>
         
         
         <category>reviews</category>
@@ -257,8 +257,8 @@
 
 </description>
         <pubDate>Thu, 29 Dec 2016 15:30:39 +0530</pubDate>
-        <link>/randomblog/what-after-graduation</link>
-        <guid isPermaLink="true">/randomblog/what-after-graduation</guid>
+        <link>http://localhost:4000/randomblog/what-after-graduation</link>
+        <guid isPermaLink="true">http://localhost:4000/randomblog/what-after-graduation</guid>
         
         
         <category>randomblog</category>
@@ -284,8 +284,8 @@
 &lt;p&gt;I had promised myself that I won’t run that race again but here I am, reading things for getting a job and spending a good 3-4 hours a day hunting jobs. Why? Do we really need this?&lt;/p&gt;
 </description>
         <pubDate>Sat, 24 Sep 2016 18:43:39 +0530</pubDate>
-        <link>/randomblog/It-is-that-time-again</link>
-        <guid isPermaLink="true">/randomblog/It-is-that-time-again</guid>
+        <link>http://localhost:4000/randomblog/It-is-that-time-again</link>
+        <guid isPermaLink="true">http://localhost:4000/randomblog/It-is-that-time-again</guid>
         
         
         <category>randomblog</category>
@@ -324,8 +324,8 @@
 
 </description>
         <pubDate>Mon, 22 Aug 2016 00:43:39 +0530</pubDate>
-        <link>/datascience/how-to-run-automated-python-script-on-remote-machine</link>
-        <guid isPermaLink="true">/datascience/how-to-run-automated-python-script-on-remote-machine</guid>
+        <link>http://localhost:4000/datascience/how-to-run-automated-python-script-on-remote-machine</link>
+        <guid isPermaLink="true">http://localhost:4000/datascience/how-to-run-automated-python-script-on-remote-machine</guid>
         
         
         <category>datascience</category>
@@ -365,8 +365,8 @@
 
 </description>
         <pubDate>Mon, 15 Aug 2016 00:43:39 +0530</pubDate>
-        <link>/datascience/one-hot-encoding</link>
-        <guid isPermaLink="true">/datascience/one-hot-encoding</guid>
+        <link>http://localhost:4000/datascience/one-hot-encoding</link>
+        <guid isPermaLink="true">http://localhost:4000/datascience/one-hot-encoding</guid>
         
         
         <category>datascience</category>
@@ -398,8 +398,8 @@
 &lt;image src=&quot;/assets/images/mps4.jpg&quot;&gt;&lt;/image&gt;
 </description>
         <pubDate>Thu, 07 Apr 2016 18:43:39 +0530</pubDate>
-        <link>/randomblog/what-i-learnt-by-speaking-to-school-kids</link>
-        <guid isPermaLink="true">/randomblog/what-i-learnt-by-speaking-to-school-kids</guid>
+        <link>http://localhost:4000/randomblog/what-i-learnt-by-speaking-to-school-kids</link>
+        <guid isPermaLink="true">http://localhost:4000/randomblog/what-i-learnt-by-speaking-to-school-kids</guid>
         
         
         <category>randomblog</category>
@@ -424,8 +424,8 @@
 
 </description>
         <pubDate>Sun, 20 Mar 2016 18:43:39 +0530</pubDate>
-        <link>/randomblog/i-failed</link>
-        <guid isPermaLink="true">/randomblog/i-failed</guid>
+        <link>http://localhost:4000/randomblog/i-failed</link>
+        <guid isPermaLink="true">http://localhost:4000/randomblog/i-failed</guid>
         
         
         <category>randomblog</category>
@@ -460,8 +460,8 @@
 &lt;image src=&quot;/assets/images/kasol7.jpg&quot;&gt; &lt;/image&gt;
 </description>
         <pubDate>Sun, 10 Jan 2016 18:43:39 +0530</pubDate>
-        <link>/travel/kasol-place-closest-to-heaven</link>
-        <guid isPermaLink="true">/travel/kasol-place-closest-to-heaven</guid>
+        <link>http://localhost:4000/travel/kasol-place-closest-to-heaven</link>
+        <guid isPermaLink="true">http://localhost:4000/travel/kasol-place-closest-to-heaven</guid>
         
         
         <category>travel</category>
