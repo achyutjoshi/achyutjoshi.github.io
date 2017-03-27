@@ -6,9 +6,48 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Feb 2017 10:44:35 +0530</pubDate>
-    <lastBuildDate>Fri, 17 Feb 2017 10:44:35 +0530</lastBuildDate>
-    <generator>Jekyll v3.3.1</generator>
+    <pubDate>Mon, 27 Mar 2017 22:11:01 +0530</pubDate>
+    <lastBuildDate>Mon, 27 Mar 2017 22:11:01 +0530</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Podcast #1 - What If</title>
+        <description>&lt;p&gt;I always wanted to record a podcast of my own. And finally, after many failed attempts, we recorded this
+when we had gone out for a dinner.&lt;/p&gt;
+
+&lt;p&gt;This podcast basically consists of three final year undergraduate students(one of them is obviously me), contemplating on their journey so far. We discussed a hypothetical situation where we were guaranteed our dream career on the first day of
+college, and then how this would have changed our stay at IIT Jodhpur.&lt;/p&gt;
+
+&lt;p&gt;This is our first podcast, so I am certain that there are several mistakes. However, we enjoyed as hell while making it, and I am sure you will do too, when you hear the conversation. We are waiting for your reviews!&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/314453779&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&quot;&gt;
+&lt;/iframe&gt;
+</description>
+        <pubDate>Sun, 26 Mar 2017 00:43:39 +0530</pubDate>
+        <link>http://localhost:4000/podcast/podcast-1-what-if</link>
+        <guid isPermaLink="true">http://localhost:4000/podcast/podcast-1-what-if</guid>
+        
+        
+        <category>podcast</category>
+        
+      </item>
+    
+      <item>
+        <title>A Ride in a Metro</title>
+        <description>&lt;p&gt;I have been to many metro cities around the world, but the energy and liveliness we have in the metros of India cannot be matched. The Indian culture of family and the way we interact is something very unique. In this every adaptive world and times when we are adopting the western culture in all ways, this is something we should always hold on to.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Yesterday I was traveling from MG Road metro to Baiyananihalli in Bengaluru. It was a Sunday and I met a big group of people, talking loudly, laughing and enjoying their time together. If it was a Toronto or London, such loud noise would be considered as bad manners. But here, it made the whole train lively and humane. Such small moments in our ever busy mundane schedule, makes living in India meaningful!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 04 Mar 2017 03:43:39 +0530</pubDate>
+        <link>http://localhost:4000/randomblog/a-ride-in-a-metro</link>
+        <guid isPermaLink="true">http://localhost:4000/randomblog/a-ride-in-a-metro</guid>
+        
+        
+        <category>randomblog</category>
+        
+      </item>
     
       <item>
         <title>Powerpoints - How not to make them?</title>
@@ -429,42 +468,6 @@
         
         
         <category>randomblog</category>
-        
-      </item>
-    
-      <item>
-        <title>Kasol : A place closest to Heaven</title>
-        <description>&lt;p&gt;I woke up to the roller-coaster ride of our Himachal State Transport bus when it reached Bhunter(a small town before Manali). Last night was tough after being stalled at Ambala Cant for more than 4 hours waiting for our bus to which we finally gave up and boarded the local state transport bus. But as soon as we got down at Bhunter, the cold air brought a sense of freshness in our bodies. We had to search out our bags for warm clothes because it was damn cold. We looked somewhat like this –&lt;/p&gt;
-
-&lt;image src=&quot;/assets/images/kasol1.jpg&quot;&gt; &lt;/image&gt;
-
-&lt;p&gt;Kasol was still an hour ride from Bhunter. You ditch the Manali road and follow the Parvati for an hour, on a life-threatening road full of turns and zig-zags. Reaching Kasol after a unvarying drive, I was in a tizzy, partly out of hunger and partly out of the happy Himalayan wind.  The moment we reached Kasol, we saw a bunch of hippies strolling down the narrow roads of Kasol evidently making most of the moment. The red-and-white mobile telephony tower stands right at the edge of the river that divides Old Kasol and New Kasol. There is a bridge in the middle of the town and a few restaurants here and there, but that is all. The main beauty of this infamous town lies within, and you had to explore to find it.&lt;/p&gt;
-
-&lt;image src=&quot;/assets/images/kasol2.jpg&quot;&gt; &lt;/image&gt;
-
-&lt;p&gt;We headed straight to the riverside to catch River Parvati wildly flapping its way across this tiny Himalayan village. The Sun was just coming out. A dog was crossing the river on an old, rickety bridge(which also led straight to the party town – Chalal). There was wind in my hair and I was content in that one moment of awe. We sat there, looking at each other and then gazing upon the backdrop of the Himalayas. Trust me, 5 childhood friends meeting after a long time could feel the intensity of this moment.&lt;/p&gt;
-
-&lt;image src=&quot;/assets/images/kasol3.jpg&quot;&gt; &lt;/image&gt;
-
-&lt;p&gt;The subtle moment was disturbed by our crave for rest. Some hours of sleep was enough to get us back in action mode. As such there are not many things to do in Kasol. You could either trek to Malana, Tosh or KheerGanga. But for the first evening, we chose to sit ideally near the riverbanks and just breathe. There are many good places to eat, like a good breakfast at German Bakery or a finger licking meal at Little Italy. At night, we headed out to Chalal to experience the much talked about party in the valley. Because it was the last few hours of the party, we somehow sneaked in and danced to a few last songs. The trail back to our rooms was in total darkness, walking side by side river Parvati to guide us. It seemed quite ironic to be guided by the gregarious river when we are the ones to pollute it in the first place.&lt;/p&gt;
-
-&lt;image src=&quot;/assets/images/kasol4.jpg&quot;&gt; &lt;/image&gt;
-
-&lt;p&gt;The next day, we trekked to Manikaran which turned out to be a sacred place for the Sikhs. A word of caution, there are very few ATMs in this area and unfortunately not all work every time. So carry enough cash always. Then we took a detour and climbed a mountain which seemed accessible from the banks of the gurudwara. But as we kept on climbing, the peak seemed to be mocking us by getting higher and higher. In the end, as it always turns out Nature won. But the view was enthralling and worth every drop of sweat spent for climbing up.&lt;/p&gt;
-
-&lt;image src=&quot;/assets/images/kasol5.jpg&quot;&gt; &lt;/image&gt;
-&lt;image src=&quot;/assets/images/kasol6.jpg&quot;&gt; &lt;/image&gt;
-
-&lt;p&gt;Everyone has a different kind of tale to tell when they visit Kasol. We had a tale of nostalgia, we had some stories of the past to remember and a promise of making many more. Kasol helps you to slow down a bit in this fast paced world, slow down and be grateful for every tiny little thing. It is not just a place on the map, it is that tranquillity that comes with your eyes sparkling every time you see the starlit night sky or with the way you open up with your best friends and relive the younger carefree days. It forces you to do certain things which will stay as a lasting memory of the trip. There was indeed something different in that place which makes us crave to experience it once again.&lt;/p&gt;
-
-&lt;image src=&quot;/assets/images/kasol7.jpg&quot;&gt; &lt;/image&gt;
-</description>
-        <pubDate>Sun, 10 Jan 2016 18:43:39 +0530</pubDate>
-        <link>http://localhost:4000/travel/kasol-place-closest-to-heaven</link>
-        <guid isPermaLink="true">http://localhost:4000/travel/kasol-place-closest-to-heaven</guid>
-        
-        
-        <category>travel</category>
         
       </item>
     
