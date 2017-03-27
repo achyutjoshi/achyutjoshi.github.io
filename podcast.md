@@ -2,6 +2,8 @@
 layout: page
 title : Podcasts
 permalink : /podcast/
+
+image : podcast.png
 ---
 
 <!--
@@ -21,7 +23,7 @@ permalink : /podcast/
 <br>
 -->
 <div class="home">
-  
+
     {% for post in site.categories['podcast'] %}
 
     <article class="post">
