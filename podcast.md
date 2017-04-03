@@ -2,8 +2,6 @@
 layout: page
 title : Podcasts
 permalink : /podcast/
-
-image : podcast.png
 ---
 
 <!--

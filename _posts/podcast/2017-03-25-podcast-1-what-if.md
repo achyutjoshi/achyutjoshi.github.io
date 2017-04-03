@@ -5,6 +5,7 @@ date:   2017-03-25 19:13:39
 categories: podcast
 comments : true
 excerpt_separator: <!--more-->
+image : podcast.png
 ---
 
 I always wanted to record a podcast of my own. And finally, after many failed attempts, we recorded this
