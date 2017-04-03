@@ -20,6 +20,8 @@ The podcast is in the form of a story - right from how the founders met, ideated
 
 Shout out to Abhinav, Karthik and E-Cell IIT Jodhpur for all the help.
 
+For those who prefer downloading podcasts - [Visit this link ](http://bit.ly/startify_podcast){:target="_blank"}
+
 <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fachyut-joshi%2Fpodcast-2-part-l-startify-the-journey-of-student-entrepreneurs%2F&hide_cover=1&light=1" frameborder="0"></iframe>
 
 <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fachyut-joshi%2Fpodcast-2-part-ll-startify-the-journey-of-student-entrepreneurs%2F&hide_cover=1&light=1" frameborder="0"></iframe>

@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Apr 2017 18:00:05 +0530</pubDate>
-    <lastBuildDate>Mon, 03 Apr 2017 18:00:05 +0530</lastBuildDate>
+    <pubDate>Mon, 03 Apr 2017 22:35:24 +0530</pubDate>
+    <lastBuildDate>Mon, 03 Apr 2017 22:35:24 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -23,6 +23,8 @@ conversation!&lt;/p&gt;
 &lt;p&gt;The podcast is in the form of a story - right from how the founders met, ideated, to how they got their first customer and the much famous exit. The founders have tried to share their learnings at every juncture of their journey. Part 1 of the podcast is more fun and less knowledge, but as you go further into the second part, the story becomes more exciting with some pointed takeaways.&lt;/p&gt;
 
 &lt;p&gt;Shout out to Abhinav, Karthik and E-Cell IIT Jodhpur for all the help.&lt;/p&gt;
+
+&lt;p&gt;For those who prefer downloading podcasts - &lt;a href=&quot;http://bit.ly/startify_podcast&quot; target=&quot;_blank&quot;&gt;Visit this link &lt;/a&gt;&lt;/p&gt;
 
 &lt;iframe width=&quot;100%&quot; height=&quot;120&quot; src=&quot;https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fachyut-joshi%2Fpodcast-2-part-l-startify-the-journey-of-student-entrepreneurs%2F&amp;amp;hide_cover=1&amp;amp;light=1&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
