@@ -13,6 +13,7 @@ when we had gone out for a dinner.
 This podcast basically consists of three final year undergraduate students(one of them is obviously me), contemplating on their journey so far. We discussed a hypothetical situation where we were guaranteed our dream career on the first day of
 college, and then how this would have changed our stay at IIT Jodhpur.
 
+<!--more-->
 This is our first podcast, so I am certain that there are several mistakes. However, we enjoyed as hell while making it, and I am sure you will do too, when you hear the conversation. We are waiting for your reviews!
 
 <iframe
