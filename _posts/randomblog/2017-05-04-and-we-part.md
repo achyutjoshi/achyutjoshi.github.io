@@ -20,9 +20,9 @@ I have always disliked endings. Whether it was when I completed a great book , a
 
 As we all get separated from each other. We will miss our conversations about everything and nothing and the dreams we had. Days, months and years will pass until this contact becomes rare. One day, our children will see our pictures and ask: “Who are these people?” And we will smile with invisible tears because a heart is touched with a strong word and you will say: “It was  them that I had the best days of my life with”
 
-It is only when you are about to lose something, do you realise its true value in life. These past weeks have been emotionally toiling, to say the least. You get a strange feeling when you are about to leave a place. Like you’ll not only miss the people you love but you’ll miss the person you are now at this time and this place. because you will never be this way ever again. 
+It is only when you are about to lose something, do you realise its true value in life. These past weeks have been emotionally toiling, to say the least. You get a strange feeling when you are about to leave a place. Like you’ll not only miss the people you love but you’ll miss the person you are now at this time and this place, because you will never be this way ever again. 
 
-So, as I glance at that GPRA gate for the last time wiping those tears, myriad of memories flashes across my mind. Today, a part of me dies. A part that will always be remembered, but which can never be resurrected.
+So, as I glance at that GPRA gate for the last time wiping those tears, myriad of memories flash across my mind. Today, a part of me dies. A part that will always be remembered, but which can never be resurrected.
 
 Fare Thee Well IITJ! Fare Thee Well.
 
