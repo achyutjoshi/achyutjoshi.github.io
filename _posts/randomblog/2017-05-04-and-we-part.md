@@ -5,7 +5,6 @@ date:   2017-05-04 13:13:39
 categories: randomblog
 comments : true
 
-image : farewell.jpg
 
 excerpt_separator: <!--more-->
 
