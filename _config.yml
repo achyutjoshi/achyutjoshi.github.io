@@ -2,7 +2,8 @@
 title: Achyut Joshi
 tagline: Entrepreneur, Avid Traveller, IITian, Skeptic, Hustler and a lifelong learner
 email: achyutj9@gmail.com
-description: > Entrepreneur, Avid Traveller, IITian, Skeptic, Hustler and a lifelong learner. I share my experiences through this blog.
+description: > # this means to ignore newlines until "baseurl"
+  Entrepreneur, Avid Traveller, IITian, Skeptic, Hustler and a lifelong learner. I share my life through this blog.
 baseurl: "" # the subpath of your site, e.g. /blog/
  # the base hostname & protocol for your site
 twitter_username: achyutjosh1995
