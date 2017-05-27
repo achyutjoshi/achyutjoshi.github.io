@@ -2,8 +2,9 @@
 layout: post
 title:  "Power of Habit by Charles Duhigg"
 date:   2017-02-10 20:13:39
-categories: reviews
+categories: books
 comments : true
+description : Power of Habit is one of the most amazing books I have ever read. The author examines why some people and companies struggle to change, despite years of trying, while other seem to remake themselves overnight. The book is divided into three sections, namely Individual, Company and Societies. The author discusses how habits are formed in all three areas with some compelling evidences. It is a must read for every person who is looking to make his life better. 
 
 excerpt_separator: <!--more-->
 
@@ -96,13 +97,13 @@ Listeners are happy to sit through a song they might dislike as long as it seems
 
 “By dressing something new in old clothes, and making the unfamiliar seem familiar” – the golden rule for making your product viral. How to do this? Sandwich theorem – Sandwich the unfamiliar between the familiar. If you dress something new in old habits, it is easier for the public to accept it.
 
- 
+
 
 __Part – C Habits of Societies__
 
 Social habits are what fill streets who may not know one another, who are marching for different reasons, but who are all moving in the same direction. A movement starts because of Social habits of friendship and strong ties between close acquaintances. It grows because of habits of community, and the weak ties that hold neighbourhoods and clans together. And it endures because leaders give participants new habits that create a fresh sense of identity and a feeling of ownership.
 
-For an idea to grow beyond a community, it must become self-propelling. And the surest way to achieve that is to give people new habits that help them figure out where to go on their own. The will to believe is the most important ingredient in creating belief in change. And that one of the most important methods for creating that belief was habits. 
+For an idea to grow beyond a community, it must become self-propelling. And the surest way to achieve that is to give people new habits that help them figure out where to go on their own. The will to believe is the most important ingredient in creating belief in change. And that one of the most important methods for creating that belief was habits.
 
 
 The FRAMEWORK to create or change Habits:

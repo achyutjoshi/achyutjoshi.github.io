@@ -15,28 +15,28 @@ permalink : /travel/
             </li>
         {% endfor %}
     </ul>
-</div> 
+</div>
 <br>
 <br>
 -->
 <div class="home">
-  
+
     {% for post in site.categories['travel'] %}
 
     <article class="post">
       <h4 class="post-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
 
       <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: '%B %d, %Y' }}</time>
+        <br>
+      {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
 
-      {{ post.content }}
-
-      <hr>
+      
     </article>
     {% endfor %}
 
 
 
- 
+
 
     <!-- Pagination links -->
     <div class="pagination">
@@ -50,5 +50,5 @@ permalink : /travel/
         {% else %}
             <span class="inactive next">Next</span>
         {% endif %}
-    </div> 
+    </div>
 </div>

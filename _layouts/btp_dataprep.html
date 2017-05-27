@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <!-- Mirrored from shamsoft.net/thedocs/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Sep 2016 07:42:27 GMT -->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="An Academic Project by Achyut Joshi, Himanshu Sikaria & Tarun Devireddy under Dr Vivek Vijay where various predictive models like SVM, Random Forests, Neural Networks, etc are used to suggest a user whether the prices of a particular flight is expected to rise or fall in future.">
+    <meta name="keywords" content="datascience, machine learning, flight prices prediction, prediction, india, academic project, achyutjoshi, achyut, iitjodhpur">
+
 
     <title>Flight Prices Prediction</title>
 
@@ -59,7 +60,7 @@
             <li>
               <a href = {{site.baseurl}}/btp/results>Results & Conclusions</a>
             </li>
-            
+
 
           </ul>
 
@@ -69,12 +70,12 @@
 
         <!-- Main content -->
         <article class="col-md-9 col-sm-9 main-content" role="main">
-          
+
           <header>
             <h1>Data Preparation</h1>
             <p>The kind of data that we collected from the python script was very raw and needed a lot of work. For instance, the price was a character type and not an integer. Moreover, for any model to work efficiently, certain variables need to be introduced by combining or changing the existing variables. </p>
             <p>This section focuses on various techniques we used to clean and prepare the data.</p>
-            
+
             <ol class="toc">
               <li><a href="#generic">Generic Exploration & Cleaning</a></li>
               <li><a href="#data_spec">Data Specific Methods</a></li>
@@ -87,7 +88,7 @@
             <h2 id="generic">Generic Exploration & Cleaning</h2>
             <img class="img-shadow img-responsive center-block" src="/assets/images/btp/data1.png"></img>
             <br>
-            <p>The collected data for each route looks like the one above. Because of the large number of flights in the busy routes like Delhi Bombay, the data collected over time is over a million points and hence efficiently handling such big data for faster computation is the first aim. In R the <b>‘fread’ function in ‘data.table’</b> package was used. 
+            <p>The collected data for each route looks like the one above. Because of the large number of flights in the busy routes like Delhi Bombay, the data collected over time is over a million points and hence efficiently handling such big data for faster computation is the first aim. In R the <b>‘fread’ function in ‘data.table’</b> package was used.
             <br>
             <pre><code>bomdel <- fread("bomdel.csv")</code></pre>
             </p>
@@ -128,21 +129,21 @@
                 <h5>Outliers</h5>
                 <p>We are focusing on minimizing the flight prices, hence we considered only the economy class with the following conditions: <br>
 
-                a) The minimum value of total fare for all days for a particular flight id  is less than the mean fare of all the flights 
+                a) The minimum value of total fare for all days for a particular flight id  is less than the mean fare of all the flights
                 b) The duration of the journey is less than 3 times the mean duration.
-                
+
 
                 </p>
               </li>
             </ul>
 
 
-            
+
 
           </section>
 
           <section>
-            
+
             <h2 id="data_spec">Data Specific Methods</h2>
             <img class="img-shadow img-responsive center-block" src="/assets/images/btp/dept_btp.png"></img>
             <br>
@@ -153,7 +154,7 @@
             </ol>
             <br>
             <p>For the above example, if we choose the first method we would need to make a total of 44 predictions (i.e. run a machine learning algorithm 44 times) for a single query. This also cascades the error per prediction decreasing the accuracy. Hence, the <b>second method seems to be a better way to predict</b>, wait or buy which is a simple binary classification problem. But, in this method, we would need to predict the days to wait using the historic trends.</p>
-            
+
             <p>For this we again have two options:</p>
             <ol>
             <li>We do the <b>predictions for each flight id</b>. The problem with this is that, if there is a change in flight id by the airline (which happens frequently) or there is an introduction or a new flight for a specific route then our analysis would fail.</li>
@@ -169,7 +170,7 @@
 </li>
             <li><b>Minimum fare:</b> This does not give a very good insight of the trend, as a minimum value could occur because of some offer by an airline.
 </li>
-            <li><b>First Quartile: </b> This is a good measure as we are focusing on minimizing the fare and we do not want to consider the flights with high fares. 
+            <li><b>First Quartile: </b> This is a good measure as we are focusing on minimizing the fare and we do not want to consider the flights with high fares.
 </li>
             <li><b>Custom Fare:</b> This is the fare giving more weightage to recent price trend.<br>
             <code>Total_customFare  = w*(First Quartile for entire time period) + (1-w)*(First quartile of last x days)</code><br>(We have considered: w = 0.7 and x = & days)
@@ -181,7 +182,7 @@
 </code><br> (Here, d is the days to departure and D is the days to departure for the current row.)
 </p>
 
-            
+
 <section>
             <h2 id="trend">Trend Analysis</h2>
             <p>After creating the train file, we shift to create another dataset which is used to <b>predict number of days to wait</b>. For this, we used trend analysis on the original dataset.</p>
@@ -206,11 +207,11 @@
 <br>
 
 
-            
+
 
           </section>
-          
-          
+
+
         </article>
         <!-- END Main content -->
       </div>

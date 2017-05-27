@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="An Academic Project by Achyut Joshi, Himanshu Sikaria & Tarun Devireddy under Dr Vivek Vijay where various predictive models like SVM, Random Forests, Neural Networks, etc are used to suggest a user whether the prices of a particular flight is expected to rise or fall in future.">
+    <meta name="keywords" content="datascience, machine learning, flight prices prediction, prediction, india, academic project, achyutjoshi, achyut, iitjodhpur">
+
 
     <title>Flight Prices Prediction</title>
 
@@ -42,7 +43,7 @@
 <!-- End Jekyll SEO tag -->
 
   </head>
-  
+
 
 
     <main class="container">
@@ -79,7 +80,7 @@
             <li>
               <a href = /btp/results>Results & Conclusions</a>
             </li>
-            
+
 
           </ul>
 
@@ -89,17 +90,17 @@
 
         <!-- Main content -->
         <article class="col-md-9 col-sm-9 main-content" role="main">
-          
+
           <header>
             <h1>Data Collection</h1>
             <p>Data Collection is one of the most important aspect of this project. There are various sources of airfare data on the Web, which we could use to train our models. A multitude of consumer travel sites supply fare information for multiple routes, times, and airlines.</p>
             <p>We tried various sources ranging from many APIs to scraping consumer travel websites. In this section we have discussed in detail on these various sources and the importance of parameters that are collected.</p>
-            
+
             <ol class="toc">
               <li><a href="#datasources">Data Sources</a></li>
               <li><a href="#whatwhen">What and When we collected?</a></li>
               <li><a href="#automate">Automating the Collection</a></li>
-              
+
             </ol>
           </header>
 
@@ -120,7 +121,7 @@
             <h2 id="whatwhen">What and When we collected?</h2>
             <h5>What?</h5>
             <p>The basic structure of the script successfully extracts information from the Makemytrip website and outputs a csv data file. Now an important aspect is to decide the parameters that might be needed for the flight prediction algorithm.</p>
-            <p>Makemytrip returns numerous variables for each flight returned. However not all are required and thus we selected the following - 
+            <p>Makemytrip returns numerous variables for each flight returned. However not all are required and thus we selected the following -
             <ol>
             <li>Origin City</li>
             <li>Destination City</li>
@@ -146,24 +147,24 @@
             <br>
             <p>As you can observe the cascading effect of dates. Due to this, we have only one day's data of flights having a 92 days to departure. Therefore to restrict our model to 45 days to departure, we had to collevt data till 92 days to departure to get enough valid data.</p>
             <br>
-            
+
 
           </section>
           <section>
-            
+
             <h2 id="automate">Automating the Collection</h2>
             <p>The above script had to be run daily to get the required data. Manually running the file was senseless because there are many ways to automate the script. There are multiple cloud servers like Microsoft Azure or AWS EC2 which can be used to host the python script.</p>
             <p>We used Microsoft Azure initially and the process of setting up a virtual server is quite easy. However, the free trial period was limited and thus we had to shift to our institute's local server. Linux system provides a beautiful option called Cronjobs. It is an in-built scheduling option that is very easy to use. You can read a detailed blog on automating python script <a target="_blank" href = "https://achyutjoshi.github.io/datascience/how-to-run-automated-python-script-on-remote-machine">here</a>.</p>
 
-            
+
           </section>
 
 
-          
 
 
-          
-          
+
+
+
         </article>
         <!-- END Main content -->
       </div>

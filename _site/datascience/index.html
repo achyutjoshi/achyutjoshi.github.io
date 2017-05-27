@@ -101,6 +101,12 @@
             
                 
                 
+                <a class="page-link" href="/books/">Books</a>
+                
+                
+            
+                
+                
                 
             
                 
@@ -154,12 +160,6 @@
                 
             
                 
-                
-                
-            
-                
-                
-                <a class="page-link" href="/reviews/">Reviews</a>
                 
                 
             
@@ -284,98 +284,53 @@
             </li>
         
     </ul>
-</div> 
+</div>
 <br>
 <br>
 
 -->
 
 <div class="home">
-  
+
     
 
     <article class="post">
-      <h4 class="post-title"><a class="post-link" href="/datascience/how-to-run-automated-python-script-on-remote-machine">How to run automated python scripts on remote machines</a></h4>
+      <h4 class="post-title"><a class="post-link" href="/datascience/how-to-run-automated-python-script-on-remote-machine">How to run automated python scripts on remote machines</a>
 
-      <time datetime="2016-08-22T00:43:39+05:30" class="post-date">August 22, 2016</time>
+      </h4>
+        <time datetime="2016-08-22T00:43:39+05:30" class="post-date">August 22, 2016</time>
+        <br />
 
-      <p>I am currently working on the B.Tech Project that involves predicting flight prices. To build the models, I needed historical flight prices. Unfortunately, such data is not available and so I had to build a scraper to extract flight prices daily and save it in a csv file.</p>
-
-<!--more-->
-
-<p>Building a scraper is no rocket science. If you are using python, there are multiple frameworks like Scrapy, which are very powerful tools. My particular problem was not a complex one, and therefore I manually built a script which extracts the useful fields from Makemytrip website. You can look at the code <a href="https://github.com/achyutjoshi/Flight-Prices-Scraper" target="_blank">here</a>.</p>
-
-<p>Now, the most challenging part of this whole process was to schedule it. I wanted my script to run on a particular time, daily and everytime it runs, it should append the values to the original csv file. Scheduling it on my local machine was not a solution, because I cannot keep it running all the time.</p>
-
-<p>I had two options -</p>
-
-<ol>
-  <li>Run it on my institute’s server</li>
-  <li>Use virtual machines provided by <a href="http://azure.microsoft.com/" target="_blank">Microsoft Azure</a> or <a href="http://aws.amazon.com" target="_blank">AWS</a></li>
-</ol>
-
-<p>Due to some reason, the institute’s server was not responding. So the next best possible option was to use Microsoft Azure. AWS is better with respect to performance, but you need to be technically very sound to set up the server using AWS.So, I setup a virtual machine using the least possible configuration on Azure. It provides us with a INR 12k free credits on signing up. I used SSH to login into my remote system and installed python and all the libraries that were needed.</p>
-
-<p>Linux system provides a beautiful option called Cronjobs. It is an in-built scheduling option that is very easy to use. The major problem you can face when scheduling your scripts is the permissions of the file. Do make sure that you have given execution rights to all users(to be on the safer side). Also, if your script is writing/reading a file, make sure those files have the respective permissions.</p>
-
-<p>These are the few links that will help you to setup a cronjob and run a python script -</p>
-
-<ol>
-  <li><a href="http://www.adminschoice.com/crontab-quick-reference" target="_blank">Quick Reference</a></li>
-  <li><a href="http://stackoverflow.com/questions/8727935/execute-python-script-on-crontab" target="_blank">Stack OverFlow - Python Script</a></li>
-</ol>
-
-<p>To conclude, data science frequently requires the tedious job of collecting data. However, if you just learn the basics of scraping and scheduling scripts on a remote machine, your life will be a lot more easier.</p>
+      I am currently working on the B.Tech Project that involves predicting flight prices. To build the models, I needed historical flight prices. Unfortunately, such data is not available and so I had to build a scraper to extract flight prices daily and save it in a csv file.
 
 
 
-      <hr />
+
+
+
     </article>
     
 
     <article class="post">
-      <h4 class="post-title"><a class="post-link" href="/datascience/one-hot-encoding">One Hot Encoding in Data Science</a></h4>
+      <h4 class="post-title"><a class="post-link" href="/datascience/one-hot-encoding">One Hot Encoding in Data Science</a>
 
-      <time datetime="2016-08-15T00:43:39+05:30" class="post-date">August 15, 2016</time>
+      </h4>
+        <time datetime="2016-08-15T00:43:39+05:30" class="post-date">August 15, 2016</time>
+        <br />
 
-      <p>I consider myself a newbie for the data analysis world. What I have understood so far is that data preparation is the most important step while solving any problem. Each predictive  model requires a certain type of data and in a certain way. For instance, tree based boosting models like xgboost require all the feature variables to be numeric. While solving the San Francisco Crime Classification problem on Kaggle, I stumbled upon different ways to handle categorical variables. One of the method to convert a categorical input variable into a continuous one is One Hot Encoding/ Dummy coding.</p>
-
-<!--more-->
-
-<p>Many a times we have categorical variables with many levels. For example in the SF Crime Classification problem, there were 39 different levels of crime. Now many learning algorithms either learn a single weight per feature, or they use distances between samples. In both cases having a categorical variable with more levels will decrease the accuracy of the model. Let us look into both cases.</p>
-
-<p><strong>Linear Model</strong> :</p>
-
-<p>Suppose you have a dataset having only a single categorical feature “colour”, with values “Blue”, “Green” and “Red”. Assume, that these are encoded as 0, 1 and 2. You then have a weight w for this feature in a linear classifier, which will make some kind of decision based on the constraint w×x + b &gt; 0, or equivalently w×x &lt; b.</p>
-
-<p>The problem now is that the weight w cannot encode a three-way choice. The three possible values of w×x are 0, w and 2×w. Either these three all lead to the same decision (they’re all &lt; b or ≥b) or “Blue” and “Green” lead to the same decision, or “Green” and “Red” give the same decision. There’s no possibility for the model to learn that “Blue” and “Red” should be given the same label, with “French” the odd one out.</p>
-
-<p>Dummy coding will convert this colour feature into three features – ‘isgreen’ ‘isred’ and ‘isblue. By this, we effectively blow up the feature space to three features, which will each get their own weights, so the decision function is now w[Blue]x[Blue] + w[Green]x[Green] + w[Red]x[Red] &lt; b, where all the x’s are booleans. This easily caters the problem we were having before.</p>
-
-<p><strong>Distance-Based</strong> :</p>
-
-<p>Similarly, any learner based on standard distance metrics (such as k-nearest neighbors) between samples will get confused without one-hot encoding. With the naive encoding and Euclidean distance, the distance between Green and Red is 1. The distance between Red and Blue is 2. But with the one-hot encoding, the pairwise distances between [1, 0, 0], [0, 1, 0] and [0, 0, 1] are all equal to √2.</p>
-
-<p>However, this is not true for all models. Decision trees and derived models such as random forests, if deep enough, can handle categorical variables without one-hot encoding.</p>
-
-<p><strong>Other Methods used for Encoding</strong> –</p>
-
-<ol>
-  <li>Ordinal Coding – Assign Numbers to each categories</li>
-  <li>Binary: first the categories are encoded as ordinal, then those integers are converted into binary code, then the digits from that binary string are split into separate columns.  This encodes the data in fewer dimensions that one-hot, but with some distortion of the distances.</li>
-</ol>
-
-<p>References: Quora &amp; Analytics Vidya</p>
+      I consider myself a newbie for the data analysis world. What I have understood so far is that data preparation is the most important step while solving any problem. Each predictive  model requires a certain type of data and in a certain way. For instance, tree based boosting models like xgboost require all the feature variables to be numeric. While solving the San Francisco Crime Classification problem on Kaggle, I stumbled upon different ways to handle categorical variables. One of the method to convert a categorical input variable into a continuous one is One Hot Encoding/ Dummy coding.
 
 
 
-      <hr />
+
+
+
     </article>
     
 
 
 
- 
+
 
     <!-- Pagination links -->
     <div class="pagination">
@@ -385,7 +340,7 @@
         
             <span class="inactive next">Next</span>
         
-    </div> 
+    </div>
 </div>
 
   </article>

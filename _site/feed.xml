@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 May 2017 15:25:37 +0530</pubDate>
-    <lastBuildDate>Mon, 15 May 2017 15:25:37 +0530</lastBuildDate>
+    <pubDate>Sat, 27 May 2017 11:38:17 +0530</pubDate>
+    <lastBuildDate>Sat, 27 May 2017 11:38:17 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -304,11 +304,11 @@ college, and then how this would have changed our stay at IIT Jodhpur.&lt;/p&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Sat, 11 Feb 2017 01:43:39 +0530</pubDate>
-        <link>http://localhost:4000/reviews/power-of-habit</link>
-        <guid isPermaLink="true">http://localhost:4000/reviews/power-of-habit</guid>
+        <link>http://localhost:4000/books/power-of-habit</link>
+        <guid isPermaLink="true">http://localhost:4000/books/power-of-habit</guid>
         
         
-        <category>reviews</category>
+        <category>books</category>
         
       </item>
     
