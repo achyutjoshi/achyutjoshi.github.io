@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from shamsoft.net/thedocs/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Sep 2016 07:42:27 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Data Science Project by Achyut Joshi to understand different health trends in Nagpur District. It was a part of the recruiting challenge by a Delhi based startup Socialcops">
+    <meta name="keywords" content="datascience, machine learning, policy making, data intelligence, socialcops, delhi, startup, prediction, india, academic project, achyutjoshi, achyut, iitjodhpur">
+
+
+    <title>Analysing Health Data of Nagpur District</title>
+
+    <!-- Styles -->
+    <link href="assets/css/theDocs.all.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../apple-touch-icon.html">
+    <link rel="icon" href="assets/img/favicon.ico">
+  {% seo %}
+
+  </head>
+
+  <header class="site-header navbar-fullwidth">
+
+      <!-- Top navbar & branding -->
+      <nav class="navbar navbar-default">
+        <div class="container">
+
+          <!-- Toggle buttons and brand -->
+
+
+            <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+
+        </div>
+      </nav>
+      <!-- END Top navbar & branding -->
+
+    </header>
+
+
+    <main class="container">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-md-3 col-sm-3 sidebar">
+
+          <ul class="sidenav dropable sticky">
+            <li><a href= {{site.baseurl}}/socialcophealth/overview>Overview</a></li>
+            <li>
+              <a class="active" href= {{site.baseurl}}/socialcophealth/approach>Approach to the Problem</a>
+            </li>
+
+            <li>
+              <a  href= {{site.baseurl}}/socialcophealth/analysis >Analysis</a>
+            </li>
+            <li>
+              <a href = {{site.baseurl}}/socialcophealth/learnings >Key Learnings</a>
+            </li>
+            
+
+
+          </ul>
+
+        </aside>
+        <!-- END Sidebar -->
+
+
+        <!-- Main content -->
+        <article class="col-md-9 col-sm-9 main-content" role="main">
+
+          <header>
+            <h1>Approach to the Problem</h1>
+            <p>The given problem statement of identifying important health trends was very vague which made a systematic approach a necessity. Moreover the end report had to made for a non-technical audience and thus constrained the usuage of technical jargons. </p>
+            <p>This section focuses on the step-by-step approach used to solve the challenge.</p>
+
+
+          </header>
+
+          <section>
+            <ul class="step-text">
+              <li>
+                <h5>Consolidation of all Excel Files</h5>
+                <p>As mentioned, there were over 150 individual excel files provided. Therefore the first task at hand was to develop a script that reads all excel files and merges them into one data frame in R.</p>
+              </li>
+
+              <li>
+                <h5>Understanding all the variables</h5>
+                <p>There were an over 100 variables ranging from <i>Total Pregnant Women</i> to <i>Number of Child Deaths because of Respiratory Disease</i>. Because of the lack of domain knowledge, each variable had to be studied and the its significance understood. For instance, <i>why are IFA tablets important for pregant women and how does it affect a child's health after it is born?</i> This particular step became very important in the later stages because every variable and its affects were known comprehensively. </p>
+              </li>
+
+              <li>
+                <h5>Background research on the subject and identifying focus areas</h5>
+                <p>Apart from understanding the variables, researching about the NRHM(National Rural Health Mission) became very crucial. The given dataset was collected as a part of that program. After due research, I was able to divide the whole study into 4 focus groups - 1) <b>Maternal Health</b>
+                  2) <b>Child Health – Immunisation & Disease Control</b>
+                  3) <b>Family Planning - Population Growth Stability</b>
+                  4) <b>Adult & Adolescent Health</b>.
+                  And this division made the study were systematic and modular.
+                </p>
+              </li>
+
+              <li>
+                <h5>Making relations between the data and the research</h5>
+                <p>Once I had the focus groups and the required understanding about the variables, I had to go back to the dataset and understand how I could corelate all the knowledge and start analysing it. </p>
+              </li>
+
+              <li>
+                <h5>Taking up each focus area and analysing for trends</h5>
+                <p>After much research and studying, I finally got down to understanding the trends and analysing the data. I took up each focus group, which were more or less independent of each other and started to play with the respective subset. </p>
+              </li>
+
+              <li>
+                <h5>Formulating Indicators for the focus areas</h5>
+                <p>Another important deliverable was to formulate important health indicators for the dataset. These indicators were either intutive, like the average mortality rate, or theoretical, like the maternal mortality rate(which are defined by WHO). These indicators further helped to discover trends in the data. </p>
+              </li>
+
+            </ul>
+
+
+
+
+          </section>
+
+
+
+
+        </article>
+        <!-- END Main content -->
+      </div>
+    </main>
+
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/theDocs.all.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+
+
+</html>

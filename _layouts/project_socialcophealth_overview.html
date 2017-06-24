@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Data Science Project by Achyut Joshi to understand different health trends in Nagpur District. It was a part of the recruiting challenge by a Delhi based startup Socialcops">
+    <meta name="keywords" content="datascience, machine learning, policy making, data intelligence, socialcops, delhi, startup, prediction, india, academic project, achyutjoshi, achyut, iitjodhpur">
+
+    <title>Analysing Health Data of Nagpur District</title>
+
+    <!-- Styles -->
+    <link href=assets/css/theDocs.all.min.css rel="stylesheet">
+    <link href=assets/css/custom.css rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../apple-touch-icon.html">
+    <link rel="icon" href="assets/images/favicon.ico">
+   {% seo %}
+
+  </head>
+
+  <body>
+
+
+
+    <header class="site-header navbar-fullwidth">
+      <nav class="navbar navbar-default">
+        <div class="container">
+
+          <!-- Toggle buttons and brand -->
+
+
+            <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+
+        </div>
+      </nav>
+
+      <div class="banner banner-full-height overlay-white" style="background-image: url(/assets/images/homepage2.jpg);">
+        <div class="container text-left">
+          <h1 class="text-teal"><strong>Analysing Health Data of Nagpur District</strong></h1>
+          <h5 class="text-uppercase">Discovering significant health trends to help devise a better strategy for the policy makers</h5>
+          <br>
+          <p class="hidden-xs hidden-sm">As a part of a recruitment challenge by Socialcops, governmental data was cleaned, studied and analysed to discover trends that will help improve the medical standard of the district.</p>
+          <br>
+
+        </div>
+      </div>
+    </header>
+
+
+
+    <main class="container">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-md-3 col-sm-3 sidebar">
+
+          <ul class="sidenav dropable sticky">
+            <li><a class="active" href= {{site.baseurl}}/socialcophealth/overview>Overview</a></li>
+            <li>
+              <a href= {{site.baseurl}}/socialcophealth/approach>Approach to the Problem</a>
+            </li>
+
+            <li>
+              <a  href= {{site.baseurl}}/socialcophealth/analysis >Analysis</a>
+             </li>
+
+            <li>
+              <a  href = {{site.baseurl}}/socialcophealth/learnings >Key Learnings</a>
+
+            </li>
+
+
+
+
+
+
+          </ul>
+
+        </aside>
+        <!-- END Sidebar -->
+
+
+        <!-- Main content -->
+        <article class="col-md-9 col-sm-9 main-content" role="main">
+
+          <header>
+            <h1>About the Project</h1>
+            <p>Socialcops is a data intelligence startup based out of Delhi. As a part of their application process for Data for Impact Fellowship, I was provided with this task, which I had to complete in 7 days. The whole project was done using R and Excel.</p>
+
+            <ol class="toc">
+              <li><a href="#prob">Problem Statement</a></li>
+              <li><a href="#datastruc">Data Structuring </a></li>
+              <li><a href="#nrhm">Background Information on NRHM</a></li>
+            </ol>
+          </header>
+
+          <section>
+            <h2 id="prob">Problem Statement</h2>
+            <p>The main problem statement given was - <i>"What analyses should be undertaken by SocialCops to help the Government of Maharashtra's Health Department to identify the root causes of  the extreme Health trends in Nagpur?" </i></p>
+            <p>Tasks which were needed to be done - </p>
+            <ol>
+            <li>Clean, structure, and prepare the data for the analysis so that you can compare all the files together. </li>
+            <li>Prepare a methodology to analyse the data and report 5 important health trends and figure out the reasons behind at least 1 of them. </li>
+            <li>Figure out the variables that will help you study the health trends, as well as  the explanatory variables that will help you understand the reasons for the current health trends. Give us the list of indicators that you decide to use for the analysis. </li>
+
+            </ol>
+
+
+            </p>
+
+            <br>
+
+
+
+          </section>
+
+          <section>
+
+            <h2 id="datastruc">Data Structuring</h2>
+            <p>
+            The National Rural Health Mission (NRHM), now under National Health Mission is an initiative undertaken by the Government of India to address the health needs of under-served rural areas. A sample of the data for NRHM Maharashtra, Public Healthcare Centre (PHC), had been shared along with the task.
+            </p>
+            <p>
+            The data given, was in the form of over 150 individual excel files, each representing the health data of that particular area. To consolidate, the first job at hand was to understand this arrangement and merge all the files.
+            </p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/1.png"></img>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/2.png"></img>
+            <br>
+            <p>
+              Each excel file was arranged like the above snapshot, each row representing various indicators collected from April 2015 - March 2016. So as mentioned, all files had to be merged into one data file so that analysis can be easily performed on the whole set.
+            </p>
+
+          </section>
+
+
+          <section>
+
+            <h2 id="nrhm">Background Information on NRHM</h2>
+            <p>The National Rural Health Mission (NRHM), now under National Health Mission is an initiative undertaken by the Government of India to address the health needs of under-served rural areas. Launched in April 2005 by Indian Prime Minister Manmohan Singh, the NRHM was initially tasked with addressing the health needs of 18 states that had been identified as having weak public health indicators.
+</p>
+            <p>
+              The NRHM is divided into 4 components –
+            </p>
+            <ol>
+            <li>NHM Finance</li>
+            <li>Health System Strengthening</li>
+            <li>RMNCH+A (Reproductive, Maternal, New Born, Child, Adolescent Health)</li>
+            <li>National Disease Control</li>
+            </ol>
+            <br>
+            <p>
+              The decentralized Indian Healthcare system aims in providing medical and healthcare support to the most underserved regions of the country. The primary level consists of <b>ASHA(Accredited Social Heath Activist) workers</b>, who are selected amongst the village populations and are given basic healthcare training. The next level consists of <b>SCs(Sub-Centres)</b> & <b>Primary Health Centres </b>followed by <b>CHC(Community Health Centres)</b>. The last level is made up by <b>District Hospitals</b>. Moreover, to motivate citizens to use public healthcare system, various schemes like JSY(Janani Suraksha Yojna) have been started which also includes monetary incentives.
+            </p>
+            <p>
+              Broadly, the major sectors of the programme can be divided into the following categories –
+            </p>
+            <ol>
+            <li>Maternal Health</li>
+            <li>Child Health – Immunisation & Disease Control</li>
+            <li>Family Planning - Population Growth Stability</li>
+            <li>Adult & Adolescent Health</li>
+            </ol>
+
+          </section>
+
+
+
+        </article>
+        <!-- END Main content -->
+      </div>
+    </main>
+
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/theDocs.all.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+
+</html>

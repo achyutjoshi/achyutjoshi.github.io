@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from shamsoft.net/thedocs/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Sep 2016 07:42:27 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Data Science Project by Achyut Joshi to understand different health trends in Nagpur District. It was a part of the recruiting challenge by a Delhi based startup Socialcops">
+    <meta name="keywords" content="datascience, machine learning, policy making, data intelligence, socialcops, delhi, startup, prediction, india, academic project, achyutjoshi, achyut, iitjodhpur">
+
+
+    <title>Analysing Health Data of Nagpur District</title>
+
+    <!-- Styles -->
+    <link href="assets/css/theDocs.all.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../apple-touch-icon.html">
+    <link rel="icon" href="assets/img/favicon.ico">
+  {% seo %}
+
+  </head>
+
+  <header class="site-header navbar-fullwidth">
+
+      <!-- Top navbar & branding -->
+      <nav class="navbar navbar-default">
+        <div class="container">
+
+          <!-- Toggle buttons and brand -->
+
+
+            <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+
+        </div>
+      </nav>
+      <!-- END Top navbar & branding -->
+
+    </header>
+
+
+    <main class="container">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-md-3 col-sm-3 sidebar">
+
+          <ul class="sidenav dropable sticky">
+            <li><a href= {{site.baseurl}}/socialcophealth/overview>Overview</a></li>
+            <li>
+              <a href= {{site.baseurl}}/socialcophealth/approach>Approach to the Problem</a>
+            </li>
+
+            <li>
+              <a class = "active" href= {{site.baseurl}}/socialcophealth/analysis >Analysis</a>
+            </li>
+            <li>
+              <a  href = {{site.baseurl}}/socialcophealth/learnings >Key Learnings</a>
+            </li>
+
+
+
+          </ul>
+
+        </aside>
+        <!-- END Sidebar -->
+
+
+        <!-- Main content -->
+        <article class="col-md-9 col-sm-9 main-content" role="main">
+
+          <header>
+            <h1>Analysis and Important Trends</h1>
+            <p>The process involved rigourous data cleaning and preparation. There were multiple imputations, various NA value corrections and data manipulations involved. I am not covering the data preparation in this section, but feel free to drop me a line and I will gladly share the codes. </p>
+            <p>This section focuses on the four important health trends which I could discover from my analysis on the given dataset.</p>
+
+            <ol class="toc">
+              <li><a href="#reps">Regarding Respiratory Problems</a></li>
+              <li><a href="#vita">Different Vitamin A doses</a></li>
+              <li><a href="#steri">Male and Female Sterilizations</a></li>
+              <li><a href="#vacc">Vaccination in the region</a></li>
+
+
+            </ol>
+          </header>
+
+          <section>
+            <h2 id="reps">Regarding Respiratory Problems</h2>
+
+            <h5>Respiratory Problems are the major cause of diseases and deaths in the region. Moreover, winter months are more susceptible to such problems.</h5>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/ana_1.png" height = "300em" width = "450em"></img>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/ana_2.png" height = "300em" width = "450em"></img>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/ana_3.png" height = "300em" width = "450em"></img>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/ana_4.png" height = "300em" width = "450em"></img>
+            <br>
+            <p> Major Causes for <b>Infant Asphyxia</b> are – </p>
+            <ol>
+              <li>Low Birth Weight in new-borns</li>
+              <li>Anaemic mother </li>
+              <li>Delivery Complications</li>
+            </ol>
+
+            <p>With respect to <b>respiratory deaths and illness amongst children and adults</b>, the major causes can be - </p>
+            <ol>
+              <li>High air pollution due to 2 thermal power plants in the region</li>
+              <li>Increase in smoking habits in early youths</li>
+            </ol>
+
+
+            <p> Moreover, the probability of respiratory problems increase in winter months because of the cold & dry air during that time we breathe, which in turn affects the respiratory tract leading to several health problems.
+</p>
+
+
+
+
+
+          </section>
+
+          <section>
+
+            <h2 id="vita">Vitamin A doses</h2>
+            <h5>Number of vitamin A doses administered between 9 months and 5 years drastically decreases from the 5th dose. However, number of doses administered from 5th to 9th doses are similar.</h5>
+            <br>
+            <p>According to WHO Guidelines, children between 12-59 months of age should be administered with Vitamin A doses every 4-6 months. Therefore, it approximately sums to 9 doses.
+</p>
+<img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/ana_5.png" height = "300em" width = "450em"></img>
+<br>
+<img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/ana_6.png" height = "300em" width = "450em"></img>
+<br>
+<img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/ana_7.png" height = "300em" width = "450em"></img>
+<br>
+            <p>The above graphs clearly shows that number of children administered with the 1st dose is higher than the 5th and the 9th
+              in most of the cases. Moreover, the number are very similar for the 5th & the 9th doses. Therefore, if <i>the NRHM scheme encourages
+              (through different incentives) to bring more children till the 5th dose, then it is highly probable that they will complete the full 9 doses</i></p>
+
+
+
+<section>
+            <h2 id="steri">Male and Female Sterilizations</h2>
+            <h5>Male Sterilization is only 6.09% of the total sterilization in the region. Moreover, spacing methods are yet not  common among Females. Condoms constitute 81.3% of the total spacing methods like IUDs, Oral Pills, condoms etc.
+</h5>
+<br>
+<img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/ana_8.png" height = "300em" width = "450em"></img>
+<br>
+<img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/ana_9.png" height = "300em" width = "450em"></img>
+<br>
+<img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/ana_10.png" height = "300em" width = "450em"></img>
+<br>
+<p>The following major conclusions can be inferred from the above graphs –
+</p>
+<ol>
+  <li>Male participation in family planning remains negligible, especially in sterilization(NSV). This is majorly because men in India are not willing to get involved in family planning. Also, major misconceptions about vasectomy don’t help make it any more popular. Some men think it will make them impotent. Others relate it to castration. Government needs to bring in more awareness about the importance of family planning and eradicate the common misconceptions.
+</li>
+  <li>On the other hand, contraceptive methods like condoms(for men) and IUDs, oral pills,etc (for females) are more common amongst men. This is majorly because condoms are comparatively cheaper and easier to use. On the other hand, IUDs are painful and thus most women fear them. Many Indian women reject the IUD, opting instead to depend on less reliable methods or no method at all; doctors report that many women would prefer to have abortions rather than have an IUD inserted.
+</li>
+</ol>
+
+<br>
+<p>Looking at the bright side, this region has a higher usage of Oral Pills and IUDs than female sterilizations, which shows that gradually the scenario is changing. Moreover, currently there are no sterilization facilities available at primary/SC level.
+</p>
+
+
+
+
+
+          </section>
+
+          <section>
+                      <h2 id="vacc">Vaccination in the Region</h2>
+                      <h5>The New Pentavalent Vaccine drive is being adapted by the region</h5>
+                      <br>
+                      <p>Pentavalent vaccine contains five antigens i.e. Hepatitis B, Diphtheria + Pertussis + Tetanus (DPT – current trivalent vaccine) and Haemohilus influenza b (Hib) vaccine. Pentavalent vaccination is provided to the children at the age of 6, 10 and 14 weeks as primary dose. The vaccine has replaced DPT and Hep B vaccine in the immunization schedule.
+                      </p>
+                      <p>Maharashtra Government launched the ambitious pentavalent vaccination programme across the state in November 2015. The new vaccines comes as a part of intensive immunization drive(Mission Indradhanush & National Immunisation Schedule) across India after Prime Minister Narendra Modi announced to provide total immunization to over 90 per cent infants by 2020.
+                      </p>
+                      <br>
+                      <img class="img-shadow img-responsive center-block" src="/assets/images/socialcops1/ana_11.png" height = "300em" width = "450em"></img>
+                      <br>
+                      <p>
+                        In the above graph we can clearly see that individual DTP & Hepatitis vaccines are decreasing after December 2015 while the new pentavalent is increasing. Moreover, due to the intensive awareness campaigns, we can clearly see the increase in OPV3 after December 2015.
+                      </p>
+                      
+                    </section>
+
+
+
+        </article>
+        <!-- END Main content -->
+      </div>
+    </main>
+
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/theDocs.all.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+
+
+</html>
