@@ -9,7 +9,9 @@ description : When Breath Becomes Air is a non-fiction autobiographical book wri
 keywords : "book, when breath becomes air, memoir, book review, paul kalanithi, bill gates recommendation, kindle, when breath becomes air book, achyutjoshi, achyut, iitjodhpur, bill gates notes, india, death, motivation, Paul Kalanithi, Atul Gawande, Lucy Kalanithi, Kalanithi"
 ---
 
-I have never been a big fan of memoirs or biographies. However, [Bill Gate's blog](https://www.gatesnotes.com/Books/When-Breath-Becomes-Air){:target="_blank"} on Paul Kalanithi's autobiography motivated me to give this genre a try. I remember picking up this book on a train journey, and finishing it in one go.
+I have never been a big fan of memoirs or biographies. However, Bill Gate's on Paul Kalanithi's autobiography motivated me to give this genre a try. I remember picking up this book on a train journey, and finishing it in one go.
+
+<!--more-->
 
 Death is never easy, especially when you know it is coming. Paul, a young ambitious surgeon who was at his peak, suddenly finds out that he is diagnosed with terminal cancer. When breath becomes Air, is the journey from this realization to his very last breath.
 
