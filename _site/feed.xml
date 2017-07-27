@@ -6,9 +6,67 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Jul 2017 22:36:48 +0530</pubDate>
-    <lastBuildDate>Tue, 25 Jul 2017 22:36:48 +0530</lastBuildDate>
+    <pubDate>Fri, 28 Jul 2017 00:06:39 +0530</pubDate>
+    <lastBuildDate>Fri, 28 Jul 2017 00:06:39 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Why to keep a log file and how to keep it in R?</title>
+        <description>&lt;p&gt;One of the first things we are taught in Programming 101 is to write a well structured &amp;amp; commented code. And as any newbie would, we ignore this lesson and focus on achieving the end result. Continuing the same learnings, I coded a R(the R language!) script to be run on files amounting to 30GBs! This was my first professional experience after my graduation and I did not want to fuck up. So, I structured the code, wrote all the comments and ran it on all the files. And what happened next?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;All files were not structured the same way and so my script broke for a few files, leaving my final dataset void of some very important data. Moreover, my script was deleting some rows from every file, and thus again I was tampering with the original dataset without any logical and concrete reason behind it. It might not sound something as significant as not achieving the final goal, but believe me, in &lt;em&gt;data science if your data is not representative of the true dataset, your analysis is considered void.&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Log file is a file that records events that occur during a process. It basically helps to track back the process and discover if anything has gone wrong.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Reasons to keep a Log File&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So how to account for such cases? &lt;em&gt;Maintain a Log File&lt;/em&gt;! If you need more reasons for maintaining a log file, here are few I can think of -&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Large datasets follow Murphy’s Law. &lt;em&gt;Anything that can go wrong, will go wrong.&lt;/em&gt; And log file is the best way to keep a check&lt;/li&gt;
+  &lt;li&gt;While running a common script on several multiple files, log file will give you a gist of the whole process&lt;/li&gt;
+  &lt;li&gt;Log file will help for future reference, for your own self and also for others who will use the script or the dataset again.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;What to write in a log file?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So, okay! I know log file is important, but what do I write in the log file? &lt;em&gt;It depends on the use case.&lt;/em&gt; As someone who works with data daily, I usually maintain the following parameters in my log file -&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Total number of Files the script was run for&lt;/li&gt;
+  &lt;li&gt;File names&lt;/li&gt;
+  &lt;li&gt;Number of rows in each file (before and after processing)&lt;/li&gt;
+  &lt;li&gt;Number of Columns in each file (before and after processing)&lt;/li&gt;
+  &lt;li&gt;Any specific parameter important to the particular dataset&lt;/li&gt;
+  &lt;li&gt;Processing time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How to keep a log file in R?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;createLog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;log_con&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;process.log&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;w&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nrow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log_con&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is a very basic way to keep a log file. I prefer using this function in every script because it gives me the freedom to choose the contents of my log file.&lt;/p&gt;
+
+&lt;p&gt;Happy Coding!&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+</description>
+        <pubDate>Tue, 25 Jul 2017 01:43:39 +0530</pubDate>
+        <link>http://localhost:4000/datascience/why-to-keep-a-logfile</link>
+        <guid isPermaLink="true">http://localhost:4000/datascience/why-to-keep-a-logfile</guid>
+        
+        
+        <category>datascience</category>
+        
+      </item>
     
       <item>
         <title>When Breath Becomes Air - Paul Kalanithi</title>
@@ -440,46 +498,6 @@ college, and then how this would have changed our stay at IIT Jodhpur.&lt;/p&gt;
         
         
         <category>randomblog</category>
-        
-      </item>
-    
-      <item>
-        <title>How to run automated python scripts on remote machines</title>
-        <description>&lt;p&gt;I am currently working on the B.Tech Project that involves predicting flight prices. To build the models, I needed historical flight prices. Unfortunately, such data is not available and so I had to build a scraper to extract flight prices daily and save it in a csv file.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Building a scraper is no rocket science. If you are using python, there are multiple frameworks like Scrapy, which are very powerful tools. My particular problem was not a complex one, and therefore I manually built a script which extracts the useful fields from Makemytrip website. You can look at the code &lt;a href=&quot;https://github.com/achyutjoshi/Flight-Prices-Scraper&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now, the most challenging part of this whole process was to schedule it. I wanted my script to run on a particular time, daily and everytime it runs, it should append the values to the original csv file. Scheduling it on my local machine was not a solution, because I cannot keep it running all the time.&lt;/p&gt;
-
-&lt;p&gt;I had two options -&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Run it on my institute’s server&lt;/li&gt;
-  &lt;li&gt;Use virtual machines provided by &lt;a href=&quot;http://azure.microsoft.com/&quot; target=&quot;_blank&quot;&gt;Microsoft Azure&lt;/a&gt; or &lt;a href=&quot;http://aws.amazon.com&quot; target=&quot;_blank&quot;&gt;AWS&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Due to some reason, the institute’s server was not responding. So the next best possible option was to use Microsoft Azure. AWS is better with respect to performance, but you need to be technically very sound to set up the server using AWS.So, I setup a virtual machine using the least possible configuration on Azure. It provides us with a INR 12k free credits on signing up. I used SSH to login into my remote system and installed python and all the libraries that were needed.&lt;/p&gt;
-
-&lt;p&gt;Linux system provides a beautiful option called Cronjobs. It is an in-built scheduling option that is very easy to use. The major problem you can face when scheduling your scripts is the permissions of the file. Do make sure that you have given execution rights to all users(to be on the safer side). Also, if your script is writing/reading a file, make sure those files have the respective permissions.&lt;/p&gt;
-
-&lt;p&gt;These are the few links that will help you to setup a cronjob and run a python script -&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.adminschoice.com/crontab-quick-reference&quot; target=&quot;_blank&quot;&gt;Quick Reference&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/8727935/execute-python-script-on-crontab&quot; target=&quot;_blank&quot;&gt;Stack OverFlow - Python Script&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;To conclude, data science frequently requires the tedious job of collecting data. However, if you just learn the basics of scraping and scheduling scripts on a remote machine, your life will be a lot more easier.&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 22 Aug 2016 00:43:39 +0530</pubDate>
-        <link>http://localhost:4000/datascience/how-to-run-automated-python-script-on-remote-machine</link>
-        <guid isPermaLink="true">http://localhost:4000/datascience/how-to-run-automated-python-script-on-remote-machine</guid>
-        
-        
-        <category>datascience</category>
         
       </item>
     
