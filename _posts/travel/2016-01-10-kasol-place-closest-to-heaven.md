@@ -4,7 +4,7 @@ title:  "Kasol : A place closest to Heaven"
 date:   2016-01-10 13:13:39
 category : travel
 comments : true
-image : kasol1.jpg
+image : /assets/images/kasol1.jpg
 description : Parvati Valley has become one of the most visited regions in Himachal Pradesh. The serenity and the tranquility attracts many to this little paradise. Achyut and his school friends ventured out to a backpacking trip to Kasol. Read more about this trip and how they travelled.
 keywords : "travel, photoblog, Kasol, north india, wanderlust, travel diary, explore, achyutjoshi, achyut, iitjodhpur, parvati valley, manali, himachal pradesh, backpacking, budget travel"
 

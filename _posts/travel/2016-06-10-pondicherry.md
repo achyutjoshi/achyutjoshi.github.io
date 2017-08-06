@@ -7,7 +7,7 @@ comments : true
 excerpt_separator: <!--more-->
 description : Pondicherry has always been one of the most exotic destinations in South India. Achyut ventured out to explore this beach-side heaven during his summer internship days. Read more about this trip and how he travelled.
 keywords : "travel, photoblog, Pondicherry, south india, wanderlust, travel diary, explore, achyutjoshi, achyut, iitjodhpur, pondi, yellowstreets"
-image : pondi3.jpg
+image : /assets/images/pondi3.jpg
 
 ---
 

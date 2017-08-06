@@ -12,14 +12,18 @@ layout: default
 
   <article class="post-content">
     {{ content }}
+    <br>
+    <br>
     {% include facebook.html %}
     {% include disqus.html %}
 
-    {% if page.keywords %}
- 8 <meta name="keywords" content="{{ page.keywords }}" />
- 9 {% else %}
-10 <meta name="keywords" content="freelance, designer, skeptic, web design, development, data science, freelance developer, jekyll, entrepreneur, IIT, travel, Achyut, achyutjoshi, books, startify, iitjodhpur, data, photoshop, engineer, productivity" />
-11 {% endif %}
+
+
+  {% if page.keywords %}
+ <meta name="keywords" content="{{ page.keywords }}" />
+ {% else %}
+<meta name="keywords" content="freelance, designer, skeptic, web design, development, data science, freelance developer, jekyll, entrepreneur, IIT, travel, Achyut, achyutjoshi, books, startify, iitjodhpur, data, photoshop, engineer, productivity" />
+{% endif %}
 
   </article>
 

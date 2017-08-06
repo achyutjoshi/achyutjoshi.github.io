@@ -5,7 +5,7 @@ date:   2017-04-02 19:13:39
 categories: podcast
 comments : true
 excerpt_separator: <!--more-->
-image : podcast.png
+image : /assets/images/podcast.png
 ---
 
 Startify has been one of the best decisions of my undergraduate life. We got this idea of documenting our journey in
