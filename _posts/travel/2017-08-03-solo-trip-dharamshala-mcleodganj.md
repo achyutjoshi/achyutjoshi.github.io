@@ -2,7 +2,7 @@
 layout: post
 title:  "Doing Mcleodganj Solo: Notes by a Novice"
 date:   2017-08-03 13:13:39
-category : randomblog
+category : travel
 comments : true
 excerpt_separator: <!--more-->
 image : /assets/images/mcleo4.jpg
