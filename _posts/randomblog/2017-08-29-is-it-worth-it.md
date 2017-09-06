@@ -14,21 +14,22 @@ into the infinite void till you cannot match your own sight
 <!--more-->
 
 I have. And I have known this for long.  
- But still I did nothing. Or rather, we did nothing.    
+ But still I did nothing.   
+Or rather, we did nothing.      
 
 Four long years back, I left home to pursue my dreams.  
-I was always taught to dream big and, 
-fortunately or unfortunately,   
-I dreamt bigger that my cosy little home city could provide.  
+I was always taught to dream big and,   
+fortunately or unfortunately,     
+I dreamt bigger that my cosy little home city could provide.    
 
-There was this unsaid understanding that  
-one day I will leave home,
-but never really understood that  
-I will never really be at home after that day.  
+There was this unsaid understanding that    
+one day I will leave home,  
+but never really understood that    
+I will never really be at home after that day.    
 
-Family gatherings started to become a rarity,  
-Home-food a luxury and festival days just holidays.  
- But more importantly, I was never there  
+Family gatherings started to become a rarity,    
+Home-food a luxury and festival days just holidays.    
+ But more importantly, I was never there    
 I was never there for them, when they needed the most.  
 
 When they wanted to learn a new app,  

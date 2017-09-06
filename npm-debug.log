@@ -1,0 +1,260 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--global',
+1 verbose cli   'desktop-dimmer' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'desktop-dimmer', null ]
+7 verbose cache add spec desktop-dimmer
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'desktop-dimmer',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'desktop-dimmer',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed desktop-dimmer@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for desktop-dimmer
+11 info addNameTag [ 'desktop-dimmer', 'latest' ]
+12 silly mapToRegistry name desktop-dimmer
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'desktop-dimmer',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'desktop-dimmer',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/desktop-dimmer
+17 verbose addNameTag registry:https://registry.npmjs.org/desktop-dimmer not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/desktop-dimmer
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 2:35:35 PM
+21 verbose request id 95a12d257a1b2a71
+22 http request GET https://registry.npmjs.org/desktop-dimmer
+23 http 200 https://registry.npmjs.org/desktop-dimmer
+24 verbose headers { server: 'nginx/1.10.3',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'last-modified': 'Tue, 07 Mar 2017 20:10:26 GMT',
+24 verbose headers   etag: 'W/"58bf13b2-10232"',
+24 verbose headers   'content-encoding': 'gzip',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'content-length': '7219',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Wed, 06 Sep 2017 09:05:36 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   age: '0',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-sin18031-SIN',
+24 verbose headers   'x-cache': 'MISS',
+24 verbose headers   'x-cache-hits': '0',
+24 verbose headers   'x-timer': 'S1504688736.463718,VS0,VE259',
+24 verbose headers   vary: 'Accept-Encoding, Accept' }
+25 silly get cb [ 200,
+25 silly get   { server: 'nginx/1.10.3',
+25 silly get     'content-type': 'application/json',
+25 silly get     'last-modified': 'Tue, 07 Mar 2017 20:10:26 GMT',
+25 silly get     etag: 'W/"58bf13b2-10232"',
+25 silly get     'content-encoding': 'gzip',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'content-length': '7219',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Wed, 06 Sep 2017 09:05:36 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     age: '0',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-sin18031-SIN',
+25 silly get     'x-cache': 'MISS',
+25 silly get     'x-cache-hits': '0',
+25 silly get     'x-timer': 'S1504688736.463718,VS0,VE259',
+25 silly get     vary: 'Accept-Encoding, Accept' } ]
+26 verbose get saving desktop-dimmer to /Users/apple/.npm/registry.npmjs.org/desktop-dimmer/.cache.json
+27 verbose correctMkdir /Users/apple/.npm correctMkdir not in flight; initializing
+28 verbose makeDirectory /Users/apple/.npm creation not in flight; initializing
+29 silly makeDirectory /Users/apple/.npm uid: 501 gid: 20
+30 silly addNameTag next cb for desktop-dimmer with tag latest
+31 silly addNamed desktop-dimmer@2.9.0
+32 verbose addNamed "2.9.0" is a plain semver version for desktop-dimmer
+33 silly mapToRegistry name desktop-dimmer
+34 silly mapToRegistry using default registry
+35 silly mapToRegistry registry https://registry.npmjs.org/
+36 silly mapToRegistry data Result {
+36 silly mapToRegistry   raw: 'desktop-dimmer',
+36 silly mapToRegistry   scope: null,
+36 silly mapToRegistry   name: 'desktop-dimmer',
+36 silly mapToRegistry   rawSpec: '',
+36 silly mapToRegistry   spec: 'latest',
+36 silly mapToRegistry   type: 'tag' }
+37 silly mapToRegistry uri https://registry.npmjs.org/desktop-dimmer
+38 verbose addRemoteTarball https://registry.npmjs.org/desktop-dimmer/-/desktop-dimmer-2.9.0.tgz not in flight; adding
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/desktop-dimmer/-/desktop-dimmer-2.9.0.tgz',
+39 verbose addRemoteTarball   '4270391a1a2c1e0b8592bc3fffaf647e960112f4' ]
+40 info retry fetch attempt 1 at 2:35:36 PM
+41 info attempt registry request try #1 at 2:35:36 PM
+42 http fetch GET https://registry.npmjs.org/desktop-dimmer/-/desktop-dimmer-2.9.0.tgz
+43 http fetch 200 https://registry.npmjs.org/desktop-dimmer/-/desktop-dimmer-2.9.0.tgz
+44 silly fetchAndShaCheck shasum 4270391a1a2c1e0b8592bc3fffaf647e960112f4
+45 verbose addTmpTarball /var/folders/kj/9sn8d24s4331dpj3ctn_2v6w0000gn/T/npm-44237-2ac9547d/registry.npmjs.org/desktop-dimmer/-/desktop-dimmer-2.9.0.tgz not in flight; adding
+46 verbose addTmpTarball already have metadata; skipping unpack for desktop-dimmer@2.9.0
+47 verbose correctMkdir /Users/apple/.npm correctMkdir not in flight; initializing
+48 silly cache afterAdd desktop-dimmer@2.9.0
+49 verbose afterAdd /Users/apple/.npm/desktop-dimmer/2.9.0/package/package.json not in flight; writing
+50 verbose correctMkdir /Users/apple/.npm correctMkdir not in flight; initializing
+51 verbose afterAdd /Users/apple/.npm/desktop-dimmer/2.9.0/package/package.json written
+52 silly install resolved [ { name: 'desktop-dimmer',
+52 silly install resolved     productName: 'Desktop Dimmer',
+52 silly install resolved     version: '2.9.0',
+52 silly install resolved     description: 'Enables darker-than-dark Desktop dimming for your displays',
+52 silly install resolved     license: 'MIT',
+52 silly install resolved     homepage: 'https://sidneys.github.io/desktop-dimmer',
+52 silly install resolved     author:
+52 silly install resolved      { name: 'sidneys',
+52 silly install resolved        email: 'sidneys.github.io@outlook.com',
+52 silly install resolved        url: 'https://github.com/sidneys' },
+52 silly install resolved     repository:
+52 silly install resolved      { type: 'git',
+52 silly install resolved        url: 'git+https://github.com/sidneys/desktop-dimmer.git' },
+52 silly install resolved     bugs: { url: 'https://github.com/sidneys/desktop-dimmer/issues' },
+52 silly install resolved     engines: { node: '>=7.0.0' },
+52 silly install resolved     os: [ 'darwin', 'win32', 'linux' ],
+52 silly install resolved     keywords:
+52 silly install resolved      [ 'desktop dimmer',
+52 silly install resolved        'shades',
+52 silly install resolved        'dimmer',
+52 silly install resolved        'shade',
+52 silly install resolved        'turn off the lights' ],
+52 silly install resolved     preferGlobal: true,
+52 silly install resolved     dependencies:
+52 silly install resolved      { 'app-root-path': '^2.0.1',
+52 silly install resolved        appdirectory: '^0.1.0',
+52 silly install resolved        'auto-launch': 'git://github.com/sidneys/node-auto-launch.git#master',
+52 silly install resolved        'babel-cli': '^6.23.0',
+52 silly install resolved        'babel-preset-electron': '^1.4.15',
+52 silly install resolved        chalk: '^1.1.3',
+52 silly install resolved        'color-picker': 'git://github.com/tovic/color-picker.git#master',
+52 silly install resolved        'electron-compile': '^6.1.3',
+52 silly install resolved        'electron-compilers': '^5.5.1',
+52 silly install resolved        'electron-connect': '^0.6.1',
+52 silly install resolved        'electron-editor-context-menu': '^1.1.1',
+52 silly install resolved        'electron-settings': '^2.2.2',
+52 silly install resolved        'electron-squirrel-startup': '^1.0.0',
+52 silly install resolved        'electron-updater': '^1.8.2',
+52 silly install resolved        'file-type': '^4.1.0',
+52 silly install resolved        'fs-extra': '^2.0.0',
+52 silly install resolved        keypath: '^0.0.1',
+52 silly install resolved        lodash: '^4.17.4',
+52 silly install resolved        menubar: 'git://github.com/sidneys/menubar.git#add-taskbar-support',
+52 silly install resolved        'read-chunk': '^2.0.0',
+52 silly install resolved        'semver-compare': '^1.0.0',
+52 silly install resolved        tinycolor2: 'latest' },
+52 silly install resolved     devDependencies:
+52 silly install resolved      { electron: '1.4.14',
+52 silly install resolved        'electron-builder': '11.5.1',
+52 silly install resolved        'electron-builder-squirrel-windows': '11.5.0',
+52 silly install resolved        fkill: '^4.1.0',
+52 silly install resolved        glob: '^7.1.1',
+52 silly install resolved        gulp: '^3.9.1',
+52 silly install resolved        'gulp-load-plugins': '^1.5.0',
+52 silly install resolved        minimist: '^1.2.0',
+52 silly install resolved        progress: '^1.1.8',
+52 silly install resolved        'publish-release': '^1.3.3' },
+52 silly install resolved     main: './app/es6-init.js',
+52 silly install resolved     bin: { 'desktop-dimmer': './bin/cli.js' },
+52 silly install resolved     scripts:
+52 silly install resolved      { 'deploy:github': 'node ./lib/deploy-github.js -- ',
+52 silly install resolved        start: 'electron ./app/es6-init.js',
+52 silly install resolved        'start:dev': 'electron ./app/es6-init.js',
+52 silly install resolved        'start:livereload': 'gulp livereload',
+52 silly install resolved        build: 'node ./lib/build.js --',
+52 silly install resolved        localsetup: 'babel-node ./lib/localsetup.js -- ',
+52 silly install resolved        'localsetup:dev': 'babel-node ./lib/localsetup.js -- ',
+52 silly install resolved        'localsetup:rebuild': 'babel-node ./lib/localsetup.js -- ',
+52 silly install resolved        'localsetup:rebuild:dev': 'babel-node ./lib/localsetup.js -- ' },
+52 silly install resolved     build:
+52 silly install resolved      { appId: 'de.sidneys.desktop-dimmer',
+52 silly install resolved        directories: [Object],
+52 silly install resolved        files: [Object],
+52 silly install resolved        mac: [Object],
+52 silly install resolved        win: [Object],
+52 silly install resolved        linux: [Object],
+52 silly install resolved        deb: [Object],
+52 silly install resolved        dmg: [Object],
+52 silly install resolved        pacman: [Object],
+52 silly install resolved        rpm: [Object],
+52 silly install resolved        squirrelWindows: [Object] },
+52 silly install resolved     gitHead: 'eff232aad23f5a1c680a0230318fbcb2800d9d9e',
+52 silly install resolved     _id: 'desktop-dimmer@2.9.0',
+52 silly install resolved     _shasum: '4270391a1a2c1e0b8592bc3fffaf647e960112f4',
+52 silly install resolved     _from: 'desktop-dimmer@latest',
+52 silly install resolved     _npmVersion: '4.3.0',
+52 silly install resolved     _nodeVersion: '7.7.1',
+52 silly install resolved     _npmUser: { name: 'sidneys', email: 'sidneys.github.io@outlook.com' },
+52 silly install resolved     dist:
+52 silly install resolved      { shasum: '4270391a1a2c1e0b8592bc3fffaf647e960112f4',
+52 silly install resolved        tarball: 'https://registry.npmjs.org/desktop-dimmer/-/desktop-dimmer-2.9.0.tgz' },
+52 silly install resolved     maintainers: [ [Object] ],
+52 silly install resolved     _npmOperationalInternal:
+52 silly install resolved      { host: 'packages-18-east.internal.npmjs.com',
+52 silly install resolved        tmp: 'tmp/desktop-dimmer-2.9.0.tgz_1488917425783_0.1837344546802342' },
+52 silly install resolved     directories: {},
+52 silly install resolved     _resolved: 'https://registry.npmjs.org/desktop-dimmer/-/desktop-dimmer-2.9.0.tgz' } ]
+53 info install desktop-dimmer@2.9.0 into /usr/local/lib
+54 info installOne desktop-dimmer@2.9.0
+55 verbose installOne of desktop-dimmer to /usr/local/lib not in flight; installing
+56 verbose correctMkdir /Users/apple/.npm/_locks correctMkdir not in flight; initializing
+57 verbose makeDirectory /Users/apple/.npm/_locks creation not in flight; initializing
+58 silly makeDirectory /Users/apple/.npm/_locks uid: 501 gid: 20
+59 verbose lock using /Users/apple/.npm/_locks/desktop-dimmer-119444f28f1a7019.lock for /usr/local/lib/node_modules/desktop-dimmer
+60 warn engine desktop-dimmer@2.9.0: wanted: {"node":">=7.0.0"} (current: {"node":"4.4.7","npm":"2.15.8"})
+61 silly install write writing desktop-dimmer 2.9.0 to /usr/local/lib/node_modules/desktop-dimmer
+62 verbose unbuild lib/node_modules/desktop-dimmer
+63 silly gentlyRm /usr/local/lib/node_modules/desktop-dimmer is being purged from base /usr/local
+64 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/desktop-dimmer
+65 verbose tar unpack /Users/apple/.npm/desktop-dimmer/2.9.0/package.tgz
+66 verbose tar unpacking to /usr/local/lib/node_modules/desktop-dimmer
+67 silly gentlyRm /usr/local/lib/node_modules/desktop-dimmer is being purged
+68 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/desktop-dimmer
+69 silly gunzTarPerm modes [ '755', '644' ]
+70 error tar.unpack untar error /Users/apple/.npm/desktop-dimmer/2.9.0/package.tgz
+71 verbose unlock done using /Users/apple/.npm/_locks/desktop-dimmer-119444f28f1a7019.lock for /usr/local/lib/node_modules/desktop-dimmer
+72 verbose fstream_path /usr/local/lib/node_modules/desktop-dimmer
+73 verbose fstream_type Directory
+74 verbose fstream_class DirWriter
+75 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/desktop-dimmer'
+75 verbose stack     at Error (native)
+76 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+76 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+76 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+77 verbose cwd /Users/apple/Documents/Blog/blog
+78 error Darwin 16.7.0
+79 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--global" "desktop-dimmer"
+80 error node v4.4.7
+81 error npm  v2.15.8
+82 error path /usr/local/lib/node_modules/desktop-dimmer
+83 error code EACCES
+84 error errno -13
+85 error syscall mkdir
+86 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/desktop-dimmer'
+86 error     at Error (native)
+86 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/desktop-dimmer']
+86 error   errno: -13,
+86 error   code: 'EACCES',
+86 error   syscall: 'mkdir',
+86 error   path: '/usr/local/lib/node_modules/desktop-dimmer',
+86 error   fstream_type: 'Directory',
+86 error   fstream_path: '/usr/local/lib/node_modules/desktop-dimmer',
+86 error   fstream_class: 'DirWriter',
+86 error   fstream_stack:
+86 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+86 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+86 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+87 error Please try running this command again as root/Administrator.
+88 verbose exit [ -13, true ]
+89 verbose unbuild lib/node_modules/desktop-dimmer
+90 silly gentlyRm /usr/local/lib/node_modules/desktop-dimmer is being purged from base /usr/local
+91 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/desktop-dimmer
