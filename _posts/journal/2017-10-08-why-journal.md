@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "#1 - Why Journaling?"
-date:   2017-08-20 01:13:39
+date:   2017-10-08 01:13:39
 category : journal
 comments : true
 excerpt_separator: <!--more-->
