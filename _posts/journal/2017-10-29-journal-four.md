@@ -33,5 +33,6 @@ I was reading [this blog](https://betterhumans.coach.me/a-phone-setup-that-will-
 __Top things that I read or listened to__
 1. [Spotify’s Discover Weekly](https://hackernoon.com/spotifys-discover-weekly-how-machine-learning-finds-your-new-music-19a41ab76efe){:target="_blank"}
 2. [Why Twitter expanded its word-limit?](https://blog.twitter.com/engineering/en_us/topics/insights/2017/Our-Discovery-of-Cramming.html?utm_campaign=Data%2BElixir&utm_medium=email&utm_source=Data_Elixir_157){:target="_blank"}
-3. [The boss goes first](http://sethgodin.typepad.com/seths_blog/2017/11/the-boss-goes-first.html){:target="_blank"}
-4. [The Upgrade - By Life Hacker](https://lifehacker.com/charles-duhigg-on-self-motivation-mental-models-and-g-1793445660){:target="_blank"}
+3. [Note Taking](http://www.dansheffler.com/blog/2014-07-21-two-goals-of-note-taking/){:target="_blank"}
+4. [The boss goes first](http://sethgodin.typepad.com/seths_blog/2017/11/the-boss-goes-first.html){:target="_blank"}
+5. [The Upgrade - By Life Hacker](https://lifehacker.com/charles-duhigg-on-self-motivation-mental-models-and-g-1793445660){:target="_blank"}
