@@ -7,7 +7,7 @@ comments : true
 excerpt_separator: <!--more-->
 description : Back to journaling after two weeks!
 ---
-So, as always, I did not end up making this a habit. Various incidences in my life has forced me to conclude that I can never create a routine of my own. But I badly want to challenge that conclusion and therefore instead of waiting for this to become a habit and then make it public, I will be posting every journal entry on Sundays over my facebook & instagram handle. Game on, life!
+So, as always, I did not end up making this a habit. Various incidences in my life have forced me to conclude that I can never create a routine of my own. But I badly want to challenge that conclusion and therefore instead of waiting for this to become a habit and then make it public, I will be posting every journal entry on Sundays over my facebook & instagram handle. Game on, life!
 
 <!--more-->
 
