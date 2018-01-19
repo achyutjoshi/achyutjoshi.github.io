@@ -20,7 +20,7 @@ I took this break from my stint with SocialCops because of this very reason. I w
 __Whats stopping me?__
 
 1. __One, home__
-Finally being at home with the intension of staying here, at least for the next three-four months have been comforting and serene. I am yet to settle down, find a schedule because for the past five years home has always been a holiday for me. And this comfort has brought an inertia which I need to let go off, and that too very fast. It again has to be a place where I learn and grow.
+Finally being at home with the intension of staying here, at least for the next three-four months have been comforting and serene. Spending time with my parents and family is very special. However, I am yet to settle down, find a schedule because for the past five years home has always been a holiday for me. And this comfort has brought an inertia which I need to let go off, and that too very fast. It again has to be a place where I learn and grow.
 
 
 2. __Two, my headspace.__
