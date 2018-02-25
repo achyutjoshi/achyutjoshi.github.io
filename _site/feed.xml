@@ -6,9 +6,52 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Feb 2018 15:37:40 +0530</pubDate>
-    <lastBuildDate>Sun, 25 Feb 2018 15:37:40 +0530</lastBuildDate>
+    <pubDate>Mon, 26 Feb 2018 01:02:43 +0530</pubDate>
+    <lastBuildDate>Mon, 26 Feb 2018 01:02:43 +0530</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>#6 - Rather than the breadth, lets do the depth!</title>
+        <description>&lt;p&gt;It has been one week since I returned from my Thailand expedition - and it has not been that bad. Obviously, I don’t think I will ever be satisfied with myself, and that is perfectly okay. So, I hit the gym regularly for the whole week. I set up a good working space at my home - though could not work as much as I wanted to. But at least, there is some start.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;p&gt;I have always tried to be an all-rounder - doing a good bunch of things whenever I got the chance. It might be because of the way I was brought up or because I have an acute fear of missing out. This has placed me in a box where I am a master of none. Therefore one thing that I have decided is to try going deep into a subject this time. And I spent the later part of the week deciding the field I want to go deep into - a classic case of me fearing of missing out, again! I have already taken up a few things - more on this next week.&lt;/p&gt;
+
+&lt;p&gt;I am also trying to automate the email updates for my blog through Mailchimp. Though, I need to figure out a way through which MailChimp selects RSS feeds of only certain categories of posts and convert it into a newsletter. And this has to be compatible with Jekyll and Github Pages. I will dig into this more the coming week!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Interesting Stumbles&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/mimir-blockchain/the-birds-the-bees-and-the-merkle-trees-ep-0-blockchains-from-scratch-3cedb1e669eb&quot; target=&quot;_blank&quot;&gt;Blockchain&lt;/a&gt; - I have not completed this, but so far, this post have really helped to know the subject&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCJkMlOu7faDgqh4PfzbpLdg&quot; target=&quot;_blank&quot;&gt;Nerdwriter&lt;/a&gt; - An insightful youtube channel that is just a great way to spend time on the internet rather than surfing through the shit called Facebook&lt;/li&gt;
+  &lt;li&gt;This is Us - The newest drama in my list which I binged watched through the week. For all those who are fans of good-old classic drama, This is Us won’t disappoint.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Books,Books and Books&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/gp/product/0434023469/ref=as_li_tl?ie=UTF8&amp;amp;camp=3638&amp;amp;creative=24630&amp;amp;creativeASIN=0434023469&amp;amp;linkCode=as2&amp;amp;tag=achyutjoshi-21&amp;amp;linkId=63448d3e15ac4d5b82637cd3194e0a02&quot; target=&quot;_blank&quot;&gt;Smarter, Faster and Better&lt;/a&gt; -I took up this book after hearing Duhigg talk about Mental Models in a Freakonomics podcast. I have completed around 30% of it it, and so far, there has been nothing extra-ordinary in the book. I have always been a big fan of Duhigg’s writing style, so hopefully this won’t disappoint.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.in/gp/product/0099578077/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;amp;tag=achyutjoshi-21&amp;amp;creative=24630&amp;amp;linkCode=as2&amp;amp;creativeASIN=0099578077&amp;amp;linkId=c7e966ae5f27509bfa376cf8eba3f0fb&quot; target=&quot;_blank&quot;&gt;1Q84&lt;/a&gt; - Murakami has this power of gripping your attention throughout the book. Another masterpiece by this Japanese superstar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Music Discovery&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I have often heard my friends telling how they hate finding new music. And yes, it is a pain-staking process. But I have these few hours once every two weeks where I devote the time to discover new music. Why not share them with the world?  &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=J1yvQznOHNU&amp;amp;list=PLkCUhga4t_lBGSlF94CtJbYK3XWzjog2D&amp;amp;index=5&amp;amp;t=0s&quot; target=&quot;_blank&quot;&gt;Parvazz -Khufiya Dastaan&lt;/a&gt; - One of the older gems by this great band&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=9cbQoAWL2-8&amp;amp;list=PLkCUhga4t_lBGSlF94CtJbYK3XWzjog2D&amp;amp;index=6&quot; target=&quot;_blank&quot;&gt;Vipin Misra Project&lt;/a&gt; - A silk-route member who now has his own band - Another one of the hidden gems of the Indian Indie scene&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-BKHCIVzV38&amp;amp;list=PLkCUhga4t_lBGSlF94CtJbYK3XWzjog2D&amp;amp;index=7&quot; target=&quot;_blank&quot;&gt;Dream Theatre&lt;/a&gt; - My new work music&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sun, 25 Feb 2018 06:43:39 +0530</pubDate>
+        <link>http://localhost:4000/journal/journal-six</link>
+        <guid isPermaLink="true">http://localhost:4000/journal/journal-six</guid>
+        
+        
+        <category>journal</category>
+        
+      </item>
     
       <item>
         <title>Pre-trip Musings : Thailand #0</title>
@@ -426,62 +469,6 @@ because I was leaving a part of me behind.&lt;/p&gt;
         
         
         <category>randomblog</category>
-        
-      </item>
-    
-      <item>
-        <title>Doing Mcleodganj Solo: Notes by a Novice</title>
-        <description>&lt;p&gt;For people who know me, understand how the word travelling can ignite a spark within me. For me, the only positive of staying in Delhi was being at an overnight distance to most of the destinations in the Himalayas. Three weeks into my first job, I was starting to curse myself for wasting three weekends and so hastily I booked my tickets to Dharamshala and my accommodation at Zostel-Mcleodganj. And this is how I found my north star, something that I can always go back to  - the concept of travelling alone!  
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;p&gt;A normal Friday evening. I left from work at 6. Briskly walked through the Delhi chaos. I reached home and packed a few tees and my bathroom pouch. My kindle and my diary were already sitting inside my bag. I rechecked my tickets, locked my house and started to walk for Saket metro. Usually, I listen to a podcast when I am travelling in the metro, but that Friday evening was different. I just stood near the door, with two small bags and nonchalantly gazed through the people. When I got out, the weather too was experiencing something contrasting - the first proper rains of the season. Finally, after an hour of waiting and navigating through the conundrum called ISBT, I boarded my bus to Dharamshala.&lt;/p&gt;
-
-&lt;p&gt;  Mcleodganj is an experience that has been transformed by many travellers, either through their words or pictures. And I am an expert in neither. So, rather than trying to put the trip into words, I will make an attempt to express what Mcleodganj did to me.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ना मूज़े हिन्दी आती है,
-and neither my English is perfect.     &lt;br /&gt;
-But I love writing
-और में लिख रहा हू |&lt;/p&gt;
-
-  &lt;p&gt;में वो हू जो अपने आप में रहता है,
-But my shells collapse like dominos,             &lt;br /&gt;
-जब में लिख रहा होता हू ,
-And I am writing.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It was my first, travelling solo. And frankly, I was shit scared. Being someone who finds it difficult to start a conversation and someone who thinks a lot about how others will perceive me, it was supposed to be a nightmare. But in fact, it turned out to be the exact opposite. The two days were a perfect mixture of solitude and meeting some warm &amp;amp; interesting people, which includes a designer from Delhi and an artist from Kolkata who calls himself Pablo. We met in the morning, explored the nooks and crannies of the town, talked about things ranging from college to Buddhism to meditation, had a drink at night and bid farewell to never see each other ever again. Can it get more spontaneous than this?   &lt;/p&gt;
-
-&lt;p&gt;The art of doing nothing is something everyone should learn to practice. We always prefer to cut down our commute and take a taxi to the hotel. But imagine walking on the green serene curves of Himalayas, with the early morning drizzles hitting on the road and sometimes making their distinctive sound of dropping in a puddle. It might sound enchanting, but it was a long arduous walk with no map or humanity to guide. I was presented with cross roads every now and then, and sometimes I had to climb back up with my luggage when the road did not feel right. And yet, if given a chance, I would try to make many more mistakes just to walk more. Most people would consider this a big waste of time, but I say, once in a while indulge into doing nothing, just nothing. I sat for a couple of hours at this wooden porch of a cute little hostel in Dharamkot which silently sits hidden behind the majestic Himalayas. A dense cover of fog passes through me as I sip some hot green tea, observing rain drops falling from the ceiling. Apart from that, I was doing nothing. But I was having fun, and that is what matters.&lt;/p&gt;
-
-&lt;p&gt;Having travelled the Himalayas a lot, I have visited many Monasteries and there is something different about the religion that has always fascinated me. Is it the calmness of the location or is it the intense devotion of the monks? Or is there a whole new reason yet to be discovered? I am not sure. But I will definitely read more about the religion and its practices which attract millions of people to backpack and spend several months in the little Lhasa. One thing is certain, the Namgyal Monastery, where His Holiness Dalai Lama lives, is a big disappointment, especially after you have visited some splendid places in Spiti and Bhutan. However, there was this one moment where monks were humming some mantra in perfect sync creating a congruous symphony that made the disappointment vanish for a few minutes and after that, well, it was back again!&lt;/p&gt;
-
-&lt;image height=&quot;300em&quot; width=&quot;225em&quot; src=&quot;/assets/images/mcleo1.jpg&quot;&gt; &lt;/image&gt;
-&lt;image height=&quot;300em&quot; width=&quot;375em&quot; src=&quot;/assets/images/mcleo2.jpg&quot;&gt; &lt;/image&gt;
-
-&lt;p&gt;  The second day, I again walked down the same path. However this time, the road did not seem fascinating enough. I knew what was coming next and that somewhere took away the key ingredient of uncertainty. Is it always like that? Once you start going through the same path, you start getting used to it and slowly it ceases to excite and surprise you. Or does it depend on the individual? For me, it depends on the situation. But there is no denying that the first time, will always be in the top three!&lt;/p&gt;
-
-&lt;p&gt;  I got this unique opportunity to observe certain landmark areas during different times of a day - morning, afternoon, evening and night, because well I had nothing much to do. I believe that if you truly want to experience a place, visit it during all phases of the day. I can bet it on my life that the place will transform into something you had never expected. The colours, the smell, the people and the feeling, everything just switches and each part of the day has its own charm. Some are serene and some are filled with humans.&lt;/p&gt;
-
-&lt;p&gt;I feel that we Indians never glorify our places and monuments. I remember visiting Lord’s in London. The stadium was not something extra ordinary. You will find similar or better stadiums around the world. But then what was different at Lord’s? The whole experience that they have created makes it royal and grand. The Dharamshala Cricket Stadium is one of the most scenic cricket stadiums in the world, but we never create that kind of experience around it. The stadium looked pale and lonely with just the Dhauladhar range trying to make up for the bland surroundings.&lt;/p&gt;
-
-&lt;image height=&quot;300em&quot; width=&quot;275em&quot; src=&quot;/assets/images/mcleo3.jpg&quot;&gt; &lt;/image&gt;
-&lt;image height=&quot;300em&quot; width=&quot;375em&quot; src=&quot;/assets/images/mcleo4.jpg&quot;&gt; &lt;/image&gt;
-
-&lt;p&gt;On my second and the last day, I was sitting in this cosy little cafe in Mcleodganj, reading Kafka on the Shore with slow moving clouds in front of my eyes. I sat there for around four hours. When travelling alone, there will be times, especially near the end of your trip, when you would yearn to have someone with you. You start to regret for not have planned the trip to perfection. And the most difficult part is shaking those thoughts because they will come for sure. I had those exact same thoughts in that cafe, but the book, the view and the hot ginger lemon slowly erased those thoughts out.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt; And I love living,&lt;/p&gt;
-
-  &lt;p&gt;और मैं जी रहा हूँ |&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Thu, 03 Aug 2017 18:43:39 +0530</pubDate>
-        <link>http://localhost:4000/travel/solo-trip-dharamshala-mcleodganj</link>
-        <guid isPermaLink="true">http://localhost:4000/travel/solo-trip-dharamshala-mcleodganj</guid>
-        
-        
-        <category>travel</category>
         
       </item>
     
