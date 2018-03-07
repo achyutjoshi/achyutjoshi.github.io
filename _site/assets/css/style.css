@@ -78,6 +78,13 @@ img {
     clear: both;
 }
 
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 figure {
     margin: 0;
 }
@@ -338,5 +345,3 @@ a.previous:hover, a.next:hover {
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
-
-
