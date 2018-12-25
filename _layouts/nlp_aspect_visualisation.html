@@ -92,7 +92,7 @@
                <a href = {{site.baseurl}}/aspect_extraction/future >Conclusions & Future Work </a>
             </li>
 
-      
+
 
 
           </ul>
@@ -106,56 +106,20 @@
 
           <header>
             <h1>Visualisation</h1>
-            <p>Every product have multiple reviews and hence will have a good number of aspect-modifier pairs. We also found different words used for a very similar aspect of the product. And therefore it becomes very important to group similar aspects into one cluster and thus providing a better accumulated insight of the product. Post clustering, polarity scores of the modifier were averaged out for every cluster to give a quantifiable explaination to opinion. </p>
+            <p>We implemented a <code>Flask-based UI</code> with search functionality for Amazon reviews based on product ID, limited to those in the dataset. The product ID can be easily fetched from the Amazon product page URL. </p>
+            <p>The search page redirects the user to a product landing page which displays a detailed analysis of the aspects and polarity score results from our model. An <code>Ajax request</code> is sent to the database, which returns the results of our models for the searched product ID. We used Flask, jQuery, HTML, and D3.js for development. </p>
 
-            <ol class="toc">
-              <li><a href="#generic">Word Vectors and Clustering</a></li>
-              <li><a href="#data_spec">Polarity : The goods and the bads</a></li>
-              <li><a href="#trend">Database : Integrating into the pipeline</a></li>
 
-            </ol>
           </header>
 
           <section>
-            <h2 id="generic">Word Vectors and Clustering</h2>
-            <p>There are two basic school of thoughts in the statistical analysis of languages - context free grammar & dependency grammar. The former assumes no underlying relationship and rules between words while the latter assumes a very intricate logic behind any language. I personally found <a target="_blank" href="https://youtu.be/PVShkZgXznc?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6">this</a> lecture by Professor Chris Manning particularly insightful to understand the difference between the two.
-            </p>
-            <p>Now to understand why we decided to go ahead with dependency grammar in this project, it becomes very important to know what we are trying to achieve. Look at the sentence below - </p>
-            <p><code>The delivery was very late!</code> </p>
-            <p>In layman's term, we want the model to extract <code>(delivery,late)</code> as the aspect-modifier pair. Looking at it closely, these words are basically noun & adjective pairs. And hence, there exists an underlying relationship and meaning behind these words that we can exploit using the dependency parsing tree by curating custom rules.  </p>
-            <br>
-            <img class="img-shadow img-responsive center-block" src="assets/images/dependency.png"></img>
-            <p>Figure: Dependency parsing tree from spaCy package</p>
+            <h2>Screenshots</h2>
 
+            <img class="img-shadow img-responsive center-block" src="assets/images/viz.png"></img>
+            <br>
+            <p>The product landing page displays a horizontal bar chart with clusters along with their aggregated polarity scores. The green and red bars denote an overall positive and negative opinion, respectively. We also added a bubble chart with color-coded aspects, where the bubbles are colored according to the cluster and sized according to the frequency of the aspects. Additionally, there is a tool tip that allows the users to click on a bubble and see a review that contains that aspect.</p>
           </section>
 
-          <section>
-
-            <h2 id="data_spec">Polarity : The goods and the bads</h2>
-            <p>The dependency parsing tree as modelled by the spaCy package can be seen in the above figure. Using such a tree, we curated a bunch of rules by manually reading through 100-150 reviews so we can extract aspect-modifier pairs from the reviews.</p>
-            <br>
-            <img class="img-shadow img-responsive center-block" src="assets/images/rules.png"></img>
-            <br>
-            <p>Some of the curated rules can be seen in the figure above. I have explained a couple of them in detail here - </p>
-            <ol>
-            <li>A word with <code>nsubj</code> dependency relationship with a verb token would be the noun of the phrase, and a word with <code>acomp</code> dependency relationship would be the adjective of this noun. Thus, we would extract this pair as a relevant aspect-modifier pair. (Note : To know more about these dependency identifiers, visit <a target="_blank" href="http://universaldependencies.org">Universal Dependencies</a>)</li>
-            <li>In order to incorporate negatives, we check if there is any word with a <code>neg</code> relationship. If yes, we append it to the already found modifier. </li>
-            <li>We also noticed the usage of pronouns like <code>it,this,they & these</code>as a replacement to the product under review. And hence we replaced these words with <code>product</code> key word.</li>
-            </ol>
-            <p>To be very explicit, as per the notations used in the image, we get an output <code>(A, M + M')</code> as the pair</p>
-
-
-            <section>
-            <h2 id="trend">Database : Integrating into the pipeline</h2>
-            <p>Having understood how parsing rules were used to solve the problem at hand, now we see how we scaled the algorithm to incorporate it into the data pipeline.</p>
-
-            <p>Python's spaCy package was used to implement these rules using the POS tags provided by the package. Each review was passed through this model and the output was appended in the form of a <code>json file</code>, where along with the aspect-modifier pairs, important meta data of the review like <code>review_id, product_id and product_category</code> were also appended.</p>
-            <p>One can find the whole codebase on the github repository along with a sample output file.</p>
-
-
-
-
-          </section>
 
 
         </article>

@@ -104,59 +104,30 @@
         <article class="col-md-9 col-sm-9 main-content" role="main">
 
           <header>
-            <h1>Results & Conclusions</h1>
+            <h1>Conclusions & Future Work</h1>
 
-          <section>
-            <h2 id="features">Results</h2>
-
-            <img  class=" img-responsive center-block" style='width:80%;' src="/assets/images/btp/result_btp.png"></img>
-            <br>
-            <p>On 2500 unique test cases, we <b>saved total of 7 lakh rupees and lost 2 lakh rupees.</b> </p>
-
-
-
-
-
-          </section>
 
           <section>
             <h2 id="features">Conclusions</h2>
-            <p>From the data collected and through exploratory data analysis, we can determine the following:</p>
+            <p>This being a descriptive model, there is no one metric to evaluate the results. Therefore we conducted a series of experiments - both automated and manual to understand where the model can be improved. Some of the insights are as follows - </p>
             <br>
             <ul class="step-text">
               <li>
-                <p>The trend of flight prices vary over <code>various months and across the holiday</code></p>
+                <p>Extracting aspects turned out to be a major bottleneck for the whole process. Dependency grammar rules can be improved by studying more reviews.</code></p>
               </li>
 
               <li>
-                <p>There are two groups of airlines: <code> the economical group and the luxurious group</code>.
-                Spicejet, AirAsia, IndiGo, Go Air are in the economical class, whereas Jet Airways and Air India in the other. Vistara has a more spread out trend.</p>
+                <p>Contextual knowledge should be used while calculating polarity scores. This will help give a better quantitative understanding of the reviews.</p>
               </li>
 
               <li>
-                <p>The airfare varies depending on the <code>time of departure</code>, making timeslot used in analysis an important parameter.</p>
+                <p>Our innovation of using word vectors and clustering algorithm did prove to be useful when 100 odd products were manually examined. This step made sure that similar aspect words were clubbed under one umbrella.</p>
               </li>
 
               <li>
-                <p>The airfare <code>increases during a holiday season</code>.  In our time period, during Diwali the fare remained high for all the values of days to departure. We haven’t considered holiday season as a parameter now, since we are looking at data for a few months.
-</p>
+                <p>Any model is only useful when it solves a problem. Creating an interactive UI does that for us. Upon various demonstrations to a bunch of user, we realised that the UI really brings the model into life.</p>
               </li>
 
-              <li>
-                <p>Airfare varies according to the day of the week of travel. It is <code>higher for weekends and Monday and slightly lower for the other days.</code>
-</p>
-              </li>
-
-              <li>
-                <p>There are a few times when an offer is run by an airline because of which the prices drop suddenly. These are difficult to incorporate in our mathematical models, and hence lead to error.</p>
-              </li>
-
-              <li>
-                <p>Along the <code>Mumbai-Delhi route, we find that the price of flights increases or remains constant</code> as the days to departure decreases. This is because of the high frequency of the flights, high demand and also could be due to heavy competition.</p>
-              </li>
-              <li>
-                <p>Only about 8-10% of the times, a person should wait according to the data collected across the Mumbai-Delhi route, compared to 30-40% in Delhi-Guwahati route</p>
-              </li>
 
 
             </ul>
@@ -164,6 +135,31 @@
 
           </section>
 
+        <section>
+          <h2 id="features1">Future Work</h2>
+          <br>
+          <ul class="step-text">
+            <li>
+              <p>Improving dependency rules</p>
+            </li>
+
+            <li>
+              <p>Contextual knowledge should be used while calculating polarity scores.</p>
+            </li>
+
+
+            <li>
+              <p>Developing a web-plugin for the UI - this will make sure that the user do not have to visit a new environment for accessing our model.</p>
+            </li>
+            <li>
+              <p>Currently, the model training time is around 7-8 hrs for 1M reviews. We can further work on optimizing this to reduce the model run time.</p>
+            </li>
+
+
+          </ul>
+
+
+        </section>
 
 
         </article>
