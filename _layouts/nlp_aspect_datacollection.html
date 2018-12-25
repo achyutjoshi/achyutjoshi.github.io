@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An Academic Project by Achyut Joshi, Ishika Arora, Sumedha Raman & Andrew Giannotto as a part of the CSE6242 course at Georgia Tech. The project aims to extract opinions regarding different aspects of a product from their online reviews using various models from NLP">
+    <meta name="keywords" content="datascience, machine learning, natural language processing, nlp, georgia tech, academic project, achyutjoshi, achyut, gatech, analytics, amazon reviews, spacy, stanford, python">
+
+
+    <title>Aspect Extraction and Opinion Analysis</title>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-76699034-1', 'auto');
+    ga('require', 'linkid');
+
+    ga('send', 'pageview');
+
+  </script>
+
+    <!-- Styles -->
+    <link href="assets/css/theDocs.all.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../apple-touch-icon.html">
+    <link rel="icon" href="assets/img/favicon.ico">
+  {% seo %}
+  </head>
+
+  <header class="site-header navbar-fullwidth">
+
+      <!-- Top navbar & branding -->
+      <nav class="navbar navbar-default">
+        <div class="container">
+
+          <!-- Toggle buttons and brand -->
+
+
+            <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+
+        </div>
+      </nav>
+      <!-- END Top navbar & branding -->
+
+    </header>
+
+
+
+    <main class="container">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-md-3 col-sm-3 sidebar">
+
+          <ul class="sidenav dropable sticky">
+            <li><a  href={{site.baseurl}}/aspect_extraction/overview>Overview</a></li>
+            <li>
+              <a href={{site.baseurl}}/aspect_extraction/ourmodel>Our Model</a>
+            </li>
+
+            <li>
+              <a class = "active" href={{site.baseurl}}/aspect_extraction/datacollection >Data Collection</a>
+            </li>
+
+            <li>
+              <a href = {{site.baseurl}}/aspect_extraction/aspectextraction >Aspect Extraction</a>
+            </li>
+            <li>
+              <a  href = {{site.baseurl}}/aspect_extraction/clustering >Clustering and Polarity</a>
+            </li>
+
+            <li>
+              <a href = {{site.baseurl}}/aspect_extraction/visualisation >Visualisation</a>
+            </li>
+
+            <li>
+              <a href = {{site.baseurl}}/aspect_extraction/future >Conclusions & Future Work </a>
+            </li>
+
+        
+
+
+          </ul>
+
+        </aside>
+        <!-- END Sidebar -->
+
+
+        <!-- Main content -->
+        <article class="col-md-9 col-sm-9 main-content" role="main">
+
+          <header>
+            <h1>Data Collection</h1>
+            <p>Data is one of the most important aspect of any machine learning project. Luckily for this project, Amazon has made the review dataset available on S3 buckets.</p>
+
+
+            <ol class="toc">
+              <li><a href="#datasources">Data Source</a></li>
+              <li><a href="#whatwhen">Integrating into the pipeline</a></li>
+
+            </ol>
+          </header>
+
+          <section>
+            <h2 id="datasources">Data Source</h2>
+            <p>The Amazon Customer Review Dataset is available for free in the  Registry of Open Data on AWS. It consists of two decades of reviews from 1995 to 2015, for 50 different product categories. The complete data set consists of approximately 130M+ reviews. For testing our model code and UI, we downloaded the 'Electronics' review data set file and ran it locally.</p>
+            <p>A comprehensive list of links that would prove to be helpful in accessing the dataset -  </p>
+            <ul>
+              <li><a target="_blank"  href="https://s3.amazonaws.com/amazon-reviews-pds/readme.html">Amazon Review Dataset Readme</a></li>
+              <li><a target="_blank"  href="https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt">Metadata and Column Headers</a></li>
+
+            </ul>
+
+
+            <section>
+
+            <h2 id="whatwhen">Integrating into the pipeline</h2>
+            <p>As you would imagine, with textual data file size increases exponentially. Moreover, it also becomes very important to clean the text data so that the NLP model gets the best possible version of the dataset. </p>
+
+            <br>
+            <h5>Cleaning the text</h5>
+            <p>The review text that we extracted from the data set had a lot of unclean data, so we created a cleaning script for the dataset. It removed unnecessary characters, hyperlinks, symbols, excess spaces, and other patterns of text that could not be processed by our algorithms. From the cleaned dataset, we extracted the review text description for our analysis. The cleaning script can be accessed on Github repository of the project.
+            </p>
+            <br>
+            <h5>Tackling the large size</h5>
+            <p>Amazon is hosting the files in two formats - <code>compressed tsv</code> and <code>parquet</code>. Since we had experience with working on tsv files, we decided to move ahead with that particular file format. However, when testing on a sample file, we ran into memory error since the NLP libraries were occuping a significant chunk of the RAM. Therefore to tackle this very problem, we took a series of infrastructure and framework decisions -
+              <ul>
+                <li>We created an EC2 instance on AWS with the default configuration provided by t3.micro. Moreover, we also mounted additional EBS volume to increase the storage capacity</li>
+                <li>Pandas provide a very efficient way of reading in compressed files in small chunks. Visit <a target="_blank" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html">this link</a> to know more. We specifically used <code>chunksize</code> and <code>compression</code> parameters.</li>
+
+              </ul>
+
+            Moreover since we were running the model on AWS, the dataset on S3 buckets were now directly accessible and hence there was no need to download raw files. This saved us unnecessary I/O operations.
+            </p>
+
+
+
+          </section>
+
+
+
+
+
+
+        </article>
+        <!-- END Main content -->
+      </div>
+    </main>
+
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/theDocs.all.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from shamsoft.net/thedocs/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Sep 2016 07:42:27 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An Academic Project by Achyut Joshi, Ishika Arora, Sumedha Raman & Andrew Giannotto as a part of the CSE6242 course at Georgia Tech. The project aims to extract opinions regarding different aspects of a product from their online reviews using various models from NLP">
+    <meta name="keywords" content="datascience, machine learning, natural language processing, nlp, georgia tech, academic project, achyutjoshi, achyut, gatech, analytics, amazon reviews, spacy, stanford, python">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-76699034-1', 'auto');
+    ga('require', 'linkid');
+
+    ga('send', 'pageview');
+
+  </script>
+
+  <title>Aspect Extraction and Opinion Analysis</title>
+
+    <!-- Styles -->
+    <link href="assets/css/theDocs.all.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../apple-touch-icon.html">
+    <link rel="icon" href="assets/img/favicon.ico">
+  {% seo %}
+
+  </head>
+
+  <header class="site-header navbar-fullwidth">
+
+      <!-- Top navbar & branding -->
+      <nav class="navbar navbar-default">
+        <div class="container">
+
+          <!-- Toggle buttons and brand -->
+
+
+            <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+
+        </div>
+      </nav>
+      <!-- END Top navbar & branding -->
+
+    </header>
+
+
+    <main class="container">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-md-3 col-sm-3 sidebar">
+
+          <ul class="sidenav dropable sticky">
+            <li><a  href={{site.baseurl}}/aspect_extraction/overview>Overview</a></li>
+            <li>
+              <a href={{site.baseurl}}/aspect_extraction/ourmodel>Our Model</a>
+            </li>
+
+            <li>
+              <a  href={{site.baseurl}}/aspect_extraction/datacollection >Data Collection</a>
+            </li>
+
+            <li>
+              <a class = "active" href = {{site.baseurl}}/aspect_extraction/aspectextraction >Aspect Extraction</a>
+            </li>
+            <li>
+              <a  href = {{site.baseurl}}/aspect_extraction/clustering >Clustering and Polarity</a>
+            </li>
+            <li>
+              <a href = {{site.baseurl}}/aspect_extraction/visualisation >Visualisation</a>
+            </li>
+
+             <li>
+               <a href = {{site.baseurl}}/aspect_extraction/future >Conclusions & Future Work </a>
+            </li>
+
+
+          </ul>
+
+        </aside>
+        <!-- END Sidebar -->
+
+
+        <!-- Main content -->
+        <article class="col-md-9 col-sm-9 main-content" role="main">
+
+          <header>
+            <h1>Aspect Extraction</h1>
+            <p>The objective of this step was to extract instances of product aspects and modifiers that express the opinion about a particular aspect. We used the dependency parser tree in Python's <code>spaCy</code> package to extract pairs of words based on specific syntactic dependency paths. The output of this step was a list of such noun-adjective which serve as the input to the next step of grouping aspects.</p>
+
+            <ol class="toc">
+              <li><a href="#generic">Why dependency parser?</a></li>
+              <li><a href="#data_spec">Deep dive into custom dependency rules</a></li>
+              <li><a href="#trend">Integrating into the pipeline</a></li>
+
+            </ol>
+          </header>
+
+          <section>
+            <h2 id="generic">Why dependency parser?</h2>
+            <p>There are two basic school of thoughts in the statistical analysis of languages - context free grammar & dependency grammar. The former assumes no underlying relationship and rules between words while the latter assumes a very intricate logic behind any language. I personally found <a target="_blank" href="https://youtu.be/PVShkZgXznc?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6">this</a> lecture by Professor Chris Manning particularly insightful to understand the difference between the two.
+            </p>
+            <p>Now to understand why we decided to go ahead with dependency grammar in this project, it becomes very important to know what we are trying to achieve. Look at the sentence below - </p>
+            <p><code>The delivery was very late!</code> </p>
+            <p>In layman's term, we want the model to extract <code>(delivery,late)</code> as the aspect-modifier pair. Looking at it closely, these words are basically noun & adjective pairs. And hence, there exists an underlying relationship and meaning behind these words that we can exploit using the dependency parsing tree by curating custom rules.  </p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="assets/images/dependency.png"></img>
+            <p>Figure: Dependency parsing tree from spaCy package</p>
+
+          </section>
+
+          <section>
+
+            <h2 id="data_spec">Deep dive into custom dependency rules</h2>
+            <p>The dependency parsing tree as modelled by the spaCy package can be seen in the above figure. Using such a tree, we curated a bunch of rules by manually reading through 100-150 reviews so we can extract aspect-modifier pairs from the reviews.</p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="assets/images/rules.png"></img>
+            <br>
+            <p>Some of the curated rules can be seen in the figure above. I have explained a couple of them in detail here - </p>
+            <ol>
+            <li>A word with <code>nsubj</code> dependency relationship with a verb token would be the noun of the phrase, and a word with <code>acomp</code> dependency relationship would be the adjective of this noun. Thus, we would extract this pair as a relevant aspect-modifier pair. (Note : To know more about these dependency identifiers, visit <a target="_blank" href="http://universaldependencies.org">Universal Dependencies</a>)</li>
+            <li>In order to incorporate negatives, we check if there is any word with a <code>neg</code> relationship. If yes, we append it to the already found modifier. </li>
+            <li>We also noticed the usage of pronouns like <code>it,this,they & these</code>as a replacement to the product under review. And hence we replaced these words with <code>product</code> key word.</li>
+            </ol>
+            <p>To be very explicit, as per the notations used in the image, we get an output <code>(A, M + M')</code> as the pair</p>
+
+
+<section>
+            <h2 id="trend">Integrating into the pipeline</h2>
+            <p>Having understood how parsing rules were used to solve the problem at hand, now we see how we scaled the algorithm to incorporate it into the data pipeline.</p>
+
+            <p>Python's spaCy package was used to implement these rules using the POS tags provided by the package. Each review was passed through this model and the output was appended in the form of a <code>json file</code>, where along with the aspect-modifier pairs, important meta data of the review like <code>review_id, product_id and product_category</code> were also appended.</p>
+            <p>One can find the whole codebase on the github repository along with a sample output file.</p>
+
+
+
+
+          </section>
+
+
+        </article>
+        <!-- END Main content -->
+      </div>
+    </main>
+
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/theDocs.all.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+
+
+</html>

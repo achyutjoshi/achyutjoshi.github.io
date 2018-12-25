@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from shamsoft.net/thedocs/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Sep 2016 07:42:27 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An Academic Project by Achyut Joshi, Ishika Arora, Sumedha Raman & Andrew Giannotto as a part of the CSE6242 course at Georgia Tech. The project aims to extract opinions regarding different aspects of a product from their online reviews using various models from NLP">
+    <meta name="keywords" content="datascience, machine learning, natural language processing, nlp, georgia tech, academic project, achyutjoshi, achyut, gatech, analytics, amazon reviews, spacy, stanford, python">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-76699034-1', 'auto');
+    ga('require', 'linkid');
+
+    ga('send', 'pageview');
+
+  </script>
+
+    <title>Aspect Extraction and Opinion Analysis</title>
+
+    <!-- Styles -->
+    <link href="assets/css/theDocs.all.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../apple-touch-icon.html">
+    <link rel="icon" href="assets/img/favicon.ico">
+    {% seo %}
+
+  </head>
+
+  <header class="site-header navbar-fullwidth">
+
+      <!-- Top navbar & branding -->
+      <nav class="navbar navbar-default">
+        <div class="container">
+
+          <!-- Toggle buttons and brand -->
+
+
+            <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+
+        </div>
+      </nav>
+      <!-- END Top navbar & branding -->
+
+    </header>
+
+
+    <main class="container">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-md-3 col-sm-3 sidebar">
+
+          <ul class="sidenav dropable sticky">
+            <li><a  href={{site.baseurl}}/aspect_extraction/overview>Overview</a></li>
+            <li>
+              <a href={{site.baseurl}}/aspect_extraction/ourmodel>Our Model</a>
+            </li>
+
+            <li>
+              <a  href={{site.baseurl}}/aspect_extraction/datacollection >Data Collection</a>
+            </li>
+
+            <li>
+              <a  href = {{site.baseurl}}/aspect_extraction/aspectextraction >Aspect Extraction</a>
+            </li>
+            <li>
+              <a href = {{site.baseurl}}/aspect_extraction/clustering >Clustering and Polarity</a>
+            </li>
+            <li>
+              <a  href = {{site.baseurl}}/aspect_extraction/visualisation >Visualisation</a>
+            </li>
+
+             <li>
+              <a class = "active" href = {{site.baseurl}}/aspect_extraction/future >Conclusions & Future Work </a>
+            </li>
+
+
+
+          </ul>
+
+        </aside>
+        <!-- END Sidebar -->
+
+
+        <!-- Main content -->
+        <article class="col-md-9 col-sm-9 main-content" role="main">
+
+          <header>
+            <h1>Results & Conclusions</h1>
+
+          <section>
+            <h2 id="features">Results</h2>
+
+            <img  class=" img-responsive center-block" style='width:80%;' src="/assets/images/btp/result_btp.png"></img>
+            <br>
+            <p>On 2500 unique test cases, we <b>saved total of 7 lakh rupees and lost 2 lakh rupees.</b> </p>
+
+
+
+
+
+          </section>
+
+          <section>
+            <h2 id="features">Conclusions</h2>
+            <p>From the data collected and through exploratory data analysis, we can determine the following:</p>
+            <br>
+            <ul class="step-text">
+              <li>
+                <p>The trend of flight prices vary over <code>various months and across the holiday</code></p>
+              </li>
+
+              <li>
+                <p>There are two groups of airlines: <code> the economical group and the luxurious group</code>.
+                Spicejet, AirAsia, IndiGo, Go Air are in the economical class, whereas Jet Airways and Air India in the other. Vistara has a more spread out trend.</p>
+              </li>
+
+              <li>
+                <p>The airfare varies depending on the <code>time of departure</code>, making timeslot used in analysis an important parameter.</p>
+              </li>
+
+              <li>
+                <p>The airfare <code>increases during a holiday season</code>.  In our time period, during Diwali the fare remained high for all the values of days to departure. We haven’t considered holiday season as a parameter now, since we are looking at data for a few months.
+</p>
+              </li>
+
+              <li>
+                <p>Airfare varies according to the day of the week of travel. It is <code>higher for weekends and Monday and slightly lower for the other days.</code>
+</p>
+              </li>
+
+              <li>
+                <p>There are a few times when an offer is run by an airline because of which the prices drop suddenly. These are difficult to incorporate in our mathematical models, and hence lead to error.</p>
+              </li>
+
+              <li>
+                <p>Along the <code>Mumbai-Delhi route, we find that the price of flights increases or remains constant</code> as the days to departure decreases. This is because of the high frequency of the flights, high demand and also could be due to heavy competition.</p>
+              </li>
+              <li>
+                <p>Only about 8-10% of the times, a person should wait according to the data collected across the Mumbai-Delhi route, compared to 30-40% in Delhi-Guwahati route</p>
+              </li>
+
+
+            </ul>
+
+
+          </section>
+
+
+
+        </article>
+        <!-- END Main content -->
+      </div>
+    </main>
+
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/theDocs.all.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+
+
+</html>
