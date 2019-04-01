@@ -56,5 +56,5 @@ __How can I use the lessons learnt in my real life?__
 
 __Any links with previous books I have read?__
 
-1. It is fascinating to learn about how life evolved on Earth. Homo Sapiens have walk through a great journey evolution into the current version of us. The author hinted of how sleep could have been our primary phase of life and then slowly we evolved into being awake more.
-2. Yuval Harari in Sapiens explained how the brain size got bigger once we started walking on two legs and how the fact that we can create myths evolved us into the most dominant species on Earth. This books seconds that idea and relates how REM sleep helped in making emotional and cognitive connection between thoughts. This book will definitely will rank up top with Sapiens in terms of knowledge I gained!
+1. It is fascinating to learn about how life evolved on Earth. Homo Sapiens have walked through a great journey of evolution to reach the current version of us. The author hinted of how sleep could have been our primary phase of life and slowly we evolved into being awake more.
+2. Yuval Harari in Sapiens explained how the brain size got bigger once we started walking on two legs and how the fact that we can create myths evolved us into the most dominant species on Earth. This books seconds that idea and relates how REM sleep helped in making emotional and cognitive connection between thoughts. This book will definitely rank up top with Sapiens in terms of knowledge I gained!
