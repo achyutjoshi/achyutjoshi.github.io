@@ -47,7 +47,7 @@ __Which opinions were created/changed after reading the book?__
 13. REM dreaming also fosters problem solving and creativity. In this phase, the brain is no longer constrained to see the most obvious connections. It becomes very actively biased towards seeking out the most distant, non-obvious links between two sets of information. Maybe this is why most of our dreams constitutes random un-related experiences from our brain.
 
 
-__How can I use the lessons learnt in my real life?__
+__How can I use the lessons learnt from this book in my real life?__
 
 1. Since caffeine remains in the body for at least 5-6 hours, I decided not to consume coffee after 4PM.
 2. Sleep deprived driving is more dangerous than drunk driving. And this fact has made me more careful whenever I or someone I know travels at night!
