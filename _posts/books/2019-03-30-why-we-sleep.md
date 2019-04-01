@@ -11,15 +11,16 @@ keywords : "book, why we sleep, sleep, book review, uc berkeley, dreaming, kindl
 
 I have always been fascinated by sleep. I have had my parents advice me to sleep well before every exam - but obviously I never did. I took up this book to understand why people usually stress a lot on good sleep. And 15 pages into this book, I kept this book aside and slept because it was already thirty minutes past my bed time. And ironically even the author suggests the reader to sleep.
 
+<!--more-->
+
 > Should you feel drowsy and fall asleep while reading the book, unlike most authors, I will not be disheartened. Indeed, based on the topic and content of this book, I am actively going to encourage that kind of behaviour from you
+
 
 __Detailed Highlights and Notes__
 
 Using Kindle has made sharing highlights and notes pretty easy. I have my personal highlights, however when I was deciding whether I should read this book, I came across this detailed notes from this book which would serve its purpose well - [Poor Ash's Almanack](http://www.askeladdencapital.com/dr-matthew-walkers-why-we-sleep-book-review-notes-analysis/){:target="_blank"}
 
-__My Learnings__
 
-Starting this year, I have created a `book-reading` template on Evernote that helps me document my learnings when I am reading a book. I have tried and accumulate them below -
 
 __Things I knew about sleep before I read this book__
 
@@ -56,4 +57,4 @@ __How can I use the lessons learnt in my real life?__
 __Any links with previous books I have read?__
 
 1. It is fascinating to learn about how life evolved on Earth. Homo Sapiens have walk through a great journey evolution into the current version of us. The author hinted of how sleep could have been our primary phase of life and then slowly we evolved into being awake more.
-2. Yuval Harari in Sapiens explained how the brain size got bigger once we started walking on two legs and how the fact that we can create myths evolved us into the most dominant species on Earth. This books seconds that idea and relates how REM sleep helped in making emotional and cognitive connection between thoughts. This book will definitely will rank up top with Sapiens in terms of knowledge I gained! 
+2. Yuval Harari in Sapiens explained how the brain size got bigger once we started walking on two legs and how the fact that we can create myths evolved us into the most dominant species on Earth. This books seconds that idea and relates how REM sleep helped in making emotional and cognitive connection between thoughts. This book will definitely will rank up top with Sapiens in terms of knowledge I gained!
