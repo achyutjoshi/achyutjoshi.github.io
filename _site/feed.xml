@@ -6,9 +6,154 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Dec 2018 23:42:52 +0530</pubDate>
-    <lastBuildDate>Tue, 25 Dec 2018 23:42:52 +0530</lastBuildDate>
+    <pubDate>Wed, 08 May 2019 17:40:30 -0400</pubDate>
+    <lastBuildDate>Wed, 08 May 2019 17:40:30 -0400</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Dictionary Based Models for Analysing Multi-Lingual Texts</title>
+        <description>&lt;p&gt;With the increase in the accessibility of technology, language barriers have slowly started to break down. The world has started to mix these languages in order to make communication more intuitive and easy. This can very evidently be seen in multi lingual countries like India, Turkey, etc. I spent the early months of 2019 trying to understand and learn the processes to analyse such multi-lingual texts. I am planning to write a series of posts explaining my findings and learning.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;In the world of complex models, bag-of-words or dictionary based models are still one of the most intuitive language models one can think of. A bag-of-words model, or BoW for short, is a way of extracting features from text for use in modelling, such as with machine learning algorithms. The model is only concerned with whether known words occur in the document, not where in the document.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is code mixing?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Code-Mixing or Code-Switching is a phenomenon of mixing grammatical structures of two or more languages under varied social constraints. To simplify, whenever you use more than one language in a sentence, you are code mixing. Computationally, natural language analysis has progressed exponentially in terms of mono-lingual texts. However, the research community is still finding ways to process multi-lingual texts. One of the major bottleneck is - data. When it comes to mono-lingual data, it is widely and easily available. But when it comes to code-mixed data, it is a tad bit harder to find. It becomes even more difficult for languages like Hindi that has a different script (Devnagri script) and it is transliterated into roman script when it is code mixed with English.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why dictionary based models?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Dictionary based models provide a simple baseline model for such cases. The motivation behind such a model is that we create dictionaries for words of individual languages. For instance if we were analysing a potential candidate for English-Spanish code mixing, we will have two separate dictionaries of words - one for English and another for Spanish. Further, we would create a token based algorithm that compares every word with these dictionaries and returns a metric that captures the code mixing.&lt;/p&gt;
+
+&lt;p&gt;Surprisingly this simple method has been used in various domains within the world of Natural language processing - topic modelling, text classification, spam/hate speech detection, etc. Although with the increase in computational capabilities, the state of the art has slowly moved towards deep learning and neural nets, simple bag of words model prove to be a great way to quickly build a baseline model.&lt;/p&gt;
+
+&lt;p&gt;Some of the advantages of such an approach are -&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Easy and intuitive - You exactly know what is going on inside your algorithm and why the results are accurate or not. On the other hand, neural nets and deep learning models are harder to understand.&lt;/li&gt;
+  &lt;li&gt;Computationally easy - Since there are not many parameters to learn, they are much faster than other complex models.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Some drawbacks -&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Need of large corpus - Unlike neural nets, such models don’t learn and adapt on their own. The model is as good as the data is.&lt;/li&gt;
+  &lt;li&gt;Close association with rule based models - And hence models are more susceptible to human biases.&lt;/li&gt;
+  &lt;li&gt;The independence assumption - all features about order or structure of words in the document are discarded and only mapping with the dictionary corpus is considered&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Dictionary based model in identifying Code mixing&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I worked with a specific use case of identifying code mixing in social media conversation between English and Hindi. I worked with three datasets - r/India Reddit comments from January 2017, Bollywood songs lyrics and tweets from select handles. Due to the work by &lt;a href=&quot;https://www.aclweb.org/anthology/W18-3206&quot; target=&quot;_blank&quot;&gt;Deepthi Mave,etal&lt;/a&gt;, I could use the annotated dataset to test the performance. I also gathered various different corpuses which provided me with English &amp;amp; Hindi (in roman script) words. Using this dataset, I used the idea presented by &lt;a href=&quot;http://www.lrec-conf.org/proceedings/lrec2016/pdf/669_Paper.pdf&quot; target=&quot;_blank&quot;&gt;Gamback etal&lt;/a&gt; to calculate CMI index to quantify code-mixing.&lt;/p&gt;
+
+&lt;p&gt;This specific post is to discuss various challenges faced while working with the specific Hindi and English words corpuses. I would be following this blog post with detailed description of the model.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Tackling Transliteration and small corpus size.&lt;/strong&gt; In spite of the fact that Hindi has a native script, most of the Hindi social media text is transliterated. Due to lack of standardisation in transliteration, a single Hindi word can have multiple surface forms (e.g. Khushboo, Khushbu, Khushbuu etc.). Moreover, because of this, there are no exhaustive datasets available for transliterated Hindi words.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Overlapping words.&lt;/strong&gt;
+There are many words which overlaps in both languages. When 1 million most frequently used words from Google n-gram data was cross referenced with the corpus of transliterated Hindi words, there were around 5000 English words that were in the Hindi corpus. Some examples were -  rat (night), hue(happened), man(mind), is (this), etc. Moreover, among these words there were instances of words like rani, rasta, etc that has origins in Hindi however because of its common usage are considered to be english words too.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Keeping in mind the motive of identifying code mixing instances, I followed a multi-step process of creating a filtered version of these word dictionaries to tackle the above mentioned challenges.&lt;/p&gt;
+
+&lt;image height=&quot;300em&quot; src=&quot;/assets/images/nlp1.png&quot;&gt; &lt;/image&gt;
+
+&lt;p&gt;Some key assumptions and their reasons -&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Why removing english words occurring in Mieliestronk’s list? The list contains 58000 English words which have no words having origins from Hindi words. Since the Hindi dictionary was created using social media conversations, it had common english words like road, engineering etc.  Using this list, such words were removed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In the English dictionary that was created using Google n-grams dataset, there were common Hindi-origin words that were considered to be English words (rani (queen), rasta(road), cheetah(tiger)). To get rid of such instances, all words having less frequency(number of occurrences in Google n-gram dataset) than the 50 percentile and also occurring in the Hindi dictionary were removed. The 50 percentile cutoff was chosen because other words were either proper nouns (like yahoo, usa, elizabeth etc) or single letter words (like a, i, etc).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Further improvements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Get more data - I am currently working on developing a model that transliterates devnagri script into roman literals for Hindi.&lt;/li&gt;
+  &lt;li&gt;Further we can use phonetic similarity to tackle non-standard spellings in transliterated Hindi words.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I am also developing an open source tool &lt;a href=&quot;https://github.com/achyutjoshi/LangRazor&quot; target=&quot;_blank&quot;&gt;LangRazor&lt;/a&gt; which eases the process of calculating such indexes. Currently it only works for bi-lingual data, but I am hoping to extend it to analyse code-mixing between more than two languages.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 02 May 2019 15:13:39 -0400</pubDate>
+        <link>http://localhost:4000/datascience/dictionary-based-models-code-mixing-nlp</link>
+        <guid isPermaLink="true">http://localhost:4000/datascience/dictionary-based-models-code-mixing-nlp</guid>
+        
+        
+        <category>datascience</category>
+        
+      </item>
+    
+      <item>
+        <title>Why we Sleep by Mathew Walker</title>
+        <description>&lt;p&gt;I have always been fascinated by sleep. I have had my parents advice me to sleep well before every exam - but obviously I never did. I took up this book to understand why people usually stress a lot on good sleep. And 15 pages into this book, I kept this book aside and slept because it was already thirty minutes past my bed time. And ironically even the author suggests the reader to sleep.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Should you feel drowsy and fall asleep while reading the book, unlike most authors, I will not be disheartened. Indeed, based on the topic and content of this book, I am actively going to encourage that kind of behaviour from you&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Detailed Highlights and Notes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Using Kindle has made sharing highlights and notes pretty easy. I have my personal highlights, however when I was deciding whether I should read this book, I came across this detailed notes from this book which would serve its purpose well - &lt;a href=&quot;http://www.askeladdencapital.com/dr-matthew-walkers-why-we-sleep-book-review-notes-analysis/&quot; target=&quot;_blank&quot;&gt;Poor Ash’s Almanack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Things I knew about sleep before I read this book&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;We all have heard this - “Sleep is very important”. It helps our brain and body get the much deserved rest.&lt;/li&gt;
+  &lt;li&gt;Sleep also helps in recovering emotionally.&lt;/li&gt;
+  &lt;li&gt;There are two different stages of sleep - REM and NREM. Although I never exactly understood the difference.&lt;/li&gt;
+  &lt;li&gt;Dreams are very often related to our daily emotional state - if we are depressed, our dreams will reflect that.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Which opinions were created/changed after reading the book?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;There is a very complex scientific process that the body undergoes to keep in track sleep and the biological cycle at large. There are two major hormones that help the body - melatonin (helps regulate biological timing) and adenosine (acts like sleep pressure).&lt;/li&gt;
+  &lt;li&gt;Caffeine masks the very effect adenosine and hence tricks the body to be active, in spite of it needing the sleep. One very alarming fact about caffeine is the very long half-life. A 2PM cup of coffee will still has a certain residual affect at 11PM at night.&lt;/li&gt;
+  &lt;li&gt;I have personally woken up exactly two minutes before my alarm whenever I had a big day. It was fascinating to know that this happens to everyone.While our conscious mapping of time is lost during sleep, at a non-conscious level, time continues to be cataloged by the brain with incredible precision.&lt;/li&gt;
+  &lt;li&gt;Time is usually elongated in dreams. Whenever I fall asleep between two alarms, it feels like I lived a whole day within a dream in spite of having a mere 10 minute difference between the alarms.&lt;/li&gt;
+  &lt;li&gt;Night owls and early risers are not who they are by choice. It is not their conscious decision, rather their genetic fate. Interestingly if you think about it, the cultural norm are very biased towards early risers. Even personally, I have tried to create a habit of waking up early quite many times.&lt;/li&gt;
+  &lt;li&gt;It is usually very hard to acclimate to a new time zone when travelling eastward than when flying westward. The major reason - eastward direction requires that you fall asleep earlier than you would normally, which is a tall biological order for the mind to simply will into action. While the westward direction requires you to stay up later, which is consciously and practically an easier option. Now I know why it is tough to beat jet-lag when travelling back home to India from the US!&lt;/li&gt;
+  &lt;li&gt;REM or Rapid Eye Movement Sleep is when the brain is as active as when we are awake. REM is where we dream. The brain paralyses our body during REM cycle so that the brain can dream safely.&lt;/li&gt;
+  &lt;li&gt;NREM is where the brain eases off into a slow-wave sleep which triggers a state of inward reflection—one that fosters information transfer and the distillation of memories. Think of this as slow AM waves - they have a longer range. These long-range brainwaves of NREM will move memory packets (recent experiences) from a short-term storage site, which is fragile, to a more permanent, and thus safer, long-term storage location.&lt;/li&gt;
+  &lt;li&gt;Humans will have a very different circadian cycle at different ages in their life. Inside a mother’s womb, the sleep in majorly dominated by REM since it establishes a neuro architecture - a framework that will engender thoughts, memories, feelings, decisions and actions. Toddlers ought to have a polyphasic sleep because the part of the brain that controls the circadian cycle takes time to develop. For adolescent teenagers, the cycle moves a bit forward and hence most teenagers want to stay up till late. These biological facts are something we as humans should know - somethings are just beyond our control!&lt;/li&gt;
+  &lt;li&gt;An average human has a stable balance of 80/20 NREM-to-REM ratio. Things are very different for infants wherein the ratio is almost 50/50. The author beautifully expresses this as an act of modelling and remodelling. REM in infants act like a creator - someone who establishes neural highways. While NREM in later part(particularly childhood) helps in maintaining and remodelling according to experiences. If we think about it, this is the reason why childhood plays such an important role in moulding a human brain.&lt;/li&gt;
+  &lt;li&gt;I never knew that sleep and memory are intensively linked. Sleep before learning moves old stuff out to an external hard drive, creating room for the new; sleep after learning makes sure that stuff gets stored instead of lost. There are scientific methods like - sleep stimulation by audio waves to improve NREM sleep and targeted memory reactivation that researchers are experimenting with.&lt;/li&gt;
+  &lt;li&gt;While NREM is majorly associated with learning, REM is the phase that helps in emotional stability through dreaming. REM-sleep dreaming offers a form of overnight therapy. That is, REM-sleep dreaming takes the painful sting out of difficult, even traumatic, emotional episodes you have experienced during the day, offering emotional resolution when you awake the next morning.&lt;/li&gt;
+  &lt;li&gt;REM dreaming also fosters problem solving and creativity. In this phase, the brain is no longer constrained to see the most obvious connections. It becomes very actively biased towards seeking out the most distant, non-obvious links between two sets of information. Maybe this is why most of our dreams constitutes random un-related experiences from our brain.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;How can I use the lessons learnt from this book in my real life?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Since caffeine remains in the body for at least 5-6 hours, I decided not to consume coffee after 4PM.&lt;/li&gt;
+  &lt;li&gt;Sleep deprived driving is more dangerous than drunk driving. And this fact has made me more careful whenever I or someone I know travels at night!&lt;/li&gt;
+  &lt;li&gt;And to sum the whole book - I have grown more conscious about how important sleep is. And I would start investing in making my sleep better.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Any links with previous books I have read?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It is fascinating to learn about how life evolved on Earth. Homo Sapiens have walked through a great journey of evolution to reach the current version of us. The author hinted of how sleep could have been our primary phase of life and slowly we evolved into being awake more.&lt;/li&gt;
+  &lt;li&gt;Yuval Harari in Sapiens explained how the brain size got bigger once we started walking on two legs and how the fact that we can create myths evolved us into the most dominant species on Earth. This books seconds that idea and relates how REM sleep helped in making emotional and cognitive connection between thoughts. This book will definitely rank up top with Sapiens in terms of knowledge I gained!&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sat, 30 Mar 2019 10:13:39 -0400</pubDate>
+        <link>http://localhost:4000/books/why-we-sleep</link>
+        <guid isPermaLink="true">http://localhost:4000/books/why-we-sleep</guid>
+        
+        
+        <category>books</category>
+        
+      </item>
     
       <item>
         <title>Thailand #2 : The non-travel bucket-list for your solo - Questions, thoughts and more </title>
@@ -42,7 +187,7 @@
 
 &lt;p&gt;This might not be applicable to all destinations, but if you are visiting an exotic country which has a rich cuisine, just take the course. I would suggest to take it in the first few days itself because it will provide you with the knowledge of all the dishes the country has to offer. And that makes your life easier when you are ordering food at that small road-side food stall.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 01 May 2018 17:43:39 +0530</pubDate>
+        <pubDate>Tue, 01 May 2018 08:13:39 -0400</pubDate>
         <link>http://localhost:4000/travel/bucket-list-for-solo-trip</link>
         <guid isPermaLink="true">http://localhost:4000/travel/bucket-list-for-solo-trip</guid>
         
@@ -132,7 +277,7 @@ But as far as I can remember, heaven &amp;amp; hell is down on earth itself. If 
 
 &lt;p&gt;I know for a fact that I am missing out on a lot of things that we talked, but I don’t seem to remember them. I tried to paraphrase most of the wisdom as much as I could remember from my notes.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 06 Mar 2018 17:43:39 +0530</pubDate>
+        <pubDate>Tue, 06 Mar 2018 07:13:39 -0500</pubDate>
         <link>http://localhost:4000/travel/learnings-from-buddhist-monks-in-thailand</link>
         <guid isPermaLink="true">http://localhost:4000/travel/learnings-from-buddhist-monks-in-thailand</guid>
         
@@ -175,7 +320,7 @@ But as far as I can remember, heaven &amp;amp; hell is down on earth itself. If 
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-BKHCIVzV38&amp;amp;list=PLkCUhga4t_lBGSlF94CtJbYK3XWzjog2D&amp;amp;index=7&quot; target=&quot;_blank&quot;&gt;Dream Theatre&lt;/a&gt; - My new work music&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Sun, 25 Feb 2018 06:43:39 +0530</pubDate>
+        <pubDate>Sat, 24 Feb 2018 20:13:39 -0500</pubDate>
         <link>http://localhost:4000/journal/journal-six</link>
         <guid isPermaLink="true">http://localhost:4000/journal/journal-six</guid>
         
@@ -216,7 +361,7 @@ But as far as I can remember, heaven &amp;amp; hell is down on earth itself. If 
 
 &lt;p&gt;I will try to post my experiences every two days. Wish me luck!&lt;/p&gt;
 </description>
-        <pubDate>Tue, 30 Jan 2018 17:43:39 +0530</pubDate>
+        <pubDate>Tue, 30 Jan 2018 07:13:39 -0500</pubDate>
         <link>http://localhost:4000/travel/pre-trip-musings-thailand</link>
         <guid isPermaLink="true">http://localhost:4000/travel/pre-trip-musings-thailand</guid>
         
@@ -272,7 +417,7 @@ One of my juniors in college told me - “Achyut, you preach a lot, but you fail
 
 &lt;p&gt;PS. I am actively looking for any freelancing projects in the fields of - Data Science, Designing, Writing, or any shit (I have enough free time and thus will learn something new). So everyone who is reading this, help me get them :D&lt;/p&gt;
 </description>
-        <pubDate>Thu, 18 Jan 2018 06:43:39 +0530</pubDate>
+        <pubDate>Wed, 17 Jan 2018 20:13:39 -0500</pubDate>
         <link>http://localhost:4000/journal/breathing-again</link>
         <guid isPermaLink="true">http://localhost:4000/journal/breathing-again</guid>
         
@@ -314,7 +459,7 @@ One of my juniors in college told me - “Achyut, you preach a lot, but you fail
   &lt;li&gt;&lt;a href=&quot;https://lifehacker.com/charles-duhigg-on-self-motivation-mental-models-and-g-1793445660&quot; target=&quot;_blank&quot;&gt;The Upgrade - By Life Hacker&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Sun, 19 Nov 2017 06:43:39 +0530</pubDate>
+        <pubDate>Sat, 18 Nov 2017 20:13:39 -0500</pubDate>
         <link>http://localhost:4000/journal/journal-four</link>
         <guid isPermaLink="true">http://localhost:4000/journal/journal-four</guid>
         
@@ -354,7 +499,7 @@ One of my juniors in college told me - “Achyut, you preach a lot, but you fail
   &lt;li&gt;&lt;a href=&quot;https://betterhumans.coach.me/financial-freedom-the-missing-link-1b383c806044&quot; target=&quot;_blank&quot;&gt;Financial Freedom&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Sun, 29 Oct 2017 06:43:39 +0530</pubDate>
+        <pubDate>Sat, 28 Oct 2017 21:13:39 -0400</pubDate>
         <link>http://localhost:4000/journal/journal-three</link>
         <guid isPermaLink="true">http://localhost:4000/journal/journal-three</guid>
         
@@ -384,94 +529,12 @@ I stumbled upon &lt;a href=&quot;https://itunes.apple.com/us/app/reflectly-journ
   &lt;li&gt;&lt;a href=&quot;https://medium.com/personal-growth/when-it-comes-to-innovation-are-you-a-sculptor-or-a-painter-43713f11f97d&quot; target=&quot;_blank&quot;&gt;Sculptor vs Painter&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Sun, 15 Oct 2017 06:43:39 +0530</pubDate>
+        <pubDate>Sat, 14 Oct 2017 21:13:39 -0400</pubDate>
         <link>http://localhost:4000/journal/journal-two</link>
         <guid isPermaLink="true">http://localhost:4000/journal/journal-two</guid>
         
         
         <category>journal</category>
-        
-      </item>
-    
-      <item>
-        <title>#1 - Why Journaling?</title>
-        <description>&lt;p&gt;Yes, I love writing. But lately I have been thinking on the motivation behind it. I have been asked why I write and the best answer I can come up is, it pushes my boundaries, it pushes me to try new things in the first place so I can write about them. And frankly, that is the truth.
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;p&gt;I have seen many people try weekly journalling and lose their motivation within few weeks. Maybe I would too. But then I cannot not try with this fear right? So here I am, trying my hand at weekly journalling.&lt;/p&gt;
-
-&lt;p&gt;I will list down everything and anything that I want to share in these series of blog posts, which usually on normal weeks will be published on Sunday. The blogs will be raw &amp;amp; unedited so excuse the usage wrong incorrect grammar and sentence structures. I want to make this process as easy as possible so I can create a habit around it.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Everything going on in this week:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Lately I am feeling as if I am letting my life slip by my hand. Work at SocialCops is very hectic and somewhere I lose out on the things I want to do for myself. The life revolves around work-home-work, and which I really hate myself for doing. So, from this week I decided to take a step back, and start getting the control again, be in the drivers seat, and not let life play me around. And it is tough, but if if not done now, I will never learn to do it.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://bulletjournal.com&quot; target=&quot;_blank&quot;&gt;Bullet Journaling&lt;/a&gt; is back. The last time I had tried this was in my final year of college when there were less things to manage. But now, when you have multiple projects going on at work, and also several personal projects and things, you need a way for organizing your life.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Music?&lt;/strong&gt; I stumbled upon the several songs composed by Amit Trivedi for the upcoming movie Secret Superstar. And the songs are Amit Trivedi at his best. Do listen to this &lt;a href=&quot;https://www.youtube.com/watch?v=XyZ0aXrpJIc&quot; target=&quot;_blank&quot;&gt;one&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;From next time I will start sharing great blogs that I read too. I need to figure out a way to best show them though.&lt;/p&gt;
-
-&lt;p&gt;Until next time, see ya!&lt;/p&gt;
-</description>
-        <pubDate>Sun, 08 Oct 2017 06:43:39 +0530</pubDate>
-        <link>http://localhost:4000/journal/why-journal</link>
-        <guid isPermaLink="true">http://localhost:4000/journal/why-journal</guid>
-        
-        
-        <category>journal</category>
-        
-      </item>
-    
-      <item>
-        <title>Is it really worth it?</title>
-        <description>&lt;p&gt;Has anyone felt that sheer guilt from within?&lt;br /&gt;
-something inside you wants to curse you,&lt;br /&gt;
-break you, punch you and pull you down the stairs&lt;br /&gt;
-into the infinite void till you cannot match your own sight&lt;br /&gt;
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;p&gt;I have. And I have known this for long.&lt;br /&gt;
- But still I did nothing. &lt;br /&gt;
-Or rather, we did nothing.&lt;/p&gt;
-
-&lt;p&gt;Four long years back, I left home to pursue my dreams.&lt;br /&gt;
-I was always taught to dream big and,&lt;br /&gt;
-fortunately or unfortunately,          &lt;br /&gt;
-I dreamt bigger that my cosy little home city could provide.&lt;/p&gt;
-
-&lt;p&gt;There was this unsaid understanding that         &lt;br /&gt;
-one day I will leave home,    &lt;br /&gt;
-but never really understood that         &lt;br /&gt;
-I will never really be at home after that day.&lt;/p&gt;
-
-&lt;p&gt;Family gatherings started to become a rarity,  &lt;br /&gt;
-Home-food a luxury and festival days just holidays.  &lt;br /&gt;
- But more importantly, I was never there  &lt;br /&gt;
-I was never there for them, when they needed the most.&lt;/p&gt;
-
-&lt;p&gt;When they wanted to learn a new app,&lt;br /&gt;
-When they were facing issues with their mobiles,&lt;br /&gt;
-When they wanted to be in sync with the modern world&lt;br /&gt;
-or when they just wanted a kid in the house.&lt;/p&gt;
-
-&lt;p&gt;They were always there, always.&lt;br /&gt;
-They still are, and here I am,&lt;br /&gt;
-trying to open my wings and fly away&lt;br /&gt;
-when all they want is to fly with me.&lt;/p&gt;
-
-&lt;p&gt;Is it really worth it? &lt;br /&gt;
-The success. The knowledge&lt;br /&gt;
-The degrees. The work.&lt;/p&gt;
-
-&lt;p&gt;Is it really worth it?&lt;/p&gt;
-</description>
-        <pubDate>Tue, 29 Aug 2017 06:43:39 +0530</pubDate>
-        <link>http://localhost:4000/randomblog/is-it-worth-it</link>
-        <guid isPermaLink="true">http://localhost:4000/randomblog/is-it-worth-it</guid>
-        
-        
-        <category>randomblog</category>
         
       </item>
     
