@@ -100,4 +100,4 @@ One key difference to note here is that a generative algorithm is a much stronge
 __Links__
 
 1. [Prof. Negar Kivyansh](https://sites.google.com/site/negarkiyavash/){:target="_blank"}
-2. [Feynman Learning Technique](https://fs.blog/2012/04/feynman-technique/){:target = "_blank"}
+2. [Feynman Learning Technique](https://fs.blog/2012/04/feynman-technique/){:target= "_blank"}
