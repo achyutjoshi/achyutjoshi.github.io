@@ -9,7 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 twitter_username: achyutjosh1995
 twitter:
   username: achyutjosh1995
-  
+
 facebook:
   app_id: 1605837139430627
   admins: ajoshi1995
@@ -25,6 +25,8 @@ paginate: 5
 permalink: /:categories/:title
 # Build settings
 markdown: kramdown
+# kramdown :
+#   math_engine : mathjax
 #highlighter: pygments
 aboutPage: true
 

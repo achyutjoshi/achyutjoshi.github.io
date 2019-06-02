@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <h4 class="post-title">{{ page.title }}</h4>
+    <time class="post-date">{{ page.date | date: "%B %d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</time>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+    <br>
+    <br>
+    {% include facebook.html %}
+    {% include disqus.html %}
+
+
+
+  {% if page.keywords %}
+ <meta name="keywords" content="{{ page.keywords }}" />
+ {% else %}
+<meta name="keywords" content="freelance, designer, skeptic, web design, development, data science, freelance developer, jekyll, entrepreneur, IIT, travel, Achyut, achyutjoshi, books, startify, iitjodhpur, data, photoshop, engineer, productivity" />
+{% endif %}
+
+  </article>
+
+</div>

@@ -6,9 +6,113 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 May 2019 17:40:30 -0400</pubDate>
-    <lastBuildDate>Wed, 08 May 2019 17:40:30 -0400</lastBuildDate>
+    <pubDate>Sat, 01 Jun 2019 17:42:35 -0700</pubDate>
+    <lastBuildDate>Sat, 01 Jun 2019 17:42:35 -0700</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Machine Learning Takeaways - Following the Feynman Learning Technique</title>
+        <description>&lt;p&gt;Many would reckon that Machine Learning is now the new oil these days. And I would most likely support that. Personally I got exposed to the world of ML in my undergrad days but it had always remained a black box for me. One of the major motivation of joining a Masters program was my intent to peep into this black box.&lt;/p&gt;
+
+&lt;p&gt;I signed up for this course called Computational Data Analysis(CSE6740) offered by Prof. Negar Kivyansh. Every lecture I attended, I had this eureka moment where I understood the why behind a particular method. This blog (or blog series) is my attempt to follow the Feynman Learning Technique. So lets see if that works!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Important Caveat : I am assuming that the reader knows the basics of Machine Learning and have some (minimal) exposure to working with data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What are we trying to do in Machine Learning?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In a very overarching way, we are basically extracting different relationships from the data using mathematical &amp;amp; statistical rules. Everyone loves to divide machine learning into two big paradigms - Supervised and Unsupervised learning.&lt;/p&gt;
+
+&lt;p&gt;Lets assume you are a store manager and want to do apply machine learning to improve the money you earn every day. Understand the two problem statements carefully -&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You want to have an estimate on the amount you shall earn this quarter so that you can understand the amount you need to invest in the business from your savings.&lt;/li&gt;
+  &lt;li&gt;You want to understand different customer behaviour and how you can best satisfy their buying needs, which indirectly increases your revenue&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The first one is supposed to be Supervised while the later is supposed to be Unsupervised. While there are no hard margins for methods to solve these two problem statements, their only purpose here is to differentiate between the two paradigms. A supervised learning will always have a target variable (ie. something to predict or classify). Like in our case, we want to estimate quarterly earning. While unsupervised learning can be thought as an exploratory algorithm to group or rank the datasets. We shall be focusing on supervised learning for this blog.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Paradigms within Supervised Learning&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are different paradigms within Supervised Learning -&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Empirical or close-form solution based models - eg: Linear Regression&lt;/li&gt;
+  &lt;li&gt;Probabilistic Approach - world of General Linear Models&lt;/li&gt;
+  &lt;li&gt;Distance/Margin based - Support Vectors and corresponding kernel methods&lt;/li&gt;
+  &lt;li&gt;Neuron based - Neural networks and the world of Deep Learning&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Essence of the Probabilistic Approach in Machine Learning&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It is all about maximising &lt;script type=&quot;math/tex&quot;&gt;P(y ~\vert X)&lt;/script&gt;. If you understand conditional probability, you will realise that this statement is equivalent to saying - probability of y given X. If you closely understand any of the probabilistic algorithm, all we are trying to do is finding the &lt;script type=&quot;math/tex&quot;&gt;P(y ~\vert X, ~\theta)&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;P(y ~\vert X; ~\theta)&lt;/script&gt;. Since most approaches seldom have a closed form solution, probabilistic view is one of the most common ways of understanding the heuristics.&lt;/p&gt;
+
+&lt;p&gt;Now let me prove my point by seeing some of the most common models -&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Linear Regression - Here &lt;script type=&quot;math/tex&quot;&gt;P(y ~\vert X ; ~\theta)&lt;/script&gt; is assumed to be normally distributed which leads to the formulation of the likelihood function&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Logistic Regression - Here we use a transformation function to map all the y’s between [0,1) and yet the essence remains the same. We still are maximising &lt;script type=&quot;math/tex&quot;&gt;P(y \vert X ; \theta)&lt;/script&gt; which is in the form - &lt;script type=&quot;math/tex&quot;&gt;P(y \vert X ; \theta) = (h_\theta(x))^y(h_\theta(x))^{1-y}&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;General Linear Model - It is a much general version of linear regression where &lt;script type=&quot;math/tex&quot;&gt;P(y ~\vert X ; ~\theta)&lt;/script&gt; can be any probability distribution. For instance, it can be a poisson distribution.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Every Algorithm has an optimisation element&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In essence the goal of the process it to achieve the best configurations(read parameter values) which are learnt from the data. So how do we define “best”? We usually develop a loss function or the likelihood function. We generally want to minimise the loss function or maximise the likelihood function.&lt;/p&gt;
+
+&lt;p&gt;For instance -&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;General linear regression has a loss term associated within. (the most commonly used is the RMSE &lt;script type=&quot;math/tex&quot;&gt;(y - \hat{y})^2&lt;/script&gt;).&lt;/li&gt;
+  &lt;li&gt;Logistic regression has a probabilistic view point and hence it has a maximisation of likelihood.&lt;/li&gt;
+  &lt;li&gt;Support Vector Machines - We maximise the margins between the support vectors&lt;/li&gt;
+  &lt;li&gt;Decision Trees and Random Forests - You find the best parameter/subset of parameter to branch on. Here the “best” is defined by indexes like gini impurity or information gain.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For anyone who has studied advanced optimisation knows that they are really nasty. There are numerous assumptions that go behind making a function computationally possible to optimise. And inspite of these assumptions, many complex models cannot be optimised and hence heuristics like sampling or vartional inference are used. Even feature selection as a different stage of data science has optimisation involved.&lt;/p&gt;
+
+&lt;p&gt;My two cents - before diving into the fancy stuff of machine learning and deep learning, take one advanced course on optimisation. Even though you won’t remember much and you won’t directly be involved in optimisation, you will learn to appreciate the complexity of the problem at hand.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Difference between Decision function and Modeling Function&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In case of probabilistic models, lets say we somehow approximate &lt;script type=&quot;math/tex&quot;&gt;P(y \vert X)&lt;/script&gt;, what next?  In the case of linear regression it is straight forward, because what we get from maximising &lt;script type=&quot;math/tex&quot;&gt;P(y \vert X)&lt;/script&gt; are values of the parameters. So we simply have to plug the new &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; in that equation.&lt;/p&gt;
+
+&lt;p&gt;However in case of logistic regression we need one more step to decide the label. That is, &lt;script type=&quot;math/tex&quot;&gt;argmax_{y} P(y \vert X)&lt;/script&gt;. Which means, for which label is this probability maximum. And label the new data point as that particular label. The following figure will give you a better perspective of the differences that exists between the two.&lt;/p&gt;
+
+&lt;p&gt;The model fitting section is popularly known as training. There are various different ways to learn such a function - parametric(linear regression, logistic regression, etc) or non-parametric.&lt;/p&gt;
+
+&lt;image height=&quot;200em&quot; src=&quot;/assets/images/ml2.png&quot;&gt; &lt;/image&gt;
+
+&lt;p&gt;&lt;strong&gt;Generative Learning vs Discriminative Learning&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As shown above, within the class of functions in the modelling part, there are two types of approaches that can be done - Generative and Discriminative  -&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A Generative model learns the joing probability distribution &lt;script type=&quot;math/tex&quot;&gt;P(X,y)&lt;/script&gt;. It predicts the conditional probability with the help of Bayes Theorem.&lt;/li&gt;
+  &lt;li&gt;A Discriminative model learns the conditional probability distribution (&lt;script type=&quot;math/tex&quot;&gt;P(y \vert X)&lt;/script&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Again, to make a very clear distinction, the above two approaches are a part of the Modelling section. Once we use either of these to calculate &lt;script type=&quot;math/tex&quot;&gt;P(y \vert X)&lt;/script&gt;, we will use the decision rule for prediction. I found the example mentioned in Andrew Ng’s paper very intuitive. One can refer &lt;a href=&quot;https://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf&quot;&gt;his paper&lt;/a&gt; to read through a worked out example.&lt;/p&gt;
+
+&lt;p&gt;One key difference to note here is that a generative algorithm is a much stronger modelling because once we know &lt;script type=&quot;math/tex&quot;&gt;P(X,y)&lt;/script&gt;, we can theoretically generate the data. While in a discriminative model, we only learn the conditional probability from the data. A very intuitive example -  Suppose we are trying to learn how to differentiate between Chinese and Korean. If we end up learning all the syntaxes and grammars, we are taking a generative approach. While if we end up learning certain patterns about what words belong to each language, we are taking a discriminative approach.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sites.google.com/site/negarkiyavash/&quot; target=&quot;_blank&quot;&gt;Prof. Negar Kivyansh&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://fs.blog/2012/04/feynman-technique/&quot;&gt;Feynman Learning Technique&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sun, 05 May 2019 12:13:39 -0700</pubDate>
+        <link>http://localhost:4000/datascience/machine-learning-introduction</link>
+        <guid isPermaLink="true">http://localhost:4000/datascience/machine-learning-introduction</guid>
+        
+        
+        <category>datascience</category>
+        
+      </item>
     
       <item>
         <title>Dictionary Based Models for Analysing Multi-Lingual Texts</title>
@@ -81,7 +185,7 @@ There are many words which overlaps in both languages. When 1 million most frequ
 
 &lt;p&gt;I am also developing an open source tool &lt;a href=&quot;https://github.com/achyutjoshi/LangRazor&quot; target=&quot;_blank&quot;&gt;LangRazor&lt;/a&gt; which eases the process of calculating such indexes. Currently it only works for bi-lingual data, but I am hoping to extend it to analyse code-mixing between more than two languages.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 02 May 2019 15:13:39 -0400</pubDate>
+        <pubDate>Thu, 02 May 2019 12:13:39 -0700</pubDate>
         <link>http://localhost:4000/datascience/dictionary-based-models-code-mixing-nlp</link>
         <guid isPermaLink="true">http://localhost:4000/datascience/dictionary-based-models-code-mixing-nlp</guid>
         
@@ -146,7 +250,7 @@ There are many words which overlaps in both languages. When 1 million most frequ
   &lt;li&gt;Yuval Harari in Sapiens explained how the brain size got bigger once we started walking on two legs and how the fact that we can create myths evolved us into the most dominant species on Earth. This books seconds that idea and relates how REM sleep helped in making emotional and cognitive connection between thoughts. This book will definitely rank up top with Sapiens in terms of knowledge I gained!&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Sat, 30 Mar 2019 10:13:39 -0400</pubDate>
+        <pubDate>Sat, 30 Mar 2019 07:13:39 -0700</pubDate>
         <link>http://localhost:4000/books/why-we-sleep</link>
         <guid isPermaLink="true">http://localhost:4000/books/why-we-sleep</guid>
         
@@ -187,7 +291,7 @@ There are many words which overlaps in both languages. When 1 million most frequ
 
 &lt;p&gt;This might not be applicable to all destinations, but if you are visiting an exotic country which has a rich cuisine, just take the course. I would suggest to take it in the first few days itself because it will provide you with the knowledge of all the dishes the country has to offer. And that makes your life easier when you are ordering food at that small road-side food stall.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 01 May 2018 08:13:39 -0400</pubDate>
+        <pubDate>Tue, 01 May 2018 05:13:39 -0700</pubDate>
         <link>http://localhost:4000/travel/bucket-list-for-solo-trip</link>
         <guid isPermaLink="true">http://localhost:4000/travel/bucket-list-for-solo-trip</guid>
         
@@ -277,7 +381,7 @@ But as far as I can remember, heaven &amp;amp; hell is down on earth itself. If 
 
 &lt;p&gt;I know for a fact that I am missing out on a lot of things that we talked, but I don’t seem to remember them. I tried to paraphrase most of the wisdom as much as I could remember from my notes.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 06 Mar 2018 07:13:39 -0500</pubDate>
+        <pubDate>Tue, 06 Mar 2018 04:13:39 -0800</pubDate>
         <link>http://localhost:4000/travel/learnings-from-buddhist-monks-in-thailand</link>
         <guid isPermaLink="true">http://localhost:4000/travel/learnings-from-buddhist-monks-in-thailand</guid>
         
@@ -320,7 +424,7 @@ But as far as I can remember, heaven &amp;amp; hell is down on earth itself. If 
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-BKHCIVzV38&amp;amp;list=PLkCUhga4t_lBGSlF94CtJbYK3XWzjog2D&amp;amp;index=7&quot; target=&quot;_blank&quot;&gt;Dream Theatre&lt;/a&gt; - My new work music&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Sat, 24 Feb 2018 20:13:39 -0500</pubDate>
+        <pubDate>Sat, 24 Feb 2018 17:13:39 -0800</pubDate>
         <link>http://localhost:4000/journal/journal-six</link>
         <guid isPermaLink="true">http://localhost:4000/journal/journal-six</guid>
         
@@ -361,7 +465,7 @@ But as far as I can remember, heaven &amp;amp; hell is down on earth itself. If 
 
 &lt;p&gt;I will try to post my experiences every two days. Wish me luck!&lt;/p&gt;
 </description>
-        <pubDate>Tue, 30 Jan 2018 07:13:39 -0500</pubDate>
+        <pubDate>Tue, 30 Jan 2018 04:13:39 -0800</pubDate>
         <link>http://localhost:4000/travel/pre-trip-musings-thailand</link>
         <guid isPermaLink="true">http://localhost:4000/travel/pre-trip-musings-thailand</guid>
         
@@ -417,7 +521,7 @@ One of my juniors in college told me - “Achyut, you preach a lot, but you fail
 
 &lt;p&gt;PS. I am actively looking for any freelancing projects in the fields of - Data Science, Designing, Writing, or any shit (I have enough free time and thus will learn something new). So everyone who is reading this, help me get them :D&lt;/p&gt;
 </description>
-        <pubDate>Wed, 17 Jan 2018 20:13:39 -0500</pubDate>
+        <pubDate>Wed, 17 Jan 2018 17:13:39 -0800</pubDate>
         <link>http://localhost:4000/journal/breathing-again</link>
         <guid isPermaLink="true">http://localhost:4000/journal/breathing-again</guid>
         
@@ -459,7 +563,7 @@ One of my juniors in college told me - “Achyut, you preach a lot, but you fail
   &lt;li&gt;&lt;a href=&quot;https://lifehacker.com/charles-duhigg-on-self-motivation-mental-models-and-g-1793445660&quot; target=&quot;_blank&quot;&gt;The Upgrade - By Life Hacker&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Sat, 18 Nov 2017 20:13:39 -0500</pubDate>
+        <pubDate>Sat, 18 Nov 2017 17:13:39 -0800</pubDate>
         <link>http://localhost:4000/journal/journal-four</link>
         <guid isPermaLink="true">http://localhost:4000/journal/journal-four</guid>
         
@@ -499,39 +603,9 @@ One of my juniors in college told me - “Achyut, you preach a lot, but you fail
   &lt;li&gt;&lt;a href=&quot;https://betterhumans.coach.me/financial-freedom-the-missing-link-1b383c806044&quot; target=&quot;_blank&quot;&gt;Financial Freedom&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Sat, 28 Oct 2017 21:13:39 -0400</pubDate>
+        <pubDate>Sat, 28 Oct 2017 18:13:39 -0700</pubDate>
         <link>http://localhost:4000/journal/journal-three</link>
         <guid isPermaLink="true">http://localhost:4000/journal/journal-three</guid>
-        
-        
-        <category>journal</category>
-        
-      </item>
-    
-      <item>
-        <title>#2 - The Week that was.</title>
-        <description>&lt;p&gt;It really took some convincing to write this thing today. The only question popped up to me was, “Why should I write it when no one reads it?” But then, I write for myself :)
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The Big Launch&lt;/strong&gt;
-I was working on a project with the Ministry of Rural Development to develop a dashboard for monitoring 41 national schemes. It was finally launched by the Prime Minister on Wednesday in a grand event at Delhi. Apart from the 5 minutes where he launched our dashboard and spoke about the impact it will create, the event was boring &amp;amp; tiring. But yes, in my first job, the first project gets launched by the Prime Minister - it was surreal. You can read more about the project in this &lt;a href=&quot;https://socialcops.com/case-studies/disha-dashboard/&quot; target=&quot;_blank&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Thoughts?&lt;/strong&gt;
-I have started to somewhere doubt my motivation to create a habit and follow it. It has been three months I have been in Delhi and yet I usually waste time when I am not in office. Netflix, youtube and the internet have become a regular time wasting machine. Also, the zeal to convert my ambitions into actions have reduced. Is it because of the job? Or is it just me?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;One App that I discovered this week&lt;/strong&gt;
-I stumbled upon &lt;a href=&quot;https://itunes.apple.com/us/app/reflectly-journal/id1241229134?mt=8&quot; target=&quot;_blank&quot;&gt;Reflectly&lt;/a&gt;, which is a basic journalling application. The best thing I loved about this particular app, is the fact that is not monotonous. Everyday, the app asks you new questions which really makes you think about your day. Do give it a try.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Top 3 Blogs that I read&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/applied-data-science/new-r-package-the-xgboost-explainer-51dd7d1aa211&quot; target=&quot;_blank&quot;&gt;XGBoost Explainer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/airbnb-engineering/scaling-knowledge-at-airbnb-875d73eff091&quot; target=&quot;_blank&quot;&gt;Scaling Knowledge at AirBnb&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/personal-growth/when-it-comes-to-innovation-are-you-a-sculptor-or-a-painter-43713f11f97d&quot; target=&quot;_blank&quot;&gt;Sculptor vs Painter&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Sat, 14 Oct 2017 21:13:39 -0400</pubDate>
-        <link>http://localhost:4000/journal/journal-two</link>
-        <guid isPermaLink="true">http://localhost:4000/journal/journal-two</guid>
         
         
         <category>journal</category>
