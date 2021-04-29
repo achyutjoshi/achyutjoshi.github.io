@@ -7,7 +7,8 @@ exclude: true
 
 <h4>Projects I have completed or am working on - </h4>
 
-1. [Perspective Mining from Redditcomments](http://bit.ly/npl_paper){:target="\_blank"}
+1. [Perspective Mining from Reddit comments](http://bit.ly/npl_paper){:target="\_blank"}
+
    In this study, we examine different methods on extracting perspectives (viewpoints) from freely structured datasources. Consider this question - ”Will AI lead to a downfallof the human civilization?”. There are various equally valid arguments to it and one needs to read about all the diverse perspectives to create a learned opinion. Can this be done computationally? As a case in point, we focused on posts related to abortion on r/changemyview subreddit & experimented with LDA & Perspective Clustering using sentence embeddings. However since these sentences belong to the same topic, sentence vectors are very close in the embedding space which hinders the performance of clustering. To counter that, we introduce a new P-Network framework that learns a network structure between perspectives. To conclude we showcase a UI of how the framework can be usedto deliver diverse opinions on a topic to a user.
 
 2. [Aspect Extraction and Opinion Analysis of Amazon Reviews]({{site.baseurl}}/aspect_extraction/overview){:target="\_blank"}
